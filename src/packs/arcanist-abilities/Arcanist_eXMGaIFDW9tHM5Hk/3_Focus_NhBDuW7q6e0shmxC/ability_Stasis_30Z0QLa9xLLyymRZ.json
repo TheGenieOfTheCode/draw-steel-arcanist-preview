@@ -1,0 +1,190 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Stasis",
+  "type": "ability",
+  "_id": "30Z0QLa9xLLyymRZ",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> A golden beetle encased in amber</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-stasis",
+    "story": "You strike at a foe in an attempt to freeze them in time.",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "5Vee0LpnBvcfvc7U": {
+          "_id": "5Vee0LpnBvcfvc7U",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "8 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "11 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "qUgzpuuUkhml54LB": {
+          "_id": "qUgzpuuUkhml54LB",
+          "name": "Speed 0",
+          "img": null,
+          "type": "applied",
+          "sort": 100,
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, the target has speed 0 (save ends)",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "intuition"
+              },
+              "effects": {
+                "FD4VZHEOg366VbWY": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "{{potency}}, the target has speed 0 (save ends)",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "effects": {
+                "FD4VZHEOg366VbWY": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "{{potency}}, the target has speed 0 (save ends)",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "effects": {
+                "FD4VZHEOg366VbWY": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [
+    {
+      "name": "Stasis",
+      "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+      "type": "base",
+      "_id": "FD4VZHEOg366VbWY",
+      "system": {
+        "changes": [],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>The target has speed 0.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!30Z0QLa9xLLyymRZ.FD4VZHEOg366VbWY",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.30Z0QLa9xLLyymRZ"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A golden beetle encased in amber"
+    }
+  },
+  "_key": "!items!30Z0QLa9xLLyymRZ"
+}

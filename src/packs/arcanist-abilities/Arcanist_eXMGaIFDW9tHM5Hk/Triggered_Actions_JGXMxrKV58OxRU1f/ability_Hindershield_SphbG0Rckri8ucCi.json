@@ -1,0 +1,91 @@
+{
+  "folder": "JGXMxrKV58OxRU1f",
+  "name": "Hindershield",
+  "type": "ability",
+  "_id": "SphbG0Rckri8ucCi",
+  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "7",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-hindershield",
+    "story": "A shimmering wall of force blocks an enemy's attack.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "",
+    "resource": null,
+    "trigger": "The target takes damage from a strike.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The triggering strike takes a bane against the target and the target takes half the damage.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "description": "<p>The damage is halved for all targets of the triggering strike instead.</p>",
+        "before": false,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "name": "",
+        "img": null,
+        "sort": 100000
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "abjuration",
+      "slot": "triggered"
+    }
+  },
+  "_key": "!items!SphbG0Rckri8ucCi"
+}

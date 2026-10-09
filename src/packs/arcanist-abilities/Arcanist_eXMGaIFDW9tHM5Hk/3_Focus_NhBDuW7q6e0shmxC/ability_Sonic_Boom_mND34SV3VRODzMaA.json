@@ -1,0 +1,159 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Sonic Boom",
+  "type": "ability",
+  "_id": "mND34SV3VRODzMaA",
+  "img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> The bottled high note of an opera singer</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-sonic-boom",
+    "story": "An explosion of sound launches enemies away.",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "J6NKJ9WG2zCzUViT": {
+          "_id": "J6NKJ9WG2zCzUViT",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "cMFI49QeSnuv3AiH": {
+          "_id": "cMFI49QeSnuv3AiH",
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "sort": 200,
+          "forced": {
+            "tier1": {
+              "movement": [
+                "push"
+              ],
+              "distance": "1",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "push"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "push"
+              ],
+              "distance": "3",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "The bottled high note of an opera singer"
+    }
+  },
+  "_key": "!items!mND34SV3VRODzMaA"
+}

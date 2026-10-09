@@ -1,0 +1,79 @@
+{
+  "folder": "VYWV8pTdEQmIbNbb",
+  "name": "Rejuvenating Surge",
+  "type": "ability",
+  "_id": "WPYRuZ8ss1iOrDkf",
+  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-rejuvenating-surge",
+    "story": "",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "Once per round, you or an ally within 10 squares gains one or more surges.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist-enchantment"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>That creature can spend a Recovery.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "enchantment",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!WPYRuZ8ss1iOrDkf"
+}

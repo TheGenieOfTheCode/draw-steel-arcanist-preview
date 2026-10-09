@@ -1,0 +1,197 @@
+{
+  "folder": "AE5N8AXghHc3Gajx",
+  "name": "Bladed Spells",
+  "type": "feature",
+  "_id": "nbt8SZpVyJgIpPN9",
+  "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Sword.</strong> You wield a blade, using it to unleash devastating attacks infused with spells. You gain the Blacksmithing skill. You gain a +3 bonus to Stamina per echelon, and a +1 bonus to Stability. Additionally, you can use weapon and armor treasures, gain a +1 bonus to the rolled damage of your Melee Weapon abilities, and your Magic Strike abilities gain the Melee and Weapon keywords, with a distance of Melee 1. If you have a kit, you can't take this path.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "6",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-bladed-spells",
+    "advancements": {
+      "EOHHXCHPfi2Y9QwM": {
+        "_id": "EOHHXCHPfi2Y9QwM",
+        "type": "skill",
+        "name": "Blacksmithing",
+        "img": null,
+        "description": "<p>You gain the Blacksmithing skill.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "skills": {
+          "choices": [
+            "blacksmithing"
+          ],
+          "groups": []
+        },
+        "sort": 0,
+        "repick": {}
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "You can't take this path if you have a kit.",
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Bladed Spells: Stamina and Stability",
+      "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+      "type": "base",
+      "_id": "vVVZQDlPZ0QHPzTw",
+      "system": {
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.echelon",
+            "type": "add",
+            "value": 3,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.combat.stability",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>+3 Stamina per echelon and +1 stability.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!nbt8SZpVyJgIpPN9.vVVZQDlPZ0QHPzTw",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+    },
+    {
+      "name": "Bladed Spells: Melee Weapon Damage",
+      "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+      "type": "abilityModifier",
+      "_id": "0QnZvaSdftHIhBt4",
+      "system": {
+        "changes": [
+          {
+            "key": "damage.bonuses.value",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "melee",
+            "weapon"
+          ]
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>+1 rolled damage on Melee Weapon abilities.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!nbt8SZpVyJgIpPN9.0QnZvaSdftHIhBt4",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+    },
+    {
+      "name": "Bladed Spells: Magic Strike Keywords",
+      "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+      "type": "abilityModifier",
+      "_id": "EOlEM4SSJhUrTE6S",
+      "system": {
+        "changes": [
+          {
+            "key": "keyword",
+            "type": "add",
+            "value": "melee",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "keyword",
+            "type": "add",
+            "value": "weapon",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "magic",
+            "strike"
+          ]
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Magic Strike abilities gain the Melee and Weapon keywords. The change of distance to Melee 1 is not automated.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!nbt8SZpVyJgIpPN9.EOlEM4SSJhUrTE6S",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+    }
+  ],
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "path"
+    }
+  },
+  "_key": "!items!nbt8SZpVyJgIpPN9"
+}

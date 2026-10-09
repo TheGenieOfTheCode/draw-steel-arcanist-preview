@@ -1,0 +1,154 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Ice Shard",
+  "type": "ability",
+  "_id": "RjQVH6UgckzRmPrm",
+  "img": "icons/magic/water/projectile-ice-faceted-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> The fang of an ice bat</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-ice-shard",
+    "story": "You launch an icicle projectile, which explodes on contact.",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "65vJnvrDWiCmEzxm": {
+          "_id": "65vJnvrDWiCmEzxm",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "4",
+              "types": [
+                "cold"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6",
+              "types": [
+                "cold"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10",
+              "types": [
+                "cold"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "YzmAL3jeMCNTDFrG": {
+          "_id": "YzmAL3jeMCNTDFrG",
+          "name": "Splash",
+          "img": null,
+          "type": "other",
+          "sort": 300,
+          "other": {
+            "tier1": {
+              "display": "The target and each enemy adjacent to the target takes 2 × R cold damage",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "The target and each enemy adjacent to the target takes 2 × R cold damage",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "The target and each enemy adjacent to the target takes 2 × R cold damage",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>Splash damage: [[/damage 2*@R cold]]{2 × R cold damage} to the target and each enemy adjacent to the target, on every tier.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "The fang of an ice bat"
+    }
+  },
+  "_key": "!items!RjQVH6UgckzRmPrm"
+}

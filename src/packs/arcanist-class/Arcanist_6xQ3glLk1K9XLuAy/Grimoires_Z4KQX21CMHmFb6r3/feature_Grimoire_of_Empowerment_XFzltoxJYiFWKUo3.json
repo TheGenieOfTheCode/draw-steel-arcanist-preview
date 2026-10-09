@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Empowerment",
+  "type": "feature",
+  "_id": "XFzltoxJYiFWKUo3",
+  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Guidance:</strong> You gain a double edge on tests made to assist another hero's test. When you assist another hero's test during a montage, you can assist two heroes at once.</p><p><strong>Invigorate:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-empowerment",
+    "advancements": {
+      "Pty6RImFWfD91eGy": {
+        "_id": "Pty6RImFWfD91eGy",
+        "type": "itemGrant",
+        "name": "Invigorate",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.98wa8naOguMiNQOO"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "enchantment",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!XFzltoxJYiFWKUo3"
+}

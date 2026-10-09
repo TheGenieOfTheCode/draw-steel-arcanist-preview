@@ -1,0 +1,36 @@
+{
+  "folder": "cqi77v54hKy001pV",
+  "name": "Arcanist's Grimoire",
+  "type": "feature",
+  "_id": "I4rR651jwqUiIWFR",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have memorized multiple collections of simple spells called grimoires. You can prepare a number of grimoires as shown on the Arcanist Advancement table. At first level, you have the grimoires of both of your magical schools, plus one additional school. As you level, you'll gain additional grimoires, also shown on the Arcanist Advancement table. You can change your prepared grimoires as a special respite activity (see Pore Over Pages), or by using Flash Recall.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "8",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-arcanists-grimoire",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "rule"
+    }
+  },
+  "_key": "!items!I4rR651jwqUiIWFR"
+}

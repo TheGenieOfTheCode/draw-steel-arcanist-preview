@@ -1,0 +1,91 @@
+{
+  "folder": "m4XqocVuP4KK396X",
+  "name": "Analyze",
+  "type": "ability",
+  "_id": "MMLZIskGYCRwBk0P",
+  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "10",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-analyze",
+    "story": "You magically observe a creature or object.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You learn a creature's keywords, damage immunities, and damage weaknesses. You also learn if that creature has any malice abilities and what their costs are, but not what they do. You learn an object's keywords and properties.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "description": "<p>If the target is a Dynamic Terrain Object, you learn all of its abilities and can attempt to deactivate it as a part of this maneuver if you are adjacent to it. That test and all future tests to deactivate it gain a double edge.</p>",
+        "before": false,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "name": "",
+        "img": null,
+        "sort": 100000
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "divination",
+      "slot": "grimoireManeuver"
+    }
+  },
+  "_key": "!items!MMLZIskGYCRwBk0P"
+}

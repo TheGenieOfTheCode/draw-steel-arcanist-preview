@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Death",
+  "type": "feature",
+  "_id": "fCwoWmz33lVxh7JO",
+  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Speak With Dead:</strong> You can speak to a dead creature you touch if they have died within the last 24 hours and can speak a language you know, even if they are just a head. The dead creature regards you as they would have in life, and you might need to make tests to influence them and convince them to speak with you. The trauma of dying can make a creature's memory of that event hazy, but the target otherwise knows all they knew in life. After 1 minute, the effect ends. You can't use this ability on the same creature twice.</p><p><strong>Harrowing Atrophy:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-death",
+    "advancements": {
+      "KnT01tBjo7ynVY5A": {
+        "_id": "KnT01tBjo7ynVY5A",
+        "type": "itemGrant",
+        "name": "Harrowing Atrophy",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "necromancy",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!fCwoWmz33lVxh7JO"
+}

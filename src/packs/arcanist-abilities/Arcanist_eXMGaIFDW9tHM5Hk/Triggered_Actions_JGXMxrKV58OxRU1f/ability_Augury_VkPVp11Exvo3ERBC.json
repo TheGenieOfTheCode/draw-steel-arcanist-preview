@@ -1,0 +1,87 @@
+{
+  "folder": "JGXMxrKV58OxRU1f",
+  "name": "Augury",
+  "type": "ability",
+  "_id": "VkPVp11Exvo3ERBC",
+  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "6",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-augury",
+    "story": "You peer into the near future, and watch events unfold as you dictate.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "",
+    "resource": null,
+    "trigger": "The target makes a power roll.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrCreature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p><strong>Special:</strong> Roll [[/r 2d10 + @R]]{2d10 + R} at the start of each round while you have this ability prepared and note the tier outcome. You lose all noted outcomes at the end of the encounter.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "before0000000001": {
+        "_id": "before0000000001",
+        "type": "base",
+        "description": "<p>You can use this ability after seeing the result of the triggering roll. You can change the triggering roll to the tier outcome you noted; that noted outcome is then lost.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 1
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "divination",
+      "slot": "triggered"
+    }
+  },
+  "_key": "!items!VkPVp11Exvo3ERBC"
+}

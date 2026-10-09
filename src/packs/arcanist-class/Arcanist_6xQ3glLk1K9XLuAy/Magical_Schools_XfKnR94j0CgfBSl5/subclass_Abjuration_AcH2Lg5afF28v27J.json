@@ -1,0 +1,100 @@
+{
+  "folder": "XfKnR94j0CgfBSl5",
+  "name": "Abjuration",
+  "type": "subclass",
+  "_id": "AcH2Lg5afF28v27J",
+  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "system": {
+    "description": {
+      "value": "<p>The magic of protection.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "3",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-abjuration",
+    "classLink": "arcanist",
+    "advancements": {
+      "NInJmwWxl7XjEueW": {
+        "_id": "NInJmwWxl7XjEueW",
+        "type": "itemGrant",
+        "name": "Abjuration Focus",
+        "img": null,
+        "description": "<p>Your school provides you with an additional way to earn focus during combat.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 1000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.taSXm3tEY1MgIEUl"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "sIoNi5HU2k9ZDxhk": {
+        "_id": "sIoNi5HU2k9ZDxhk",
+        "type": "itemGrant",
+        "name": "Triggered Action",
+        "img": null,
+        "description": "<p>Your school grants you the following triggered action. Only one of your two school triggered actions can be prepared at a time.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 2000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.SphbG0Rckri8ucCi"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Fcpj0xmNXz9N9Lgk": {
+        "_id": "Fcpj0xmNXz9N9Lgk",
+        "type": "itemGrant",
+        "name": "Grimoire",
+        "img": null,
+        "description": "<p>You have the grimoire of this magical school.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 3000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.lwpyuWnPRYoA4MKA"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "abjuration",
+      "slot": "school"
+    }
+  },
+  "_key": "!items!AcH2Lg5afF28v27J"
+}

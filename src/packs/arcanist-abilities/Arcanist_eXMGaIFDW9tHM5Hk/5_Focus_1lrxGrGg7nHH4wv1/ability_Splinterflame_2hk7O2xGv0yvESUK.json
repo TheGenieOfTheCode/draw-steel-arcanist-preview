@@ -1,0 +1,159 @@
+{
+  "folder": "1lrxGrGg7nHH4wv1",
+  "name": "Splinterflame",
+  "type": "ability",
+  "_id": "2hk7O2xGv0yvESUK",
+  "img": "icons/magic/fire/projectile-fireball-smoke-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> A single phoenix feather</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "15",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-splinterflame",
+    "story": "Fiery missiles send your enemies flying.",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 3,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "MPXlIpvCcxx4ZmpI": {
+          "_id": "MPXlIpvCcxx4ZmpI",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "3",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "8",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "Vjt7EcmVfh19Zh8m": {
+          "_id": "Vjt7EcmVfh19Zh8m",
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "sort": 200,
+          "forced": {
+            "tier1": {
+              "movement": [
+                "push"
+              ],
+              "distance": "1",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "push"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "push"
+              ],
+              "distance": "4",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A single phoenix feather"
+    }
+  },
+  "_key": "!items!2hk7O2xGv0yvESUK"
+}

@@ -1,0 +1,101 @@
+{
+  "folder": "AE5N8AXghHc3Gajx",
+  "name": "Destructive Dominion",
+  "type": "feature",
+  "_id": "I3LcslCgENcASlTv",
+  "img": "modules/draw-steel-arcanist/assets/icons/staff.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Staff.</strong> You wield a magical staff that channels expansive and destructive magic. You gain the Sabotage skill. You gain a +1 bonus to the rolled damage of your Magic Area abilities. Additionally, you gain [[/surge 1]]{1 surge} at the beginning of any combat encounter.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "6",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-destructive-dominion",
+    "advancements": {
+      "Rhgr0Poqw4A2dpEJ": {
+        "_id": "Rhgr0Poqw4A2dpEJ",
+        "type": "skill",
+        "name": "Sabotage",
+        "img": null,
+        "description": "<p>You gain the Sabotage skill.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "skills": {
+          "choices": [
+            "sabotage"
+          ],
+          "groups": []
+        },
+        "sort": 0,
+        "repick": {}
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Destructive Dominion",
+      "img": "modules/draw-steel-arcanist/assets/icons/staff.webp",
+      "type": "abilityModifier",
+      "_id": "tLXV0SSkiN91pnTE",
+      "system": {
+        "changes": [
+          {
+            "key": "damage.bonuses.value",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "magic",
+            "area"
+          ]
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>+1 rolled damage on Magic Area abilities.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!I3LcslCgENcASlTv.tLXV0SSkiN91pnTE",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.I3LcslCgENcASlTv"
+    }
+  ],
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "path"
+    }
+  },
+  "_key": "!items!I3LcslCgENcASlTv"
+}

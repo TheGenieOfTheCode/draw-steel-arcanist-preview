@@ -1,0 +1,78 @@
+{
+  "folder": "1lrxGrGg7nHH4wv1",
+  "name": "Dispel the Supernatural",
+  "type": "ability",
+  "_id": "CtPD7It7pOlqcek5",
+  "img": "icons/magic/life/heart-cross-strong-flame-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> The petrified heart of a newt</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-dispel-the-supernatural",
+    "story": "You use magic to remove a harmful effect and rejuvenate your ally.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You can cleanse* each effect the target is suffering that was supernaturally imposed. The target gains [[/surge 2]]{2 surges} and can spend a Recovery.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "The petrified heart of a newt"
+    }
+  },
+  "_key": "!items!CtPD7It7pOlqcek5"
+}

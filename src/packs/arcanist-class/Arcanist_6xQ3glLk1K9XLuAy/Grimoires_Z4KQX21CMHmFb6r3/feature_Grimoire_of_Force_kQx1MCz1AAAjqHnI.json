@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Force",
+  "type": "feature",
+  "_id": "kQx1MCz1AAAjqHnI",
+  "img": "modules/draw-steel-arcanist/assets/icons/graviturgy.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Invisible Hand:</strong> You can spend 1 minute performing a ritual to summon a small invisible hand in an unoccupied space within 10 squares of you. The hand can move anywhere within 10 squares of you and can perform actions a hand normally could, open a door, pour liquid from a vial, or flip a switch. The hand lasts for 10 minutes or until you dismiss it (no action required).</p><p><strong>Levitate:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "10",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-force",
+    "advancements": {
+      "i1FFZhz2kA9wfzAH": {
+        "_id": "i1FFZhz2kA9wfzAH",
+        "type": "itemGrant",
+        "name": "Shunt",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.6pMxhkLVsTWTY7Qe"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "graviturgy",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!kQx1MCz1AAAjqHnI"
+}

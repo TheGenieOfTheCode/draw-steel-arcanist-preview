@@ -1,0 +1,116 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Gravity Repulse",
+  "type": "ability",
+  "_id": "vClUWlJHgKDhFq9J",
+  "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> A piece of starmetal cut into a dodecahedron</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-gravity-repulse",
+    "story": "You explode with kinetic energy, flinging foes back from you.",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "2",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "YeTJ8D5aw4IsjDMn": {
+          "_id": "YeTJ8D5aw4IsjDMn",
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "sort": 200,
+          "forced": {
+            "tier1": {
+              "movement": [
+                "push"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "push"
+              ],
+              "distance": "4",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "push"
+              ],
+              "distance": "6",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A piece of starmetal cut into a dodecahedron"
+    }
+  },
+  "_key": "!items!vClUWlJHgKDhFq9J"
+}

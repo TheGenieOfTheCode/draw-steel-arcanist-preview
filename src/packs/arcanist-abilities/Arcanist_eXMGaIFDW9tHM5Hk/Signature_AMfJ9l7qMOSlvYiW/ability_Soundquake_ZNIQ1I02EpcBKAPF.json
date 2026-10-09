@@ -1,0 +1,156 @@
+{
+  "folder": "AMfJ9l7qMOSlvYiW",
+  "name": "Soundquake",
+  "type": "ability",
+  "_id": "ZNIQ1I02EpcBKAPF",
+  "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> The elemental dust of a galeweaver</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-soundquake",
+    "story": "You unleash a thunderous wave of force out in front of you.",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "HzeEzFC7BwditUjL": {
+          "_id": "HzeEzFC7BwditUjL",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "tUZnlIZjYOIZbsUE": {
+          "_id": "tUZnlIZjYOIZbsUE",
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "sort": 200,
+          "forced": {
+            "tier1": {
+              "movement": [],
+              "distance": "",
+              "display": "",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "push"
+              ],
+              "distance": "1",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "push"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "signature",
+      "component": "The elemental dust of a galeweaver"
+    }
+  },
+  "_key": "!items!ZNIQ1I02EpcBKAPF"
+}

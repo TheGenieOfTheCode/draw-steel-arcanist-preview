@@ -1,0 +1,100 @@
+{
+  "folder": "XfKnR94j0CgfBSl5",
+  "name": "Transmutation",
+  "type": "subclass",
+  "_id": "lVPSIrtWN1q5tHWj",
+  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "system": {
+    "description": {
+      "value": "<p>The magic of change.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "3",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-transmutation",
+    "classLink": "arcanist",
+    "advancements": {
+      "jHXDqgfPzAWiLI94": {
+        "_id": "jHXDqgfPzAWiLI94",
+        "type": "itemGrant",
+        "name": "Transmutation Focus",
+        "img": null,
+        "description": "<p>Your school provides you with an additional way to earn focus during combat.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 1000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.vCsNs8lrmDfsoYNT"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Xd39Ptu1RyxtBhB9": {
+        "_id": "Xd39Ptu1RyxtBhB9",
+        "type": "itemGrant",
+        "name": "Triggered Action",
+        "img": null,
+        "description": "<p>Your school grants you the following triggered action. Only one of your two school triggered actions can be prepared at a time.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 2000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.vAzX8vGeMk18hfDq"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dPg9fY7EuDY8hbM3": {
+        "_id": "dPg9fY7EuDY8hbM3",
+        "type": "itemGrant",
+        "name": "Grimoire",
+        "img": null,
+        "description": "<p>You have the grimoire of this magical school.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 3000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.7vduxj30ovtsqJX3"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "transmutation",
+      "slot": "school"
+    }
+  },
+  "_key": "!items!lVPSIrtWN1q5tHWj"
+}

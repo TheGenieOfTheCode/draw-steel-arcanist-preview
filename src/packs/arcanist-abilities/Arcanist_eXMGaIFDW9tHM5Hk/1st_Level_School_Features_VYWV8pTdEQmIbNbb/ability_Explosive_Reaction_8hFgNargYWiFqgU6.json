@@ -1,0 +1,79 @@
+{
+  "folder": "VYWV8pTdEQmIbNbb",
+  "name": "Explosive Reaction",
+  "type": "ability",
+  "_id": "8hFgNargYWiFqgU6",
+  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-explosive-reaction",
+    "story": "",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "Once per round, an enemy within 10 squares takes damage from one or more surges.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist-evocation"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You deal [[/damage 2*@R]]{2 × R damage} to that enemy. You can have this damage be cold, fire, or lightning.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "evocation",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!8hFgNargYWiFqgU6"
+}

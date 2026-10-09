@@ -1,0 +1,78 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Counterspell",
+  "type": "ability",
+  "_id": "fGPbFglSVkkJT6NC",
+  "img": "icons/magic/defensive/barrier-shield-dome-deflect-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> The broken arcane focus of an archmage</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-counterspell",
+    "story": "Your magic nullifies an enemy's supernatural attack.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "An enemy within distance uses an ability with the Magic or Psionic keywords.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>All damage from the triggering ability is halved, and any potencies associated with the damage are reduced by [[lookup @R]]{your Reason score}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "The broken arcane focus of an archmage"
+    }
+  },
+  "_key": "!items!fGPbFglSVkkJT6NC"
+}

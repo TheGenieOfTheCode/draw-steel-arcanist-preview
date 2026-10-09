@@ -1,0 +1,30 @@
+{
+  "name": "Elemental Surges",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "type": "base",
+  "_id": "4zqbK75hc4t3UMti",
+  "system": {
+    "changes": [],
+    "end": {
+      "roll": "1d10 + @combat.save.bonus"
+    }
+  },
+  "disabled": false,
+  "start": null,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": "<p>Until the end of the encounter, your surges can deal cold, fire, or lightning damage.</p>",
+  "tint": "#ffffff",
+  "transfer": false,
+  "statuses": [],
+  "showIcon": 1,
+  "folder": "yY3HgTN7E3Rdr5Cd",
+  "sort": 0,
+  "flags": {},
+  "origin": null,
+  "_key": "!effects!4zqbK75hc4t3UMti"
+}

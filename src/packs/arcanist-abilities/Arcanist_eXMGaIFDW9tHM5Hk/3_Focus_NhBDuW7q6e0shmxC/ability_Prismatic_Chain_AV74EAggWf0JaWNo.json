@@ -1,0 +1,118 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Prismatic Chain",
+  "type": "ability",
+  "_id": "AV74EAggWf0JaWNo",
+  "img": "icons/magic/lightning/bolt-forked-teal-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> Elemental sand left behind when an elemental traverses planes</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-prismatic-chain",
+    "story": "You fling a chaotic burst of elemental energy at the target, which leaps onto others.",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "zTmxW2QSVHsJzOLn": {
+          "_id": "zTmxW2QSVHsJzOLn",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>The energy arcs from the first target to a second target within 2 squares of the first target, then arcs again to a third target within 2 squares of the second target. Use the same power roll for each target. You can have this ability deal cold, fire, or lightning damage.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "Elemental sand left behind when an elemental traverses planes"
+    }
+  },
+  "_key": "!items!AV74EAggWf0JaWNo"
+}

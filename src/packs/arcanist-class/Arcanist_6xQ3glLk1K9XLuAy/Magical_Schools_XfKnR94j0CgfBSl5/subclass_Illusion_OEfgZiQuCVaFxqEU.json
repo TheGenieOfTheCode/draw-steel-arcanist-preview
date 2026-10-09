@@ -1,0 +1,100 @@
+{
+  "folder": "XfKnR94j0CgfBSl5",
+  "name": "Illusion",
+  "type": "subclass",
+  "_id": "OEfgZiQuCVaFxqEU",
+  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "system": {
+    "description": {
+      "value": "<p>The magic of deception.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "3",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-illusion",
+    "classLink": "arcanist",
+    "advancements": {
+      "AIssaqlitgtdpWln": {
+        "_id": "AIssaqlitgtdpWln",
+        "type": "itemGrant",
+        "name": "Illusion Focus",
+        "img": null,
+        "description": "<p>Your school provides you with an additional way to earn focus during combat.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 1000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.4Z1kPA0egztTpo0r"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "RHDLECGutXtTuu9O": {
+        "_id": "RHDLECGutXtTuu9O",
+        "type": "itemGrant",
+        "name": "Triggered Action",
+        "img": null,
+        "description": "<p>Your school grants you the following triggered action. Only one of your two school triggered actions can be prepared at a time.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 2000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.MVzFDpuuamfjyASz"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wE2TkbHqEdDmOU5i": {
+        "_id": "wE2TkbHqEdDmOU5i",
+        "type": "itemGrant",
+        "name": "Grimoire",
+        "img": null,
+        "description": "<p>You have the grimoire of this magical school.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 3000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.DJDBop2TvShw0nwG"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "illusion",
+      "slot": "school"
+    }
+  },
+  "_key": "!items!OEfgZiQuCVaFxqEU"
+}

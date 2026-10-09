@@ -1,0 +1,169 @@
+{
+  "folder": "NhBDuW7q6e0shmxC",
+  "name": "Oil Slick",
+  "type": "ability",
+  "_id": "S3r744PG6tDIcVna",
+  "img": "icons/magic/acid/dissolve-pool-bubbles.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> A pork chop aged in butter for a decade</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-oil-slick",
+    "story": "You conjure a pool of dark slippery oil.",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "WpjYTVyhg1MDmAhl": {
+          "_id": "WpjYTVyhg1MDmAhl",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "acid"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [
+                "acid"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [
+                "acid"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "0Z2WWOJeIsj0Qcke": {
+          "_id": "0Z2WWOJeIsj0Qcke",
+          "name": "Prone",
+          "img": null,
+          "type": "applied",
+          "sort": 100,
+          "applied": {
+            "tier1": {
+              "display": "",
+              "effects": {},
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "agility"
+              }
+            },
+            "tier2": {
+              "display": "{{potency}}, prone",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "effects": {
+                "prone": {
+                  "condition": "failure",
+                  "end": "",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "{{potency}}, prone",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "effects": {
+                "prone": {
+                  "condition": "failure",
+                  "end": "",
+                  "properties": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>The ground beneath the area becomes @UUID[Compendium.draw-steel.monsters.Actor.d8YitCdNB3SmnKVY]{Flammable Oil} (see <em>Draw Steel: Monsters</em> pg. 336). When lit, it burns until the end of the round.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A pork chop aged in butter for a decade"
+    }
+  },
+  "_key": "!items!S3r744PG6tDIcVna"
+}

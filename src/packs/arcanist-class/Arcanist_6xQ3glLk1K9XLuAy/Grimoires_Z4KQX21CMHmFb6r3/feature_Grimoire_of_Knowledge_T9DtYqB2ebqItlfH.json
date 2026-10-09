@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Knowledge",
+  "type": "feature",
+  "_id": "T9DtYqB2ebqItlfH",
+  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Magic Sight:</strong> You can spend 1 minute performing a ritual to grant you the ability to sense magic. For the next hour, you instantly know the location of any magical object, trap, or effect within 20 squares of you. You can also see if any creatures in your line of effect, but within 20 squares of you, are under any magical effect. This feature doesn't tell you what the effect is or how it works, but grants you an edge on tests made to discern the nature of the effect.</p><p><strong>Analyze:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "10",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-knowledge",
+    "advancements": {
+      "32g7REdoYRRISz2y": {
+        "_id": "32g7REdoYRRISz2y",
+        "type": "itemGrant",
+        "name": "Analyze",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.MMLZIskGYCRwBk0P"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "divination",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!T9DtYqB2ebqItlfH"
+}

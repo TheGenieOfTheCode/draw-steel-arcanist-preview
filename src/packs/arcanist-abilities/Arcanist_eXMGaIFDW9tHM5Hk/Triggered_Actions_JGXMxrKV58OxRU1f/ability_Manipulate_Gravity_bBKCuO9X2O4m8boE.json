@@ -1,0 +1,91 @@
+{
+  "folder": "JGXMxrKV58OxRU1f",
+  "name": "Manipulate Gravity",
+  "type": "ability",
+  "_id": "bBKCuO9X2O4m8boE",
+  "img": "modules/draw-steel-arcanist/assets/icons/graviturgy.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "7",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-manipulate-gravity",
+    "story": "Terminal velocity, in the palm of your hand.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "",
+    "resource": null,
+    "trigger": "The target would be force moved or fall.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The triggering forced movement distance gains a bonus equal to or is reduced by [[lookup @R]]{your Reason score}, or the effective height of the triggering fall is increased or reduced by [[lookup @R]]{your Reason score}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "description": "<p>The amount is equal to 2 × your Reason score instead.</p>",
+        "before": false,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "name": "",
+        "img": null,
+        "sort": 100000
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "graviturgy",
+      "slot": "triggered"
+    }
+  },
+  "_key": "!items!bBKCuO9X2O4m8boE"
+}

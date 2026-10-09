@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Destruction",
+  "type": "feature",
+  "_id": "z41OR0vfeccsREi7",
+  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Immolate:</strong> You can spend 1 minute performing a ritual to disintegrate an adjacent mundane 1T object. If the object is larger, such as a wall, you can instead spend 10 minutes per square you wish to disintegrate.</p><p><strong>Chromatic Flux:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-destruction",
+    "advancements": {
+      "lrCdNiCaOyl5UhnE": {
+        "_id": "lrCdNiCaOyl5UhnE",
+        "type": "itemGrant",
+        "name": "Chromatic Flux",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.3tfBznIV2kytZKDk"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "evocation",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!z41OR0vfeccsREi7"
+}

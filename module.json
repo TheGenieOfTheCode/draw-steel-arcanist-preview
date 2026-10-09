@@ -1,0 +1,84 @@
+{
+  "id": "draw-steel-arcanist",
+  "title": "Draw Steel: The Arcanist",
+  "description": "<p>The Arcanist master class by Jenny [REDACTED] for the Draw Steel system. First Level Preview content.</p>",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Jenny [REDACTED]",
+      "flags": {
+        "role": "Class design"
+      }
+    },
+    {
+      "name": "Ady",
+      "flags": {
+        "role": "Foundry implementation"
+      }
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "draw-steel",
+        "type": "system",
+        "manifest": "https://raw.githubusercontent.com/MetaMorphic-Digital/draw-steel/refs/heads/main/system.json",
+        "compatibility": {
+          "minimum": "1.1.0",
+          "verified": "1.1.2"
+        }
+      }
+    ]
+  },
+  "packs": [
+    {
+      "name": "arcanist-class",
+      "label": "Arcanist: Class",
+      "path": "packs/arcanist-class",
+      "type": "Item",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "arcanist-abilities",
+      "label": "Arcanist: Abilities",
+      "path": "packs/arcanist-abilities",
+      "type": "Item",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "arcanist-effects",
+      "label": "Arcanist: Effects",
+      "path": "packs/arcanist-effects",
+      "type": "ActiveEffect",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "The Arcanist",
+      "sorting": "m",
+      "color": "#1b345c",
+      "packs": [
+        "arcanist-class",
+        "arcanist-abilities",
+        "arcanist-effects"
+      ]
+    }
+  ]
+}

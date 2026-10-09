@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Change",
+  "type": "feature",
+  "_id": "7vduxj30ovtsqJX3",
+  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Alter Form:</strong> You can spend 1 minute performing a ritual to alter you or another willing creature's physiology. Until you finish a respite, or until you use this ritual again, the target can gain one of the following benefits:</p><ul><li><p>They can automatically climb at full speed while moving.</p></li><li><p>They can automatically swim at full speed while moving and can breathe underwater.</p></li><li><p>They can change their physical appearance and voice to mimic a creature who they've seen before, but their size can't change. They gain an edge on tests made to convince other creatures that they are that person.</p></li></ul><p><strong>Manipulate Density:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "8",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-change",
+    "advancements": {
+      "R4MSrL4ntpZ5HYam": {
+        "_id": "R4MSrL4ntpZ5HYam",
+        "type": "itemGrant",
+        "name": "Manipulate Density",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.3GcXtAroEIdShTML"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "transmutation",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!7vduxj30ovtsqJX3"
+}

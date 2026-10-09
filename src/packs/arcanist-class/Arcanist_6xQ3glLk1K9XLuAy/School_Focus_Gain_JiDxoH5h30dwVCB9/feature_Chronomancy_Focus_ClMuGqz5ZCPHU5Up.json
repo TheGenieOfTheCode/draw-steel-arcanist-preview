@@ -1,0 +1,39 @@
+{
+  "folder": "JiDxoH5h30dwVCB9",
+  "name": "Chronomancy Focus",
+  "type": "feature",
+  "_id": "ClMuGqz5ZCPHU5Up",
+  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "system": {
+    "description": {
+      "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or an ally within 10 squares of you uses a triggered action.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "4",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-chronomancy-focus",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-chronomancy"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "chronomancy",
+      "slot": "schoolFocus"
+    }
+  },
+  "_key": "!items!ClMuGqz5ZCPHU5Up"
+}

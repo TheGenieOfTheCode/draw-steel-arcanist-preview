@@ -1,0 +1,39 @@
+{
+  "folder": "JiDxoH5h30dwVCB9",
+  "name": "Conjuration Focus",
+  "type": "feature",
+  "_id": "Go59ahfNAigeFgIF",
+  "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
+  "system": {
+    "description": {
+      "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or a creature within 10 squares of you teleports or uses an area ability.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "4",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-conjuration-focus",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-conjuration"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "conjuration",
+      "slot": "schoolFocus"
+    }
+  },
+  "_key": "!items!Go59ahfNAigeFgIF"
+}

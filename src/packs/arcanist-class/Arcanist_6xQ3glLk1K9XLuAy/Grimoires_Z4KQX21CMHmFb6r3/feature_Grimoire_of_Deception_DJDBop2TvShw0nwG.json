@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Deception",
+  "type": "feature",
+  "_id": "DJDBop2TvShw0nwG",
+  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Mystic Aura:</strong> While you are present during a negotiation, each hero with you treats their Renown as 2 higher than usual. Additionally, the first time in a negotiation an NPC's interest would decrease, it doesn't.</p><p><strong>Illusory Distraction:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-deception",
+    "advancements": {
+      "OxWJRBQyXfSo2MkD": {
+        "_id": "OxWJRBQyXfSo2MkD",
+        "type": "itemGrant",
+        "name": "Illusory Distraction",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.lLlc68dQBFTJ8LrQ"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "illusion",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!DJDBop2TvShw0nwG"
+}

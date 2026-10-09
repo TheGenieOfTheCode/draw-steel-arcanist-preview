@@ -1,0 +1,60 @@
+{
+  "folder": "Z4KQX21CMHmFb6r3",
+  "name": "Grimoire of Protection",
+  "type": "feature",
+  "_id": "lwpyuWnPRYoA4MKA",
+  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "system": {
+    "description": {
+      "value": "<p>You gain the following features:</p><p><strong>Invisible Alarm:</strong> You can spend 10 minutes creating an invisible trip wire that encompasses 10 connected squares. You can designate any number of creatures who won't trigger the trip wire. If a non-designated creature enters a square where the trip wire is, you are mentally alerted as long as you are within one mile of it. You can choose to have a loud ringing bell sound to emanate from the area.</p><p>The trip wire lasts for 24 hours, until it's triggered, or you use this feature again.</p><p><strong>Arcane Ward:</strong> You gain the following maneuver.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "10",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-grimoire-of-protection",
+    "advancements": {
+      "ToJO4s8YpabG5jJF": {
+        "_id": "ToJO4s8YpabG5jJF",
+        "type": "itemGrant",
+        "name": "Arcane Ward",
+        "img": null,
+        "description": "<p>You gain the following maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.hEWFFjXlms2jGm8W"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "abjuration",
+      "slot": "grimoire"
+    }
+  },
+  "_key": "!items!lwpyuWnPRYoA4MKA"
+}

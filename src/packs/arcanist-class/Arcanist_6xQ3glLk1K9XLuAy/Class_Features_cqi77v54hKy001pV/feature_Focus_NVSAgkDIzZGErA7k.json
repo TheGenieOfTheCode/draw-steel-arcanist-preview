@@ -1,0 +1,36 @@
+{
+  "folder": "cqi77v54hKy001pV",
+  "name": "Focus",
+  "type": "feature",
+  "_id": "NVSAgkDIzZGErA7k",
+  "img": "icons/magic/holy/meditation-chi-focus-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>You frantically flip through the pages of your tomes as the sounds of fire and steel whip around you in battle. Your mind must become a sacred place as you enter a deep trance to recite incantations perfectly, and this manifests as a Heroic Resource called focus.</p><h3>Focus in Combat</h3><p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain focus equal to your Victories. At the start of each of your turns during combat, you gain 1d3 focus.</p><p>You lose any remaining focus at the end of the encounter.</p><h3>Focus Outside of Combat</h3><p>Though you can't gain focus outside of combat, you can use your heroic abilities and effects that cost focus without spending it. Whenever you use an ability or effect outside of combat that costs focus, you can't use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite. You can only use as many heroic abilities with the same base cost this way as you can prepare, as shown on the Arcanist Advancement table. When you use an ability outside of combat that lets you spend unlimited focus on its effect, you can use it as if you had spent an amount of focus equal to your Victories.</p><h3>School Focus Gain</h3><p>Your choice of schools provides you with two additional ways to earn focus during combat, as triggered by specific events. You might even have a single event trigger both your focus gains.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "4",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-focus",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "rule"
+    }
+  },
+  "_key": "!items!NVSAgkDIzZGErA7k"
+}

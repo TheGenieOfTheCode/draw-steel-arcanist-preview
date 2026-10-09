@@ -1,0 +1,100 @@
+{
+  "folder": "XfKnR94j0CgfBSl5",
+  "name": "Necromancy",
+  "type": "subclass",
+  "_id": "FgOjWK8dLDJRMxM4",
+  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "system": {
+    "description": {
+      "value": "<p>The magic of death.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "3",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-necromancy",
+    "classLink": "arcanist",
+    "advancements": {
+      "sUCzNTQGbvFhVrx1": {
+        "_id": "sUCzNTQGbvFhVrx1",
+        "type": "itemGrant",
+        "name": "Necromancy Focus",
+        "img": null,
+        "description": "<p>Your school provides you with an additional way to earn focus during combat.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 1000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.g7LGscE4zZDqvpnn"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "EsHzNFeV20OsJfnx": {
+        "_id": "EsHzNFeV20OsJfnx",
+        "type": "itemGrant",
+        "name": "Triggered Action",
+        "img": null,
+        "description": "<p>Your school grants you the following triggered action. Only one of your two school triggered actions can be prepared at a time.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 2000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.fsV7NaWadClyZtMq"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "MUdfQbMqM58mRBCv": {
+        "_id": "MUdfQbMqM58mRBCv",
+        "type": "itemGrant",
+        "name": "Grimoire",
+        "img": null,
+        "description": "<p>You have the grimoire of this magical school.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 3000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.fCwoWmz33lVxh7JO"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "necromancy",
+      "slot": "school"
+    }
+  },
+  "_key": "!items!FgOjWK8dLDJRMxM4"
+}

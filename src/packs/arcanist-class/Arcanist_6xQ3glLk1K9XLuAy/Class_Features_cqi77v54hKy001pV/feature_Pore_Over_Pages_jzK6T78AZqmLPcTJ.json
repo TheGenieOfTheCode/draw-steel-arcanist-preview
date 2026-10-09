@@ -1,0 +1,36 @@
+{
+  "folder": "cqi77v54hKy001pV",
+  "name": "Pore Over Pages",
+  "type": "feature",
+  "_id": "jzK6T78AZqmLPcTJ",
+  "img": "icons/sundries/books/book-worn-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>You can spend your time consulting your magical notes, tomes, scrolls, grimoires, and other sources of magical information to best prepare for the journey ahead of you. As a respite activity, you can swap any number of your supernatural perks, your grimoires, your triggered action, or your prepared abilities for others of their type (see Prepared Abilities). For heroic abilities, the cost of the ability you swap must remain the same, and for both signature and heroic abilities, you must have the new ability's Component Prerequisite.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "8",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-pore-over-pages",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "rule"
+    }
+  },
+  "_key": "!items!jzK6T78AZqmLPcTJ"
+}

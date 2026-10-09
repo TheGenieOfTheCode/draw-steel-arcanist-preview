@@ -1,0 +1,89 @@
+{
+  "folder": "pVp7krvAxPNB9kti",
+  "name": "Flash Recall",
+  "type": "ability",
+  "_id": "BkVlVQ54s4kbghW4",
+  "img": "icons/sundries/books/book-open-purple.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "8",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-flash-recall",
+    "story": "You frantically flip through your tomes, looking for the perfect solution to the problem at hand.",
+    "keywords": [
+      "magic"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You can change one of your grimoires, one of your supernatural perks, your triggered action, or one of your prepared abilities for another of its kind. For heroic abilities, the cost of the ability you swap must remain the same, and for both signature and heroic abilities, you must have its Component Prerequisite. Once you swap an option this way, you can't swap that same kind of option again until you gain at least 1 Victory or finish a respite. If the option is a heroic ability, you can still swap another heroic ability with a different base cost.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "description": "<p>This ability becomes a free maneuver.</p>",
+        "before": false,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "name": "",
+        "img": null,
+        "sort": 100000
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "core"
+    }
+  },
+  "_key": "!items!BkVlVQ54s4kbghW4"
+}

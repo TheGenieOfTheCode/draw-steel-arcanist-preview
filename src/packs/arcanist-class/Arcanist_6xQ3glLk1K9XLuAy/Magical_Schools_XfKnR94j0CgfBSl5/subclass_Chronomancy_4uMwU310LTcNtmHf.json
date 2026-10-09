@@ -1,0 +1,100 @@
+{
+  "folder": "XfKnR94j0CgfBSl5",
+  "name": "Chronomancy",
+  "type": "subclass",
+  "_id": "4uMwU310LTcNtmHf",
+  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "system": {
+    "description": {
+      "value": "<p>The magic of time.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "3",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-chronomancy",
+    "classLink": "arcanist",
+    "advancements": {
+      "B3hW2QKXIFLC8dq4": {
+        "_id": "B3hW2QKXIFLC8dq4",
+        "type": "itemGrant",
+        "name": "Chronomancy Focus",
+        "img": null,
+        "description": "<p>Your school provides you with an additional way to earn focus during combat.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 1000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.ClMuGqz5ZCPHU5Up"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "l1XDJEbJIJJRZt0g": {
+        "_id": "l1XDJEbJIJJRZt0g",
+        "type": "itemGrant",
+        "name": "Triggered Action",
+        "img": null,
+        "description": "<p>Your school grants you the following triggered action. Only one of your two school triggered actions can be prepared at a time.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 2000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.AuePDq2FfjQcYQbB"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "fIDVuXRiMbaSKsbH": {
+        "_id": "fIDVuXRiMbaSKsbH",
+        "type": "itemGrant",
+        "name": "Grimoire",
+        "img": null,
+        "description": "<p>You have the grimoire of this magical school.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 3000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.Toh9gofgxnFDE7Xo"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "chronomancy",
+      "slot": "school"
+    }
+  },
+  "_key": "!items!4uMwU310LTcNtmHf"
+}

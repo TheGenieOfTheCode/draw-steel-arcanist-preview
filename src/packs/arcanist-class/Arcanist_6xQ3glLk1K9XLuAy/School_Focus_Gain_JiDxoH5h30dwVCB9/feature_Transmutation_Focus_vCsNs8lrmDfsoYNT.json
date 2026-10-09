@@ -1,0 +1,39 @@
+{
+  "folder": "JiDxoH5h30dwVCB9",
+  "name": "Transmutation Focus",
+  "type": "feature",
+  "_id": "vCsNs8lrmDfsoYNT",
+  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "system": {
+    "description": {
+      "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or a creature within 10 squares of you takes damage that isn't untyped or holy, or uses an ability or effect that has them change their form or size.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "4",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-transmutation-focus",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-transmutation"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "transmutation",
+      "slot": "schoolFocus"
+    }
+  },
+  "_key": "!items!vCsNs8lrmDfsoYNT"
+}

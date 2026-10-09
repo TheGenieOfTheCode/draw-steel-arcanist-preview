@@ -1,0 +1,165 @@
+{
+  "folder": "AMfJ9l7qMOSlvYiW",
+  "name": "Sickening Ray",
+  "type": "ability",
+  "_id": "ioKwj69Oem7zLfdy",
+  "img": "icons/magic/unholy/projectile-missile-green.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> The skull of a creature who has been dead for over 100 years</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "12",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-sickening-ray",
+    "story": "A sickly green ray saps away your enemy's strength.",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "sA0CQto5CdeUcF86": {
+          "_id": "sA0CQto5CdeUcF86",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [
+                "poison"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [
+                "poison"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [
+                "poison"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "RarA3PrdEq8ifNdg": {
+          "_id": "RarA3PrdEq8ifNdg",
+          "name": "Weakened",
+          "img": null,
+          "type": "applied",
+          "sort": 100,
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, weakened (save ends)",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "might"
+              },
+              "effects": {
+                "weakened": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "{{potency}}, weakened (save ends)",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "effects": {
+                "weakened": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "{{potency}}, weakened (save ends)",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "effects": {
+                "weakened": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "signature",
+      "component": "The skull of a creature who has been dead for over 100 years"
+    }
+  },
+  "_key": "!items!ioKwj69Oem7zLfdy"
+}

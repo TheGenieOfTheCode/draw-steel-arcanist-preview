@@ -1,0 +1,492 @@
+{
+  "folder": "6xQ3glLk1K9XLuAy",
+  "name": "Arcanist",
+  "type": "class",
+  "_id": "t9LGtpqRI1vcWjfy",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>An Arcanist is a monument to knowledge. You command the battlefield with a wide variety of spells and abilities, and provide great utility to your allies when exploring the timescape.</p><p>As an Arcanist, you use a vast collection of different abilities, calling upon them when the need arises, always having the perfect spell for every situation.</p><p><strong>Starting Characteristics:</strong> You start with a Reason of 2, and choose one of the following arrays for your other characteristic scores: 2, 2, -1, -1; 2, 1, 1, -1; 2, 1, 0, 0; 1, 1, 1, 0.</p><h3>Draw Steel Master Class</h3><p>The Arcanist is an example of a master class in Draw Steel. Master classes are intended for players who are familiar with the game and have played a few sessions already. They are not recommended for first time players. You need to know the rules before we start breaking them on you!</p><h3>Prepared at 1st Level</h3><p>Two signature abilities, one 3-focus ability, and one 5-focus ability; one triggered action; two grimoires (of the three you know).</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "3",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist",
+    "level": 0,
+    "primary": "Focus",
+    "epic": "Recollection",
+    "turnGain": "1d3",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "reason"
+      ]
+    },
+    "stamina": {
+      "starting": 18,
+      "level": 6
+    },
+    "recoveries": 8,
+    "advancements": {
+      "3ShBhnGkDbSbJGZT": {
+        "_id": "3ShBhnGkDbSbJGZT",
+        "type": "skill",
+        "name": "Skills",
+        "img": null,
+        "description": "<p>You gain the Magic and History skills.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "skills": {
+          "choices": [
+            "magic",
+            "history"
+          ],
+          "groups": []
+        },
+        "sort": 1000,
+        "repick": {}
+      },
+      "zBwGmfdBGnBqgSl2": {
+        "_id": "zBwGmfdBGnBqgSl2",
+        "type": "skill",
+        "name": "Skills",
+        "img": null,
+        "description": "<p>Choose any four skills from Alchemy, Forgery, Jewelry, Navigate, or from the skills of the intrigue and lore skill groups.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 4,
+        "skills": {
+          "choices": [
+            "alchemy",
+            "forgery",
+            "jewelry",
+            "navigate"
+          ],
+          "groups": [
+            "intrigue",
+            "lore"
+          ]
+        },
+        "sort": 2000,
+        "repick": {}
+      },
+      "oVsHOKsb8OyZ3Bgr": {
+        "_id": "oVsHOKsb8OyZ3Bgr",
+        "type": "itemGrant",
+        "name": "Magical School",
+        "img": "icons/sundries/books/book-embossed-jewel-gold-green.webp",
+        "description": "<p>Through your studies, you know and can cast spells from several schools of magic. Pick two magical schools. The two schools you pick make up your subclass, and your choice of schools determines many of the features you'll gain as you gain new levels.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 2,
+        "sort": 3000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.AcH2Lg5afF28v27J"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.4uMwU310LTcNtmHf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.fjTVllSxqoa55mZ5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.f81Gs5s5jClegZyg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.PlIdRHrVxQnGqdhz"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.0lpSnyxgS4AXpqrf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.CdR9QiX9elESdLHN"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.OEfgZiQuCVaFxqEU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.FgOjWK8dLDJRMxM4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.lVPSIrtWN1q5tHWj"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "XdGUgvHaNBnB2OHe": {
+        "_id": "XdGUgvHaNBnB2OHe",
+        "type": "itemGrant",
+        "name": "Features",
+        "img": null,
+        "description": "<p>You gain the following features.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 4000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.NVSAgkDIzZGErA7k"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.GG8BuxX9f1e2WWGi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.I4rR651jwqUiIWFR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.jzK6T78AZqmLPcTJ"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FHxccFFgZAcW01do": {
+        "_id": "FHxccFFgZAcW01do",
+        "type": "itemGrant",
+        "name": "1st-Level School Feature",
+        "img": "icons/magic/symbols/runes-star-blue.webp",
+        "description": "<p>You have begun studying a certain area of magical expertise. Choose one of your magical schools; you gain a feature based on the chosen school.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 1,
+        "sort": 5000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.ea5hNdhrjh7bPPl6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.Hl6csWe74eAub3tu"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.6WqD6AniIirsOth1"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.S4R8vctgkgmGdked"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.WPYRuZ8ss1iOrDkf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.8hFgNargYWiFqgU6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.5Hi87GP542IYUpoV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.bMamOlYznGC8ak2i"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.iQgl3vPI9gjGrevw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.napDyoX9hMFkZQ1f"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "5HttUGwje4tyJkoy": {
+        "_id": "5HttUGwje4tyJkoy",
+        "type": "itemGrant",
+        "name": "Flash Recall",
+        "img": null,
+        "description": "<p>You gain the following ability.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 6000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.BkVlVQ54s4kbghW4"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Gk5Gd3MRpAETox7p": {
+        "_id": "Gk5Gd3MRpAETox7p",
+        "type": "itemGrant",
+        "name": "Additional Grimoire",
+        "img": "icons/sundries/books/book-worn-purple.webp",
+        "description": "<p>At first level, you have the grimoires of both of your magical schools, plus one additional school. Choose a grimoire from a school other than your own.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 1,
+        "sort": 7000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.lwpyuWnPRYoA4MKA"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.Toh9gofgxnFDE7Xo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.FN05DsJl0ZPHKgYp"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.T9DtYqB2ebqItlfH"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.XFzltoxJYiFWKUo3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.z41OR0vfeccsREi7"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.kQx1MCz1AAAjqHnI"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.DJDBop2TvShw0nwG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.fCwoWmz33lVxh7JO"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.7vduxj30ovtsqJX3"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ERaeQ6xLdMste2j3": {
+        "_id": "ERaeQ6xLdMste2j3",
+        "type": "itemGrant",
+        "name": "Magic Missile",
+        "img": null,
+        "description": "<p>You gain the following ability, which can be used as a free strike.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 8000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.aNV6NBIFdRjRkT4I"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "hNFypuw4JoIs2erQ": {
+        "_id": "hNFypuw4JoIs2erQ",
+        "type": "itemGrant",
+        "name": "Arcane Path",
+        "img": "icons/weapons/staves/staff-ornate-gold-jeweled.webp",
+        "description": "<p>The way in which you weave your magic defines many aspects of your spellcasting capabilities. Choose one of the following options: Orb, Staff, Sword, Tome, or Wand. Your choice of arcane path determines some of the features you'll gain as you gain new levels.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 1,
+        "sort": 9000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.Oss8FeKNKBfvNEzu"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.I3LcslCgENcASlTv"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.e6vVQu9Bti564QJm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.K7gXL4KjKQvgJg6T"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "6hPmKEvajFh3rhkN": {
+        "_id": "6hPmKEvajFh3rhkN",
+        "type": "itemGrant",
+        "name": "Signature Abilities",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "description": "<p>Choose three signature abilities from the following options. You gain the Component Prerequisites for those abilities. Then, choose two of those to become prepared. Prepared signature abilities can be used at will.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 3,
+        "sort": 10000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.MbjfO1NWbkvDoKWe"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.3G1ftIXRnQeSG33V"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.z18qPlIm8JDXJflm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.rpS2BXIdXJPjTuP4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.KXRX1cAkm4d6eGvf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.FsgmcHgmeXhBSTXV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.PVJeBABxM2BFXMbh"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.tEaYqitd8SpzUYEe"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.ioKwj69Oem7zLfdy"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.ZNIQ1I02EpcBKAPF"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "w665kJqoEoeGvbu9": {
+        "_id": "w665kJqoEoeGvbu9",
+        "type": "itemGrant",
+        "name": "3-Focus Abilities",
+        "img": "icons/magic/symbols/runes-triangle-blue.webp",
+        "description": "<p>Choose two heroic abilities from the following options; you gain the Component Prerequisites for those abilities. Then, choose one to become prepared.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 2,
+        "sort": 11000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.fGPbFglSVkkJT6NC"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.vClUWlJHgKDhFq9J"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.RjQVH6UgckzRmPrm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.S3r744PG6tDIcVna"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.AV74EAggWf0JaWNo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.jHkrEF7vDKL0fcVt"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.mND34SV3VRODzMaA"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.30Z0QLa9xLLyymRZ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.dZ26b7RNNR3KiHlB"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.KprgoDTiNinKxuqi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.MkPOorP8pBjWpTSL"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "rC7zCsLhun3Qdi0g": {
+        "_id": "rC7zCsLhun3Qdi0g",
+        "type": "itemGrant",
+        "name": "5-Focus Abilities",
+        "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+        "description": "<p>Choose two heroic abilities from the following options; you gain the Component Prerequisites for those abilities. Then, choose one to become prepared.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": 2,
+        "sort": 12000,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.CtPD7It7pOlqcek5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.Ab4kAH75qVMKQWFG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.z6Xul3GFVXKWnQDs"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.sXN10hBoD3lb3BDn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.javoETs0yLcrcceq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.Fy0dTgN69aeNyYXb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.NNVMsBymEvdn6pLI"
+          },
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.2hk7O2xGv0yvESUK"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "class"
+    }
+  },
+  "_key": "!items!t9LGtpqRI1vcWjfy"
+}

@@ -1,0 +1,39 @@
+{
+  "folder": "JiDxoH5h30dwVCB9",
+  "name": "Abjuration Focus",
+  "type": "feature",
+  "_id": "taSXm3tEY1MgIEUl",
+  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "system": {
+    "description": {
+      "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or creature within 10 squares of you gains temporary Stamina, or uses a triggered action to reduce incoming damage or to impose a bane or double bane on a power roll.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "4",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-abjuration-focus",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-abjuration"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "abjuration",
+      "slot": "schoolFocus"
+    }
+  },
+  "_key": "!items!taSXm3tEY1MgIEUl"
+}
