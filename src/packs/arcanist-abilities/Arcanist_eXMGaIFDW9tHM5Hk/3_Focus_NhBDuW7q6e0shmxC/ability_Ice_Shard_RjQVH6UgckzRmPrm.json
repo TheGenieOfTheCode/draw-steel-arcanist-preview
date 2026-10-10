@@ -127,17 +127,7 @@
       "value": "",
       "level": null
     },
-    "effects": {
-      "after00000000000": {
-        "_id": "after00000000000",
-        "type": "base",
-        "description": "<p>Splash damage: [[/damage 2*@R cold]]{2 × R cold damage} to the target and each enemy adjacent to the target, on every tier.</p>",
-        "before": false,
-        "name": "",
-        "img": null,
-        "sort": 0
-      }
-    }
+    "effects": {}
   },
   "effects": [],
   "sort": 0,

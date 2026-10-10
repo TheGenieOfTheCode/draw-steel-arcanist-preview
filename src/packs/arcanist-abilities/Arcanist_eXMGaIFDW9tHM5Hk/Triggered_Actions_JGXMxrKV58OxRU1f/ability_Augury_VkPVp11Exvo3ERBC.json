@@ -55,9 +55,9 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p><strong>Special:</strong> Roll [[/r 2d10 + @R]]{2d10 + R} at the start of each round while you have this ability prepared and note the tier outcome. You lose all noted outcomes at the end of the encounter.</p>",
+        "description": "<p>Roll [[/r 2d10 + @R]]{2d10 + R} at the start of each round while you have this ability prepared and note the tier outcome. You lose all noted outcomes at the end of the encounter.</p>",
         "before": true,
-        "name": "",
+        "name": "Special",
         "img": null,
         "sort": 0
       },

@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Slipstream",
+  "type": "feature",
+  "_id": "9ATl9ZAILgHSxBsS",
+  "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to teleport up to a number of squares equal to 2 × [[lookup @R]]{your Reason score}.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-slipstream",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-conjuration"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "conjuration",
+      "slot": "schoolFeature",
+      "limit": "turn"
+    }
+  },
+  "_key": "!items!9ATl9ZAILgHSxBsS"
+}

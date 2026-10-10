@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Inflict Wounds",
+  "type": "feature",
+  "_id": "QSOhUtZAbc0L6o37",
+  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once per round when an enemy starts their turn while bleeding, weakened or winded, you can spend 1 focus as a free triggered action to deal [[/damage @R corruption]]{R corruption damage} to that creature and grant you or an ally within 10 squares temporary Stamina equal to the damage dealt.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-inflict-wounds",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-necromancy"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "necromancy",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!QSOhUtZAbc0L6o37"
+}

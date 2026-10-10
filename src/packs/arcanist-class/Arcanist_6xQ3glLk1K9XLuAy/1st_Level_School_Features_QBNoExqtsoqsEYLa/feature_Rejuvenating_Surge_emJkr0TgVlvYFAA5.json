@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Rejuvenating Surge",
+  "type": "feature",
+  "_id": "emJkr0TgVlvYFAA5",
+  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once per round when you or an ally within 10 squares gains one or more surges, you can spend 1 focus as a free triggered action to allow that creature to spend a Recovery.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-rejuvenating-surge",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-enchantment"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "enchantment",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!emJkr0TgVlvYFAA5"
+}

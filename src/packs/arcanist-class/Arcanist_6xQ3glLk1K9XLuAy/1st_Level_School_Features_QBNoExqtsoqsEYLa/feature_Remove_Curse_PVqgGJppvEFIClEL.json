@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Remove Curse",
+  "type": "feature",
+  "_id": "PVqgGJppvEFIClEL",
+  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once per round when you or an ally within 10 squares gains temporary Stamina, you can spend 1 focus as a free triggered action to cleanse* one effect that creature is suffering.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-remove-curse",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-abjuration"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "abjuration",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!PVqgGJppvEFIClEL"
+}

@@ -151,7 +151,15 @@
       "type": "base",
       "_id": "FD4VZHEOg366VbWY",
       "system": {
-        "changes": [],
+        "changes": [
+          {
+            "key": "system.movement.multiplier",
+            "type": "multiply",
+            "value": 0,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         }

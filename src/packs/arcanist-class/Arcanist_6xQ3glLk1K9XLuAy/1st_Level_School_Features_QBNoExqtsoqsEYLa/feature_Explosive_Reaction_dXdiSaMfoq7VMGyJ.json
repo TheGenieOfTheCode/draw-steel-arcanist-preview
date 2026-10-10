@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Explosive Reaction",
+  "type": "feature",
+  "_id": "dXdiSaMfoq7VMGyJ",
+  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once per round when an enemy within 10 squares takes damage from one or more surges, you can spend 1 focus as a free triggered action to deal [[/damage 2*@R]]{2 × R damage} to that enemy. You can have this damage be cold, fire, or lightning.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-explosive-reaction",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-evocation"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "evocation",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!dXdiSaMfoq7VMGyJ"
+}

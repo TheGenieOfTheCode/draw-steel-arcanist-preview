@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Fast Forward",
+  "type": "feature",
+  "_id": "NovDXrWEQ7Mgtzad",
+  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to take a move action.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-fast-forward",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-chronomancy"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "chronomancy",
+      "slot": "schoolFeature",
+      "limit": "turn"
+    }
+  },
+  "_key": "!items!NovDXrWEQ7Mgtzad"
+}

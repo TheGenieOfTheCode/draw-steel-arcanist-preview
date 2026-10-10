@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Precise Momentum",
+  "type": "feature",
+  "_id": "SXVs6LPrRn15PHc4",
+  "img": "modules/draw-steel-arcanist/assets/icons/graviturgy.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once per round when an enemy within 10 squares is force moved, you can spend 1 focus as a free triggered action to slide that creature a number of squares equal to [[lookup @R]]{your Reason score}.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-precise-momentum",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-graviturgy"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "graviturgy",
+      "slot": "schoolFeature",
+      "limit": "round"
+    }
+  },
+  "_key": "!items!SXVs6LPrRn15PHc4"
+}

@@ -1,0 +1,40 @@
+{
+  "folder": "QBNoExqtsoqsEYLa",
+  "name": "Vanishing Act",
+  "type": "feature",
+  "_id": "9eaCk1YVVvjzhBYk",
+  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to turn [[/apply invisible]]{invisible} until the start of your next turn. While invisible this way, a creature can hide even while observed.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-vanishing-act",
+    "advancements": {},
+    "prerequisites": {
+      "dsid": [
+        "arcanist-illusion"
+      ],
+      "value": "",
+      "level": null
+    }
+  },
+  "effects": [],
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "illusion",
+      "slot": "schoolFeature",
+      "limit": "turn"
+    }
+  },
+  "_key": "!items!9eaCk1YVVvjzhBYk"
+}
