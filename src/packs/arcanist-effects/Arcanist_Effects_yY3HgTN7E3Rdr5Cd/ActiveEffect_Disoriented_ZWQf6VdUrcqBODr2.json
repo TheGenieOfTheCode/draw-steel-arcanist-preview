@@ -4,7 +4,15 @@
   "type": "base",
   "_id": "ZWQf6VdUrcqBODr2",
   "system": {
-    "changes": [],
+    "changes": [
+      {
+        "key": "flags.draw-steel-ctlib.loe.rangeCap",
+        "type": "override",
+        "value": "3",
+        "phase": "initial",
+        "priority": null
+      }
+    ],
     "end": {
       "roll": "1d10 + @combat.save.bonus"
     }
@@ -20,7 +28,9 @@
   "description": "<p>A disoriented creature has line of effect only within 3 squares.</p>",
   "tint": "#ffffff",
   "transfer": false,
-  "statuses": [],
+  "statuses": [
+    "disoriented"
+  ],
   "showIcon": 1,
   "folder": "yY3HgTN7E3Rdr5Cd",
   "sort": 0,

@@ -21,6 +21,16 @@
       }
     }
   ],
+  "esmodules": [
+    "src/module/main.mjs"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
   "relationships": {
     "systems": [
       {
