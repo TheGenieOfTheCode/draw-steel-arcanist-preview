@@ -2,6 +2,8 @@ import { MODULE_ID } from "./constants.mjs";
 const FLAG = "prepared";
 const CLASS_DSID = "arcanist";
 const GRIMOIRE_PREFIX = "arcanist-grimoire-of-";
+const RULES_FEATURE = "arcanist-arcanist-abilities";
+
 const HEROIC_BY_LEVEL = [
   null, [3, 5], [3, 5, 5], [3, 5, 5, 7], [3, 5, 5, 7], [3, 5, 5, 7, 9],
   [3, 5, 5, 7, 9, 9], [3, 5, 5, 7, 9, 9], [3, 5, 5, 7, 9, 9, 11], [3, 5, 5, 7, 9, 9, 11, 11], [3, 5, 5, 7, 9, 9, 11, 11],
@@ -80,6 +82,9 @@ export const kindsOf = (actor) => {
   return [...kinds].sort((a, b) => order(a) - order(b));
 };
 
+const triggersApi = () => game.modules.get("draw-steel-triggers")?.active ? game.modules.get("draw-steel-triggers").api : null;
+export const refreshTriggers = () => { try { triggersApi()?.refreshIgnored?.(); } catch (err) { console.warn(`${MODULE_ID} | Triggers refresh`, err); } };
+
 function wrap(path, wrapper) {
   if (game.modules.get("lib-wrapper")?.active) return libWrapper.register(MODULE_ID, path, wrapper, "WRAPPER");
   const parts = path.split(".");
@@ -135,4 +140,10 @@ export function registerPrepared() {
 
   Hooks.on("renderDrawSteelHeroSheet", onSheet);
 
+  Hooks.once("ready", () => {
+    const api = triggersApi();
+    if (!api?.registerIgnoreRule) return;
+    
+    api.registerIgnoreRule(MODULE_ID, (item) => unprepared(item) || dsidOf(item) === RULES_FEATURE);
+  });
 }
