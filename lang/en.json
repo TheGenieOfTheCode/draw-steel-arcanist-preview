@@ -33,6 +33,8 @@
       "KindPerk": "Supernatural Perks",
       "ModePore": "Pore Over Pages",
       "ModeFlash": "Flash Recall",
+      "HintPore": "swap any number of options for others of their kind.",
+      "HintFlash": "swap one option for another of its kind. That kind then stays locked until you gain a Victory or finish a respite.",
       "ToggleOnPore": "Prepare Abilities: Pore Over Pages (respite)",
       "ToggleOnFlash": "Prepare Abilities: Flash Recall",
       "ToggleNeedsFlash": "Use Flash Recall, or finish a respite, to prepare abilities.",
@@ -41,7 +43,8 @@
       "Locked": "Locked until you gain a Victory or finish a respite.",
       "LockedGM": "Locked until you gain a Victory or finish a respite. Hold Shift to change it anyway.",
       "ChatStart": "Prepare with Flash Recall",
-      "ChatUsed": "Flash Recall Used"
+      "ChatUsed": "Flash Recall Used",
+      "Notice": "{name} is preparing with {mode}: {hint} Use the book in the sheet's header to finish."
     },
     "Settings": {
       "ShowUnprepared": {

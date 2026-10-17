@@ -92,6 +92,16 @@ function flashTooMany(sheet, changed) {
     || changed.some((k) => locksOf(sheet.document)[lockKey(k)]);
 }
 
+function readyToFinish(sheet) {
+  const state = _states.get(sheet);
+  if (!state) return false;
+  const { over, under } = illegalKinds(sheet);
+  if (over.length || under.length) return false;
+  const changed = changedKinds(sheet);
+  if (!changed.length) return false;
+  return state.mode !== "flash" || !flashTooMany(sheet, changed);
+}
+
 function syncHeader(sheet) {
   const header = sheet.window?.header;
   if (!header) return;
@@ -112,6 +122,7 @@ function syncHeader(sheet) {
   btn.classList.toggle("fa-book-open", on);
   btn.classList.toggle("fa-book-sparkles", !on);
   btn.classList.toggle("arcanist-lit", lit);
+  btn.classList.toggle("arcanist-ready", readyToFinish(sheet));
   btn.disabled = !on && (!!sheet.isPlayMode || (needsAbility && !game.user.isGM));
   const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : lit ? "ToggleOnPore"
     : needsAbility ? (game.user.isGM ? "ToggleNeedsFlashGM" : "ToggleNeedsFlash") : "ToggleOnFlash");
@@ -137,13 +148,17 @@ async function start(sheet, mode, { messageId = null, render = true } = {}) {
     if (kind === "perk") for (const e of perks) draft.set(e.key, !!e.item);
     else for (const item of itemsOfKind(actor, kind)) draft.set(item.id, isPrepared(item));
   }
-  _states.set(sheet, { mode, draft, perks, messageId });
+  
+  const notice = ui.notifications.info(L("Notice", { name: actor.name, mode: L(mode === "flash" ? "ModeFlash" : "ModePore"), hint: L(mode === "flash" ? "HintFlash" : "HintPore") }), { permanent: true });
+  _states.set(sheet, { mode, draft, perks, messageId, notice });
   if (!render) return;
   sheet.changeTab?.("abilities", "primary");
   await sheet.render();
 }
 
 function stop(sheet) {
+  const state = _states.get(sheet);
+  if (state?.notice) ui.notifications.remove(state.notice);
   _states.delete(sheet);
 }
 
@@ -202,6 +217,7 @@ function toggleEntry(sheet, key, shift = false) {
   if (blocked) return void ui.notifications.info(L(blocked === "locked" ? "Locked" : "FlashOneSwap"));
   state.draft.set(key, !state.draft.get(key));
   drawView(sheet, sheet.element);
+  syncHeader(sheet);
 }
 
 const nativeRow = (html, uuid) => html.querySelector(`section.tab li.item[data-document-uuid="${uuid}"]:not(.arcanist-prep-row)`);
@@ -217,6 +233,7 @@ function prepRow(li, sheet, kind, entry, withAction) {
   for (const el of li.querySelectorAll('[data-action="useAbility"]')) { el.removeAttribute("data-action"); el.classList.remove("rollable"); }
   li.querySelector(".arcanist-unprepared")?.remove();
   li.classList.remove("arcanist-unprepared-row");
+  if (!draftOf(sheet, entry) && game.settings.get(MODULE_ID, "unpreparedBadge")) li.querySelector(".name .label, .item-name .label, .name")?.insertAdjacentHTML("beforeend", ` <span class="arcanist-unprepared">${esc(L("Badge"))}</span>`);
   if (withAction && entry.item) li.querySelector(".item-row > .item-column.item-cost")?.insertAdjacentHTML("afterend", `<div class="item-column item-action">${esc(actionLabel(entry.item))}</div>`);
   return li;
 }
