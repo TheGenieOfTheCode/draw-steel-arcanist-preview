@@ -50,6 +50,17 @@ li.arcanist-unprepared-row:hover > .item-row {
   opacity: .75;
 }
 
+.arcanist-prep li.arcanist-prep-row.arcanist-blocked > .item-row {
+  cursor: not-allowed;
+  opacity: .25;
+}
+
+.arcanist-prep .arcanist-lock {
+  margin-left: 4px;
+  font-size: .85em;
+  color: var(--color-text-secondary);
+}
+
 .window-header .header-control:is(.arcanist-prepare-toggle, [data-action="toggleMode"]):disabled {
   opacity: .4;
   cursor: not-allowed;

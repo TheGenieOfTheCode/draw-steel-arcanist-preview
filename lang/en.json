@@ -12,7 +12,6 @@
       "KindGrimoire": "Grimoires",
       "KindHeroic": "{cost}-Focus Abilities",
       "ToggleOff": "Finish Preparing",
-      "ToggleOn": "Prepare Abilities",
       "ToggleNeedsEdit": "Switch to Edit Mode to prepare abilities",
       "ColumnAction": "Action Type",
       "MenuView": "View",
@@ -24,7 +23,11 @@
       "FixUnder": "Prepare more",
       "FixBoth": "Fix them",
       "FinishGM": "{fix}, or hold Shift to finish anyway.",
-      "FinishPlayer": "{fix}, or close the sheet to cancel."
+      "FinishPlayer": "{fix}, or close the sheet to cancel.",
+      "ToggleOnFlash": "Prepare Abilities: Flash Recall",
+      "FlashOneSwap": "Flash Recall swaps one option for another of the same kind.",
+      "Locked": "Locked until you gain a Victory or finish a respite.",
+      "LockedGM": "Locked until you gain a Victory or finish a respite. Hold Shift to change it anyway."
     },
     "Settings": {
       "ShowUnprepared": {

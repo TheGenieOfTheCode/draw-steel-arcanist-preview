@@ -2,6 +2,7 @@ import { MODULE_ID } from "./constants.mjs";
 import { registerPrepMode, preparing } from "./prep-mode.mjs";
 
 const FLAG = "prepared";
+const LOCKS = "flashLocks";
 const CLASS_DSID = "arcanist";
 const GRIMOIRE_PREFIX = "arcanist-grimoire-of-";
 const RULES_FEATURE = "arcanist-arcanist-abilities";
@@ -84,15 +85,30 @@ export const kindsOf = (actor) => {
   return [...kinds].sort((a, b) => order(a) - order(b));
 };
 
-export async function applyPreparation(actor, prepared) {
+export const lockKey = (kind) => kind;
+export const locksOf = (actor) => actor.getFlag(MODULE_ID, LOCKS) ?? {};
+
+export async function applyPreparation(actor, prepared, { flash = false, changedKinds = [] } = {}) {
   const updates = [];
   for (const [id, on] of prepared) {
     const item = actor.items.get(id);
     if (item && kindOf(item) !== "perk" && item.getFlag(MODULE_ID, FLAG) !== on) updates.push({ _id: id, [`flags.${MODULE_ID}.${FLAG}`]: on });
   }
   if (updates.length) await actor.updateEmbeddedDocuments("Item", updates, { render: false });
+  const actorUpdate = {};
+  if (flash && changedKinds.length) {
+    const locks = { ...locksOf(actor) };
+    for (const k of changedKinds) locks[lockKey(k)] = { at: Date.now() };
+    actorUpdate[`flags.${MODULE_ID}.${LOCKS}`] = locks;
+  }
+  if (Object.keys(actorUpdate).length) await actor.update(actorUpdate, { render: false });
   refreshTriggers();
   return updates.length;
+}
+
+export async function clearLocks(actor, kind = null) {
+  if (!kind) return actor.unsetFlag(MODULE_ID, LOCKS);
+  return actor.update({ [`flags.${MODULE_ID}.${LOCKS}.-=${lockKey(kind)}`]: null });
 }
 
 const triggersApi = () => game.modules.get("draw-steel-triggers")?.active ? game.modules.get("draw-steel-triggers").api : null;
@@ -150,6 +166,23 @@ export function registerPrepared() {
     const item = this.parent;
     if (unprepared(item)) ui.notifications.warn(L("UsedUnprepared", { name: item.name }));
     return wrapped(...args);
+  });
+
+  wrap("CONFIG.Actor.dataModels.hero.prototype.takeRespite", async function (wrapped, ...args) {
+    const result = await wrapped(...args);
+    const actor = this.parent;
+    if (isArcanist(actor)) await actor.update({ [`flags.${MODULE_ID}.-=${LOCKS}`]: null }, { render: false });
+    return result;
+  });
+
+  Hooks.on("preUpdateActor", (actor, changes, options) => {
+    const next = foundry.utils.getProperty(changes, "system.hero.victories");
+    if (next !== undefined) options.arcanistVictoriesBefore = actor.system?.hero?.victories ?? 0;
+  });
+  Hooks.on("updateActor", (actor, changes, options, userId) => {
+    if (userId !== game.user.id || options.arcanistVictoriesBefore === undefined) return;
+    const next = foundry.utils.getProperty(changes, "system.hero.victories");
+    if (next > options.arcanistVictoriesBefore && isArcanist(actor) && Object.keys(locksOf(actor)).length) clearLocks(actor);
   });
 
   Hooks.on("renderDrawSteelHeroSheet", onSheet);

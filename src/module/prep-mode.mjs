@@ -1,5 +1,5 @@
 import { MODULE_ID } from "./constants.mjs";
-import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation } from "./prepared.mjs";
+import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, locksOf, lockKey } from "./prepared.mjs";
 
 const _states = new WeakMap();
 
@@ -49,6 +49,26 @@ function illegalMessage({ over, under }) {
   return parts.join(" ");
 }
 
+function flashBlock(sheet, kind, entry, shift) {
+  const state = _states.get(sheet);
+  if (state?.mode !== "flash" || (game.user.isGM && shift)) return null;
+  if (locksOf(sheet.document)[lockKey(kind)]) return "locked";
+  const changed = changedKinds(sheet);
+  if (changed.length && !changed.includes(kind)) return "other";
+  const { on, off } = diffOf(sheet, kind);
+  let nOn = on.length;
+  let nOff = off.length;
+  const turningOn = !draftOf(sheet, entry);
+  if (baseOf(entry)) nOff += turningOn ? -1 : 1;
+  else nOn += turningOn ? 1 : -1;
+  return nOn > 1 || nOff > 1 ? "more" : null;
+}
+
+function flashTooMany(sheet, changed) {
+  return changed.length > 1 || changed.some((k) => { const d = diffOf(sheet, k); return d.on.length > 1 || d.off.length > 1; })
+    || changed.some((k) => locksOf(sheet.document)[lockKey(k)]);
+}
+
 function syncHeader(sheet) {
   const header = sheet.window?.header;
   if (!header) return;
@@ -66,7 +86,7 @@ function syncHeader(sheet) {
   btn.classList.toggle("fa-book-open", on);
   btn.classList.toggle("fa-book-sparkles", !on);
   btn.disabled = !on && !!sheet.isPlayMode;
-  const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : "ToggleOn");
+  const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : "ToggleOnFlash");
   btn.dataset.tooltip = tip;
   btn.setAttribute("aria-label", tip);
   if (mode) mode.disabled = on;
@@ -74,16 +94,16 @@ function syncHeader(sheet) {
 
 function onToggle(sheet, event) {
   if (preparing(sheet)) return finish(sheet, event);
-  return start(sheet);
+  return start(sheet, "flash");
 }
 
-async function start(sheet) {
+async function start(sheet, mode) {
   const actor = sheet.document;
   if (sheet.isPlayMode || preparing(sheet)) return;
   const kinds = kindsOf(actor);
   const draft = new Map();
   for (const kind of kinds) for (const item of itemsOfKind(actor, kind)) draft.set(item.id, isPrepared(item));
-  _states.set(sheet, { draft });
+  _states.set(sheet, { mode, draft });
   sheet.changeTab?.("abilities", "primary");
   await sheet.render();
 }
@@ -100,19 +120,26 @@ async function finish(sheet, event) {
   const isIllegal = illegal.over.length > 0 || illegal.under.length > 0;
   if (isIllegal && !shift) return void ui.notifications.warn(illegalMessage(illegal));
   const changed = changedKinds(sheet);
+  if (state.mode === "flash" && !shift) {
+    if (flashTooMany(sheet, changed)) return void ui.notifications.warn(L("FlashOneSwap"));
+  }
   const changes = changed.flatMap((k) => entriesOf(sheet, k).filter((e) => draftOf(sheet, e) !== baseOf(e)).map((e) => ({ ...e, on: draftOf(sheet, e) })));
   stop(sheet);
   if (!changes.length) return sheet.render();
 
   const prepared = new Map();
   for (const kind of kindsOf(actor)) for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
-  await applyPreparation(actor, prepared);
+  await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed });
   await sheet.render();
 }
 
-function toggleEntry(sheet, key) {
+function toggleEntry(sheet, key, shift = false) {
   const state = _states.get(sheet);
   if (!state?.draft.has(key)) return;
+  const kind = kindsOf(sheet.document).find((k) => entriesOf(sheet, k).some((e) => e.key === key));
+  const entry = entriesOf(sheet, kind).find((e) => e.key === key);
+  const blocked = flashBlock(sheet, kind, entry, shift);
+  if (blocked) return void ui.notifications.info(L(blocked === "locked" ? "Locked" : "FlashOneSwap"));
   state.draft.set(key, !state.draft.get(key));
   drawView(sheet, sheet.element);
 }
@@ -126,6 +153,7 @@ function prepRow(li, sheet, kind, entry, withAction) {
   li.classList.add("arcanist-prep-row");
   li.dataset.arcanistKey = entry.key;
   li.classList.toggle("arcanist-on", draftOf(sheet, entry));
+  li.classList.toggle("arcanist-blocked", !!flashBlock(sheet, kind, entry, false));
   for (const el of li.querySelectorAll('[data-action="useAbility"]')) { el.removeAttribute("data-action"); el.classList.remove("rollable"); }
   li.querySelector(".arcanist-unprepared")?.remove();
   li.classList.remove("arcanist-unprepared-row");
@@ -158,14 +186,19 @@ function drawView(sheet, html) {
   const actor = sheet.document;
   const view = document.createElement("div");
   view.className = "arcanist-prep";
+  const flash = state.mode === "flash";
+  const changed = flash ? changedKinds(sheet) : [];
   for (const kind of kindsOf(actor)) {
+    if (changed.length && !changed.includes(kind)) continue;
     const feature = kind === "grimoire";
     const entries = entriesOf(sheet, kind);
     const count = countOf(sheet, kind);
     const limit = limitOf(actor, kind);
+    const locked = flash && !!locksOf(actor)[lockKey(kind)];
     const section = document.createElement("section");
-    section.className = `item-list-container arcanist-prep-kind${count > limit || count < neededOf(sheet, kind) ? " over" : ""}`;
+    section.className = `item-list-container arcanist-prep-kind${count > limit || count < neededOf(sheet, kind) ? " over" : ""}${locked ? " locked" : ""}`;
     const header = headerFor(html, kind, count, limit, feature, entries.find((e) => e.item)?.uuid);
+    if (locked) header.querySelector(".item-name")?.insertAdjacentHTML("beforeend", ` <i class="fa-solid fa-lock arcanist-lock" data-tooltip="${esc(L(game.user.isGM ? "LockedGM" : "Locked"))}"></i>`);
     section.append(header);
     const list = document.createElement("ol");
     list.className = `item-list ${feature ? "features-list" : "abilities-list"}`;
