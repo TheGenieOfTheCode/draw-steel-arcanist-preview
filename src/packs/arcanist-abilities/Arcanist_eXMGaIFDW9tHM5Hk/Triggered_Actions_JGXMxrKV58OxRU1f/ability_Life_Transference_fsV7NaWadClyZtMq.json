@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p>You can cleanse* one effect the target is suffering, or they can stand up if they are prone.</p>",
+        "description": "<p>You can cleanse one effect the target is suffering, or they can stand up if they are prone.</p>",
         "before": false,
         "resource": {
           "value": 1,

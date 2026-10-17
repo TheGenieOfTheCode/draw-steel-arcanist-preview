@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
   "system": {
     "description": {
-      "value": "<p>Once per round when you or an ally within 10 squares gains temporary Stamina, you can spend 1 focus as a free triggered action to cleanse* one effect that creature is suffering.</p>",
+      "value": "<p>Once per round when you or an ally within 10 squares gains temporary Stamina, you can spend 1 focus as a free triggered action to cleanse one effect that creature is suffering.</p>",
       "director": ""
     },
     "source": {

@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>You can cleanse* each effect the target is suffering. If the target hasn't acted yet this combat round, they can take their turn immediately after yours. If they do, they gain an additional 1 of their Heroic Resource at the start of that turn, and they have an edge on all power rolls until the end of that turn.</p>",
+        "description": "<p>You can cleanse each effect the target is suffering. If the target hasn't acted yet this combat round, they can take their turn immediately after yours. If they do, they gain an additional 1 of their Heroic Resource at the start of that turn, and they have an edge on all power rolls until the end of that turn.</p>",
         "before": true,
         "name": "",
         "img": null,
