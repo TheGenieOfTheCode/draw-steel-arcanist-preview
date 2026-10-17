@@ -66,6 +66,15 @@ li.arcanist-unprepared-row:hover > .item-row {
   text-shadow: 0 0 6px var(--color-warm-1, #ee9b3a), 0 0 12px var(--color-warm-2, #c9593f);
 }
 
+.arcanist-flash-row {
+  display: flex;
+  margin-top: 6px;
+}
+
+.arcanist-flash-row button {
+  flex: 1;
+}
+
 .window-header .header-control:is(.arcanist-prepare-toggle, [data-action="toggleMode"]):disabled {
   opacity: .4;
   cursor: not-allowed;

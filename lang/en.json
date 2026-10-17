@@ -34,9 +34,13 @@
       "ModeFlash": "Flash Recall",
       "ToggleOnPore": "Prepare Abilities: Pore Over Pages (respite)",
       "ToggleOnFlash": "Prepare Abilities: Flash Recall",
+      "ToggleNeedsFlash": "Use Flash Recall, or finish a respite, to prepare abilities.",
+      "ToggleNeedsFlashGM": "Use Flash Recall, or finish a respite, to prepare abilities. Hold Shift to prepare anyway.",
       "FlashOneSwap": "Flash Recall swaps one option for another of the same kind.",
       "Locked": "Locked until you gain a Victory or finish a respite.",
-      "LockedGM": "Locked until you gain a Victory or finish a respite. Hold Shift to change it anyway."
+      "LockedGM": "Locked until you gain a Victory or finish a respite. Hold Shift to change it anyway.",
+      "ChatStart": "Prepare with Flash Recall",
+      "ChatUsed": "Flash Recall Used"
     },
     "Settings": {
       "ShowUnprepared": {
@@ -46,6 +50,10 @@
       "UnpreparedBadge": {
         "name": "Unprepared Badge",
         "hint": "Marks unprepared abilities, grimoires and perks with an Unprepared badge, on the sheet and while preparing."
+      },
+      "RequireFlashRecall": {
+        "name": "Require Using Flash Recall",
+        "hint": "Flash Recall's preparation mode only opens from the button on its ability message, once per message. Director can bypass by holding Shift."
       }
     }
   }

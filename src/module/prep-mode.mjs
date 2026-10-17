@@ -1,10 +1,13 @@
 import { MODULE_ID } from "./constants.mjs";
 import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, locksOf, lockKey, poreReady } from "./prepared.mjs";
 
+const FLASH_RECALL = "arcanist-flash-recall";
 const _states = new WeakMap();
 
 const esc = (s) => foundry.utils.escapeHTML(String(s ?? ""));
 const link = (uuid, name) => `@UUID[${uuid}]{${String(name).replace(/[{}[\]]/g, "")}}`;
+const flashNeedsAbility = () => game.settings.get(MODULE_ID, "requireFlashRecall");
+
 export const preparing = (sheet) => _states.has(sheet);
 
 export const kindLabel = (kind) => (kind === "signature" ? L("KindSignature") : kind === "triggered" ? L("KindTriggered")
@@ -86,11 +89,13 @@ function syncHeader(sheet) {
   }
   const on = preparing(sheet);
   const lit = !on && poreReady(actor);
+  const needsAbility = !on && !lit && flashNeedsAbility();
   btn.classList.toggle("fa-book-open", on);
   btn.classList.toggle("fa-book-sparkles", !on);
   btn.classList.toggle("arcanist-lit", lit);
-  btn.disabled = !on && !!sheet.isPlayMode;
-  const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : lit ? "ToggleOnPore" : "ToggleOnFlash");
+  btn.disabled = !on && (!!sheet.isPlayMode || (needsAbility && !game.user.isGM));
+  const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : lit ? "ToggleOnPore"
+    : needsAbility ? (game.user.isGM ? "ToggleNeedsFlashGM" : "ToggleNeedsFlash") : "ToggleOnFlash");
   btn.dataset.tooltip = tip;
   btn.setAttribute("aria-label", tip);
   if (mode) mode.disabled = on;
@@ -99,16 +104,18 @@ function syncHeader(sheet) {
 function onToggle(sheet, event) {
   if (preparing(sheet)) return finish(sheet, event);
   if (poreReady(sheet.document)) return start(sheet, "pore");
+  if (flashNeedsAbility() && !(game.user.isGM && event?.shiftKey)) return ui.notifications.info(L(game.user.isGM ? "ToggleNeedsFlashGM" : "ToggleNeedsFlash"));
   return start(sheet, "flash");
 }
 
-async function start(sheet, mode) {
+async function start(sheet, mode, { messageId = null, render = true } = {}) {
   const actor = sheet.document;
-  if (sheet.isPlayMode || preparing(sheet)) return;
+  if ((render && sheet.isPlayMode) || preparing(sheet)) return;
   const kinds = kindsOf(actor);
   const draft = new Map();
   for (const kind of kinds) for (const item of itemsOfKind(actor, kind)) draft.set(item.id, isPrepared(item));
-  _states.set(sheet, { mode, draft });
+  _states.set(sheet, { mode, draft, messageId });
+  if (!render) return;
   sheet.changeTab?.("abilities", "primary");
   await sheet.render();
 }
@@ -135,6 +142,8 @@ async function finish(sheet, event) {
   const prepared = new Map();
   for (const kind of kindsOf(actor)) for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
   await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed, usePore: state.mode === "pore" });
+  const message = state.messageId ? game.messages.get(state.messageId) : null;
+  if (message?.isOwner) await message.setFlag(MODULE_ID, "flashRecallUsed", true);
   await report(actor, state.mode, changes, shift && isIllegal ? illegal : { over: [], under: [] });
   await sheet.render();
 }
@@ -270,9 +279,40 @@ function onMenu(sheet, options) {
   );
 }
 
+export async function openFlashRecall(actor, message = null) {
+  const sheet = actor.sheet;
+  const edit = sheet.constructor.MODES?.EDIT;
+  if (sheet.rendered && !sheet.isPlayMode) {
+    sheet.bringToFront?.();
+    if (!preparing(sheet)) await start(sheet, "flash", { messageId: message?.id ?? null });
+    return;
+  }
+  
+  if (!preparing(sheet)) await start(sheet, "flash", { messageId: message?.id ?? null, render: false });
+  if (sheet.tabGroups) sheet.tabGroups.primary = "abilities";
+  await sheet.render({ force: true, ...(edit !== undefined ? { mode: edit } : {}) });
+  if (sheet.isPlayMode) { stop(sheet); sheet.render(); return void ui.notifications.warn(L("ToggleNeedsEdit")); }
+}
+
+function onChatMessage(message, html) {
+  const parts = message.system?.parts;
+  const use = (parts?.contents ?? (Array.isArray(parts) ? parts : [])).find((p) => p.type === "abilityUse");
+  const ability = use?.abilityUuid ? fromUuidSync(use.abilityUuid, { strict: false }) : null;
+  if (ability?.system?._dsid !== FLASH_RECALL || !ability.actor?.isOwner || !isArcanist(ability.actor)) return;
+  if (html.querySelector(".arcanist-flash-start")) return;
+  const used = flashNeedsAbility() && !!message.getFlag(MODULE_ID, "flashRecallUsed");
+  const row = document.createElement("div");
+  row.className = "arcanist-flash-row";
+  row.innerHTML = `<button type="button" class="arcanist-flash-start"${used ? " disabled" : ""}><i class="fa-solid fa-book-open" inert></i> ${esc(L(used ? "ChatUsed" : "ChatStart"))}</button>`;
+  row.querySelector("button").addEventListener("click", () => openFlashRecall(ability.actor, message));
+  const host = html.querySelector(".message-content") ?? html.querySelector("[data-part-type='abilityUse'], .message-part")?.parentElement ?? html;
+  host.append(row);
+}
+
 export function registerPrepMode() {
   Hooks.on("renderDrawSteelHeroSheet", onSheet);
   Hooks.on("getDocumentListContextOptions", onMenu);
   Hooks.on("closeDrawSteelHeroSheet", stop);
+  Hooks.on("renderChatMessageHTML", onChatMessage);
   Hooks.on(`${MODULE_ID}.poreChanged`, (actor) => { if (actor.sheet?.rendered) syncHeader(actor.sheet); });
 }

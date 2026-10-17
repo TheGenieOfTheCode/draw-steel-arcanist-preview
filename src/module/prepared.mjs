@@ -164,6 +164,15 @@ export function registerPrepared() {
     default: true,
     onChange: rerender,
   });
+  game.settings.register(MODULE_ID, "requireFlashRecall", {
+    name: "ARCANIST.Settings.RequireFlashRecall.name",
+    hint: "ARCANIST.Settings.RequireFlashRecall.hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: rerender,
+  });
   registerPrepMode();
 
   wrap("CONFIG.Item.dataModels.ability.prototype.use", async function (wrapped, ...args) {
