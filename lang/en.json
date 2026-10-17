@@ -24,6 +24,7 @@
       "FixBoth": "Fix them",
       "FinishGM": "{fix}, or hold Shift to finish anyway.",
       "FinishPlayer": "{fix}, or close the sheet to cancel.",
+      "ToggleOnPore": "Prepare Abilities: Pore Over Pages (respite)",
       "ToggleOnFlash": "Prepare Abilities: Flash Recall",
       "FlashOneSwap": "Flash Recall swaps one option for another of the same kind.",
       "Locked": "Locked until you gain a Victory or finish a respite.",

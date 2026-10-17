@@ -1,5 +1,5 @@
 import { MODULE_ID } from "./constants.mjs";
-import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, locksOf, lockKey } from "./prepared.mjs";
+import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, locksOf, lockKey, poreReady } from "./prepared.mjs";
 
 const _states = new WeakMap();
 
@@ -72,6 +72,7 @@ function flashTooMany(sheet, changed) {
 function syncHeader(sheet) {
   const header = sheet.window?.header;
   if (!header) return;
+  const actor = sheet.document;
   const mode = header.querySelector('[data-action="toggleMode"]');
   let btn = header.querySelector(".arcanist-prepare-toggle");
   if (!btn) {
@@ -83,10 +84,12 @@ function syncHeader(sheet) {
     else header.querySelector('[data-action="close"]')?.before(btn);
   }
   const on = preparing(sheet);
+  const lit = !on && poreReady(actor);
   btn.classList.toggle("fa-book-open", on);
   btn.classList.toggle("fa-book-sparkles", !on);
+  btn.classList.toggle("arcanist-lit", lit);
   btn.disabled = !on && !!sheet.isPlayMode;
-  const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : "ToggleOnFlash");
+  const tip = L(on ? "ToggleOff" : sheet.isPlayMode ? "ToggleNeedsEdit" : lit ? "ToggleOnPore" : "ToggleOnFlash");
   btn.dataset.tooltip = tip;
   btn.setAttribute("aria-label", tip);
   if (mode) mode.disabled = on;
@@ -94,6 +97,7 @@ function syncHeader(sheet) {
 
 function onToggle(sheet, event) {
   if (preparing(sheet)) return finish(sheet, event);
+  if (poreReady(sheet.document)) return start(sheet, "pore");
   return start(sheet, "flash");
 }
 
@@ -129,7 +133,7 @@ async function finish(sheet, event) {
 
   const prepared = new Map();
   for (const kind of kindsOf(actor)) for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
-  await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed });
+  await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed, usePore: state.mode === "pore" });
   await sheet.render();
 }
 
@@ -248,4 +252,5 @@ export function registerPrepMode() {
   Hooks.on("renderDrawSteelHeroSheet", onSheet);
   Hooks.on("getDocumentListContextOptions", onMenu);
   Hooks.on("closeDrawSteelHeroSheet", stop);
+  Hooks.on(`${MODULE_ID}.poreChanged`, (actor) => { if (actor.sheet?.rendered) syncHeader(actor.sheet); });
 }

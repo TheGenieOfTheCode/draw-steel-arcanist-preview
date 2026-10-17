@@ -3,6 +3,7 @@ import { registerPrepMode, preparing } from "./prep-mode.mjs";
 
 const FLAG = "prepared";
 const LOCKS = "flashLocks";
+const PORE = "poreOverPages";
 const CLASS_DSID = "arcanist";
 const GRIMOIRE_PREFIX = "arcanist-grimoire-of-";
 const RULES_FEATURE = "arcanist-arcanist-abilities";
@@ -88,7 +89,9 @@ export const kindsOf = (actor) => {
 export const lockKey = (kind) => kind;
 export const locksOf = (actor) => actor.getFlag(MODULE_ID, LOCKS) ?? {};
 
-export async function applyPreparation(actor, prepared, { flash = false, changedKinds = [] } = {}) {
+export const poreReady = (actor) => !!actor?.getFlag(MODULE_ID, PORE);
+
+export async function applyPreparation(actor, prepared, { flash = false, changedKinds = [], usePore = false } = {}) {
   const updates = [];
   for (const [id, on] of prepared) {
     const item = actor.items.get(id);
@@ -101,6 +104,7 @@ export async function applyPreparation(actor, prepared, { flash = false, changed
     for (const k of changedKinds) locks[lockKey(k)] = { at: Date.now() };
     actorUpdate[`flags.${MODULE_ID}.${LOCKS}`] = locks;
   }
+  if (usePore && poreReady(actor)) actorUpdate[`flags.${MODULE_ID}.-=${PORE}`] = null;
   if (Object.keys(actorUpdate).length) await actor.update(actorUpdate, { render: false });
   refreshTriggers();
   return updates.length;
@@ -171,8 +175,21 @@ export function registerPrepared() {
   wrap("CONFIG.Actor.dataModels.hero.prototype.takeRespite", async function (wrapped, ...args) {
     const result = await wrapped(...args);
     const actor = this.parent;
-    if (isArcanist(actor)) await actor.update({ [`flags.${MODULE_ID}.-=${LOCKS}`]: null }, { render: false });
+    if (isArcanist(actor)) await actor.update({ [`flags.${MODULE_ID}.-=${LOCKS}`]: null, [`flags.${MODULE_ID}.${PORE}`]: true }, { render: false });
     return result;
+  });
+
+  
+  Hooks.on("combatStart", (combat) => {
+    if (game.users.activeGM?.id !== game.user.id) return;
+    for (const c of combat.combatants) {
+      const actor = c.actor;
+      if (poreReady(actor)) actor.update({ [`flags.${MODULE_ID}.-=${PORE}`]: null }, { render: false });
+    }
+  });
+
+  Hooks.on("updateActor", (actor, changes) => {
+    if (changes.flags?.[MODULE_ID]) Hooks.callAll(`${MODULE_ID}.poreChanged`, actor);
   });
 
   Hooks.on("preUpdateActor", (actor, changes, options) => {

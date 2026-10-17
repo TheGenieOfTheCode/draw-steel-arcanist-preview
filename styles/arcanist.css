@@ -61,6 +61,11 @@ li.arcanist-unprepared-row:hover > .item-row {
   color: var(--color-text-secondary);
 }
 
+.window-header .header-control.arcanist-prepare-toggle.arcanist-lit {
+  color: var(--color-warm-1, #ee9b3a);
+  text-shadow: 0 0 6px var(--color-warm-1, #ee9b3a), 0 0 12px var(--color-warm-2, #c9593f);
+}
+
 .window-header .header-control:is(.arcanist-prepare-toggle, [data-action="toggleMode"]):disabled {
   opacity: .4;
   cursor: not-allowed;
