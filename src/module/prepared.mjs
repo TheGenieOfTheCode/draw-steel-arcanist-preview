@@ -151,8 +151,8 @@ export async function clearLocks(actor, kind = null) {
 const triggersApi = () => game.modules.get("draw-steel-triggers")?.active ? game.modules.get("draw-steel-triggers").api : null;
 export const refreshTriggers = () => { try { triggersApi()?.refreshIgnored?.(); } catch (err) { console.warn(`${MODULE_ID} | Triggers refresh`, err); } };
 
-function wrap(path, wrapper) {
-  if (game.modules.get("lib-wrapper")?.active) return libWrapper.register(MODULE_ID, path, wrapper, "WRAPPER");
+function wrap(path, wrapper, type = "WRAPPER") {
+  if (game.modules.get("lib-wrapper")?.active) return libWrapper.register(MODULE_ID, path, wrapper, type);
   const parts = path.split(".");
   const name = parts.pop();
   const owner = parts.slice(1).reduce((o, k) => o?.[k], globalThis[parts[0]]);
@@ -206,13 +206,28 @@ export function registerPrepared() {
     default: false,
     onChange: rerender,
   });
+  game.settings.register(MODULE_ID, "blockUnprepared", {
+    name: "ARCANIST.Settings.BlockUnprepared.name",
+    hint: "ARCANIST.Settings.BlockUnprepared.hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+  });
   registerPrepMode();
 
   wrap("CONFIG.Item.dataModels.ability.prototype.use", async function (wrapped, ...args) {
     const item = this.parent;
-    if (unprepared(item)) ui.notifications.warn(L("UsedUnprepared", { name: item.name }));
+    if (unprepared(item)) {
+      const bypass = game.user.isGM && game.keyboard?.isModifierActive?.("Shift");
+      if (game.settings.get(MODULE_ID, "blockUnprepared") && !bypass) {
+        ui.notifications.warn(L(game.user.isGM ? "BlockedUnpreparedGM" : "BlockedUnprepared", { name: item.name }));
+        return null;
+      }
+      ui.notifications.warn(L("UsedUnprepared", { name: item.name }));
+    }
     return wrapped(...args);
-  });
+  }, "MIXED");
 
   wrap("CONFIG.Actor.dataModels.hero.prototype.takeRespite", async function (wrapped, ...args) {
     const result = await wrapped(...args);
