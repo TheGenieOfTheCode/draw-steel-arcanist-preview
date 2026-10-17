@@ -16,3 +16,41 @@ li.arcanist-unprepared-row > .item-row {
 li.arcanist-unprepared-row:hover > .item-row {
   opacity: .75;
 }
+
+.tab.abilities.arcanist-preparing > :not(.arcanist-prep) {
+  display: none;
+}
+
+.arcanist-prep .item-column.item-action {
+  flex: 0 1 auto;
+  width: 100px;
+  text-align: center;
+}
+
+.arcanist-prep .arcanist-prep-count {
+  margin-left: 4px;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+}
+
+.arcanist-prep .arcanist-prep-kind.over .arcanist-prep-count {
+  font-weight: bold;
+  color: var(--color-level-error, #c83232);
+}
+
+.arcanist-prep li.arcanist-prep-row > .item-row {
+  cursor: pointer;
+}
+
+.arcanist-prep li.arcanist-prep-row:not(.arcanist-on) > .item-row {
+  opacity: .45;
+}
+
+.arcanist-prep li.arcanist-prep-row:not(.arcanist-on):hover > .item-row {
+  opacity: .75;
+}
+
+.window-header .header-control:is(.arcanist-prepare-toggle, [data-action="toggleMode"]):disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}

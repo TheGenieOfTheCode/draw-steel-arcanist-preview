@@ -1,4 +1,6 @@
 import { MODULE_ID } from "./constants.mjs";
+import { registerPrepMode, preparing } from "./prep-mode.mjs";
+
 const FLAG = "prepared";
 const CLASS_DSID = "arcanist";
 const GRIMOIRE_PREFIX = "arcanist-grimoire-of-";
@@ -82,6 +84,17 @@ export const kindsOf = (actor) => {
   return [...kinds].sort((a, b) => order(a) - order(b));
 };
 
+export async function applyPreparation(actor, prepared) {
+  const updates = [];
+  for (const [id, on] of prepared) {
+    const item = actor.items.get(id);
+    if (item && kindOf(item) !== "perk" && item.getFlag(MODULE_ID, FLAG) !== on) updates.push({ _id: id, [`flags.${MODULE_ID}.${FLAG}`]: on });
+  }
+  if (updates.length) await actor.updateEmbeddedDocuments("Item", updates, { render: false });
+  refreshTriggers();
+  return updates.length;
+}
+
 const triggersApi = () => game.modules.get("draw-steel-triggers")?.active ? game.modules.get("draw-steel-triggers").api : null;
 export const refreshTriggers = () => { try { triggersApi()?.refreshIgnored?.(); } catch (err) { console.warn(`${MODULE_ID} | Triggers refresh`, err); } };
 
@@ -98,12 +111,12 @@ function wrap(path, wrapper) {
 function onSheet(app, html) {
   const actor = app.document;
   if (!isArcanist(actor)) return;
-  for (const li of html.querySelectorAll("li.item[data-document-uuid]")) {
+  for (const li of html.querySelectorAll("li.item[data-document-uuid]:not(.arcanist-prep-row)")) {
     const item = fromUuidSync(li.dataset.documentUuid, { strict: false });
     if (!item || !unprepared(item)) continue;
     
     
-    if (item.type === "ability" && !game.settings.get(MODULE_ID, "showUnprepared")) { li.remove(); continue; }
+    if (item.type === "ability" && !game.settings.get(MODULE_ID, "showUnprepared")) { if (!preparing(app)) li.remove(); continue; }
     li.classList.add("arcanist-unprepared-row");
     if (!game.settings.get(MODULE_ID, "unpreparedBadge")) continue;
     const name = li.querySelector(".name .label, .item-name .label, .name");
@@ -131,6 +144,7 @@ export function registerPrepared() {
     default: true,
     onChange: rerender,
   });
+  registerPrepMode();
 
   wrap("CONFIG.Item.dataModels.ability.prototype.use", async function (wrapped, ...args) {
     const item = this.parent;

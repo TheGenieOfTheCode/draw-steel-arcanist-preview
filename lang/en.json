@@ -6,7 +6,22 @@
     },
     "Prepared": {
       "Badge": "Unprepared",
-      "UsedUnprepared": "{name} is not prepared. Prepare it with Flash Recall or Pore Over Pages."
+      "UsedUnprepared": "{name} is not prepared. Prepare it with Flash Recall or Pore Over Pages.",
+      "KindSignature": "Signature Abilities",
+      "KindTriggered": "Triggered Action",
+      "KindGrimoire": "Grimoires",
+      "KindHeroic": "{cost}-Focus Abilities",
+      "ToggleOff": "Finish Preparing",
+      "ToggleOn": "Prepare Abilities",
+      "ToggleNeedsEdit": "Switch to Edit Mode to prepare abilities",
+      "ColumnAction": "Action Type",
+      "OverKinds": "More are prepared than allowed: {kinds}.",
+      "UnderKinds": "Fewer are prepared than allowed: {kinds}.",
+      "FixOver": "Unprepare some",
+      "FixUnder": "Prepare more",
+      "FixBoth": "Fix them",
+      "FinishGM": "{fix}, or hold Shift to finish anyway.",
+      "FinishPlayer": "{fix}, or close the sheet to cancel."
     },
     "Settings": {
       "ShowUnprepared": {
