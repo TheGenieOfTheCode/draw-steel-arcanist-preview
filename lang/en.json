@@ -30,6 +30,7 @@
       "FinishGM": "{fix}, or hold Shift to finish anyway.",
       "FinishPlayer": "{fix}, or close the sheet to cancel.",
       "ReportUnder": "Under the limit, kept by the Director: {kinds}.",
+      "KindPerk": "Supernatural Perks",
       "ModePore": "Pore Over Pages",
       "ModeFlash": "Flash Recall",
       "ToggleOnPore": "Prepare Abilities: Pore Over Pages (respite)",

@@ -1,5 +1,5 @@
 import { MODULE_ID } from "./constants.mjs";
-import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, locksOf, lockKey, poreReady } from "./prepared.mjs";
+import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, swapPerks, locksOf, lockKey, poreReady } from "./prepared.mjs";
 
 const FLASH_RECALL = "arcanist-flash-recall";
 const _states = new WeakMap();
@@ -11,7 +11,7 @@ const flashNeedsAbility = () => game.settings.get(MODULE_ID, "requireFlashRecall
 export const preparing = (sheet) => _states.has(sheet);
 
 export const kindLabel = (kind) => (kind === "signature" ? L("KindSignature") : kind === "triggered" ? L("KindTriggered")
-  : kind === "grimoire" ? L("KindGrimoire") : L("KindHeroic", { cost: kind.slice(1) }));
+  : kind === "grimoire" ? L("KindGrimoire") : kind === "perk" ? L("KindPerk") : L("KindHeroic", { cost: kind.slice(1) }));
 
 const actionLabel = (item) => {
   const label = ds.CONFIG.abilities?.types?.[item.system?.type]?.label;
@@ -20,7 +20,26 @@ const actionLabel = (item) => {
 
 const keyAt = (target) => target?.closest?.("li.arcanist-prep-row")?.dataset.arcanistKey ?? null;
 
+async function perkEntries(actor) {
+  const owned = itemsOfKind(actor, "perk");
+  const entries = owned.map((item) => ({ key: item.id, item, uuid: item.uuid, name: item.name, img: item.img }));
+  const have = new Set(owned.map((i) => i.system?._dsid).filter(Boolean));
+  const extra = [];
+  for (const pack of game.packs.filter((p) => p.documentName === "Item" && p.metadata.packageType === "system")) {
+    const index = await pack.getIndex({ fields: ["type", "system.perkType", "system._dsid"] });
+    for (const e of index) {
+      if (e.type !== "perk" || e.system?.perkType !== "supernatural" || have.has(e.system?._dsid)) continue;
+      const doc = await fromUuid(e.uuid ?? pack.getUuid(e._id));
+      if (!doc) continue;
+      have.add(e.system?._dsid);
+      extra.push({ key: doc.uuid, doc, uuid: doc.uuid, name: doc.name, img: doc.img });
+    }
+  }
+  return [...entries, ...extra.sort((a, b) => a.name.localeCompare(b.name))];
+}
+
 function entriesOf(sheet, kind) {
+  if (kind === "perk") return _states.get(sheet)?.perks ?? [];
   return itemsOfKind(sheet.document, kind).map((item) => ({ key: item.id, item, uuid: item.uuid, name: item.name, img: item.img }));
 }
 
@@ -112,9 +131,13 @@ async function start(sheet, mode, { messageId = null, render = true } = {}) {
   const actor = sheet.document;
   if ((render && sheet.isPlayMode) || preparing(sheet)) return;
   const kinds = kindsOf(actor);
+  const perks = kinds.includes("perk") ? await perkEntries(actor) : [];
   const draft = new Map();
-  for (const kind of kinds) for (const item of itemsOfKind(actor, kind)) draft.set(item.id, isPrepared(item));
-  _states.set(sheet, { mode, draft, messageId });
+  for (const kind of kinds) {
+    if (kind === "perk") for (const e of perks) draft.set(e.key, !!e.item);
+    else for (const item of itemsOfKind(actor, kind)) draft.set(item.id, isPrepared(item));
+  }
+  _states.set(sheet, { mode, draft, perks, messageId });
   if (!render) return;
   sheet.changeTab?.("abilities", "primary");
   await sheet.render();
@@ -140,8 +163,10 @@ async function finish(sheet, event) {
   if (!changes.length) return sheet.render();
 
   const prepared = new Map();
-  for (const kind of kindsOf(actor)) for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
+  for (const kind of kindsOf(actor)) if (kind !== "perk") for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
   await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed, usePore: state.mode === "pore" });
+  const perkChanges = changes.filter((c) => !c.item || c.item.type === "perk");
+  await swapPerks(actor, perkChanges.filter((c) => c.item && !c.on).map((c) => c.item), perkChanges.filter((c) => !c.item && c.on).map((c) => c.doc));
   const message = state.messageId ? game.messages.get(state.messageId) : null;
   if (message?.isOwner) await message.setFlag(MODULE_ID, "flashRecallUsed", true);
   await report(actor, state.mode, changes, shift && isIllegal ? illegal : { over: [], under: [] });
@@ -196,6 +221,21 @@ function prepRow(li, sheet, kind, entry, withAction) {
   return li;
 }
 
+function perkRow(html, template, entry) {
+  const li = template.cloneNode(true);
+  li.dataset.documentUuid = entry.uuid;
+  const img = li.querySelector("img.item-image");
+  if (img) { img.src = entry.img; img.alt = entry.name; }
+  const label = li.querySelector(".label");
+  if (label) label.textContent = entry.name;
+  const type = li.querySelector(".item-column.item-type");
+  if (type) type.textContent = game.i18n.localize(CONFIG.Item.typeLabels?.perk ?? "TYPES.Item.perk");
+  const expand = li.querySelector('[data-action="toggleDocumentDescription"]');
+  if (expand) { expand.removeAttribute("data-action"); expand.classList.add("arcanist-expand"); }
+  li.querySelector(".document-description")?.replaceChildren();
+  return li;
+}
+
 function headerFor(html, kind, count, limit, feature, uuid) {
   const row = uuid && nativeRow(html, uuid);
   const source = row?.closest("section.item-list-container")?.querySelector(":scope > .item-header")
@@ -223,9 +263,10 @@ function drawView(sheet, html) {
   view.className = "arcanist-prep";
   const flash = state.mode === "flash";
   const changed = flash ? changedKinds(sheet) : [];
+  const featureTemplate = html.querySelector("section.tab.features .feature-list-container li.item, section.tab.features li.item.feature");
   for (const kind of kindsOf(actor)) {
     if (changed.length && !changed.includes(kind)) continue;
-    const feature = kind === "grimoire";
+    const feature = kind === "grimoire" || kind === "perk";
     const entries = entriesOf(sheet, kind);
     const count = countOf(sheet, kind);
     const limit = limitOf(actor, kind);
@@ -238,19 +279,32 @@ function drawView(sheet, html) {
     const list = document.createElement("ol");
     list.className = `item-list ${feature ? "features-list" : "abilities-list"}`;
     for (const entry of entries) {
-      const source = nativeRow(html, entry.uuid);
+      const source = entry.item ? nativeRow(html, entry.uuid) : featureTemplate;
       if (!source) continue;
-      list.append(prepRow(source.cloneNode(true), sheet, kind, entry, !feature));
+      const li = entry.item ? source.cloneNode(true) : perkRow(html, source, entry);
+      list.append(prepRow(li, sheet, kind, entry, !feature));
     }
     section.append(list);
     view.append(section);
   }
-  view.addEventListener("click", (event) => {
+  view.addEventListener("click", async (event) => {
+    const expand = event.target.closest(".arcanist-expand");
+    if (expand) return expandPerk(expand.closest("li"));
     if (event.target.closest(".item-controls, .document-description")) return;
     const key = keyAt(event.target);
     if (key) toggleEntry(sheet, key, event.shiftKey);
   });
   tab.prepend(view);
+}
+
+async function expandPerk(li) {
+  const box = li?.querySelector(".document-description");
+  if (!box) return;
+  if (!box.childElementCount) {
+    const doc = await fromUuid(li.dataset.documentUuid);
+    box.innerHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(doc?.system?.description?.value ?? "");
+  }
+  li.classList.toggle("expanded");
 }
 
 function onSheet(sheet, html) {

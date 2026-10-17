@@ -40,7 +40,27 @@ export function grimoireOf(item) {
     && advancementsOf(g).some((a) => (a.pool ?? []).some((p) => p.uuid === source))) ?? null;
 }
 
+const isSupernaturalPerk = (item) => item?.type === "perk" && item.system?.perkType === "supernatural";
+
+export function perkLimit(actor) {
+  const level = Number(actor?.system?.level ?? arcanistLevel(actor)) || 1;
+  let limit = 0;
+  for (const item of actor?.items ?? []) {
+    for (const adv of advancementsOf(item)) {
+      if (adv.type !== "itemGrant" || adv.additional?.type !== "perk") continue;
+      if (adv.requirements?.level && adv.requirements.level > level) continue;
+      const types = [...(adv.additional.perkType ?? [])];
+      if (types.length && !types.includes("supernatural")) continue;
+      const slots = Number(adv.chooseN) || 1;
+      if (types.length === 1) limit += slots;
+      else limit += Math.min(slots, actor.items.filter((i) => isSupernaturalPerk(i) && i.flags?.["draw-steel"]?.advancement?.advancementId === adv.id).length);
+    }
+  }
+  return limit;
+}
+
 export function kindOf(item) {
+  if (item?.type === "perk") return isSupernaturalPerk(item) && isArcanist(item.actor) ? "perk" : null;
   const dsid = dsidOf(item);
   if (!dsid.startsWith("arcanist-") || !isArcanist(item.actor)) return null;
   if (item.type === "feature" && dsid.startsWith(GRIMOIRE_PREFIX)) return "grimoire";
@@ -59,6 +79,7 @@ export function limitOf(actor, kind) {
   if (kind === "triggered") return 1;
   if (kind === "grimoire") return level >= 4 ? 3 : 2;
   if (/^h\d+$/.test(kind)) return HEROIC_BY_LEVEL[level].filter((c) => `h${c}` === kind).length;
+  if (kind === "perk") return perkLimit(actor);
   return Infinity;
 }
 
@@ -68,7 +89,7 @@ export const itemsOfKind = (actor, kind) => actor.items.filter((i) => kindOf(i) 
 
 export function isPrepared(item) {
   const kind = kindOf(item);
-  if (!kind) return true;
+  if (!kind || kind === "perk") return true;
   if (kind === "maneuver") return isPrepared(grimoireOf(item));
   const flag = item.getFlag(MODULE_ID, FLAG);
   if (typeof flag === "boolean") return flag;
@@ -82,6 +103,7 @@ export const unprepared = (item) => !!kindOf(item) && !isPrepared(item);
 
 export const kindsOf = (actor) => {
   const kinds = new Set(actor.items.map(kindOf).filter((k) => k && k !== "maneuver"));
+  if (isArcanist(actor) && perkLimit(actor) > 0) kinds.add("perk");
   const order = (k) => (k === "signature" ? 0 : k.startsWith("h") ? Number(k.slice(1)) : k === "triggered" ? 100 : k === "grimoire" ? 200 : 300);
   return [...kinds].sort((a, b) => order(a) - order(b));
 };
@@ -108,6 +130,17 @@ export async function applyPreparation(actor, prepared, { flash = false, changed
   if (Object.keys(actorUpdate).length) await actor.update(actorUpdate, { render: false });
   refreshTriggers();
   return updates.length;
+}
+
+export async function swapPerks(actor, removed, added) {
+  const creates = added.map((doc, i) => {
+    const data = game.items.fromCompendium(doc, { clearFolder: true });
+    const link = removed[i]?.getFlag("draw-steel", "advancement");
+    if (link) foundry.utils.setProperty(data, "flags.draw-steel.advancement", link);
+    return data;
+  });
+  if (removed.length) await actor.deleteEmbeddedDocuments("Item", removed.map((i) => i.id), { render: false });
+  if (creates.length) await actor.createEmbeddedDocuments("Item", creates, { render: false });
 }
 
 export async function clearLocks(actor, kind = null) {
