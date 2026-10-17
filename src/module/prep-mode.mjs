@@ -191,7 +191,28 @@ function onSheet(sheet, html) {
   drawView(sheet, html);
 }
 
+function onMenu(sheet, options) {
+  if (sheet.document?.type !== "hero") return;
+  const inView = (target) => !!target?.closest?.(".arcanist-prep");
+  for (const option of options) {
+    for (const key of ["visible", "condition"]) {
+      if (!(key in option)) continue;
+      const original = option[key];
+      option[key] = (target) => !inView(target) && (typeof original === "function" ? original(target) : original !== false);
+    }
+    if (!("visible" in option) && !("condition" in option)) option.visible = (target) => !inView(target);
+  }
+  const drafted = (target) => !!_states.get(sheet)?.draft.get(keyAt(target));
+  options.push(
+    { label: "ARCANIST.Prepared.MenuView", icon: "fa-solid fa-eye", visible: inView,
+      onClick: async (event, target) => (await fromUuid(target.closest("[data-document-uuid]")?.dataset.documentUuid))?.sheet?.render(true) },
+    { label: "ARCANIST.Prepared.MenuPrepare", icon: "fa-solid fa-book-open", visible: (target) => inView(target) && !drafted(target), onClick: (event, target) => toggleEntry(sheet, keyAt(target), event.shiftKey) },
+    { label: "ARCANIST.Prepared.MenuUnprepare", icon: "fa-solid fa-book-sparkles", visible: (target) => inView(target) && drafted(target), onClick: (event, target) => toggleEntry(sheet, keyAt(target), event.shiftKey) },
+  );
+}
+
 export function registerPrepMode() {
   Hooks.on("renderDrawSteelHeroSheet", onSheet);
+  Hooks.on("getDocumentListContextOptions", onMenu);
   Hooks.on("closeDrawSteelHeroSheet", stop);
 }
