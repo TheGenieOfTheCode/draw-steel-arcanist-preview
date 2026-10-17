@@ -3,6 +3,20 @@
     "Status": {
       "Disoriented": "Disoriented",
       "DisorientedDescription": "A disoriented creature has line of effect only within 3 squares."
+    },
+    "Prepared": {
+      "Badge": "Unprepared",
+      "UsedUnprepared": "{name} is not prepared. Prepare it with Flash Recall or Pore Over Pages."
+    },
+    "Settings": {
+      "ShowUnprepared": {
+        "name": "Show Unprepared Abilities",
+        "hint": "Lists unprepared abilities on the sheet, faded."
+      },
+      "UnpreparedBadge": {
+        "name": "Unprepared Badge",
+        "hint": "Marks unprepared abilities, grimoires and perks with an Unprepared badge, on the sheet and while preparing."
+      }
     }
   }
 }

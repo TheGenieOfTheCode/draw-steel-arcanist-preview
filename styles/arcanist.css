@@ -1,0 +1,18 @@
+.arcanist-unprepared {
+  font-size: var(--font-size-11, 11px);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border, currentColor);
+  border-radius: 3px;
+  padding: 0 4px;
+  margin-left: 4px;
+}
+
+li.arcanist-unprepared-row > .item-row {
+  opacity: .45;
+}
+
+li.arcanist-unprepared-row:hover > .item-row {
+  opacity: .75;
+}

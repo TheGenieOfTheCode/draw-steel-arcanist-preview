@@ -24,6 +24,9 @@
   "esmodules": [
     "src/module/main.mjs"
   ],
+  "styles": [
+    "styles/arcanist.css"
+  ],
   "languages": [
     {
       "lang": "en",
