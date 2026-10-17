@@ -116,3 +116,229 @@ li.arcanist-unprepared-row:hover > .item-row {
 .arcanist-report-over {
   color: var(--color-level-warning, #c4862b);
 }
+
+.arcanist-handout .arcanist-spread { position: relative; }
+.arcanist-handout .arcanist-spread .class-intro-wrapper { top: auto; bottom: 1.5em; }
+
+.arcanist-handout .arc-ability {
+  --arc-c: #e2402b;
+  --arc-row: #eaf0f6;
+  --arc-pill-ink: #2b2b2e;
+  --arc-pill-paper: #ffffff;
+  display: flex;
+  gap: 0;
+  margin: 1em 0;
+  break-inside: avoid;
+}
+.theme-dark .arcanist-handout .arc-ability,
+.themed.theme-dark .arcanist-handout .arc-ability {
+  --arc-row: rgb(255 255 255 / 0.07);
+  --arc-pill-ink: #e8e6e3;
+  --arc-pill-paper: #1d1d20;
+}
+.arcanist-handout .arc-ability.arc-maneuver { --arc-c: #22a9de; }
+.arcanist-handout .arc-ability.arc-triggered { --arc-c: #4fae54; }
+
+.arcanist-handout .arc-ribbon {
+  flex: 0 0 22px;
+  align-self: flex-start;
+  min-height: 80px;
+  padding: 7px 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: var(--arc-c);
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 9px), 0 100%);
+  margin-right: 3px;
+}
+.arcanist-handout .arc-gem {
+  width: 10px;
+  height: 10px;
+  margin: 2px 0 5px;
+  border: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.arcanist-handout .arc-pip { width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+.arcanist-handout .arc-pips-1 .arc-pip { width: 7px; height: 7px; background: none; border: 1.5px solid #fff; }
+.arcanist-handout .arc-pips-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 5px);
+  grid-auto-rows: 5px;
+  gap: 1px;
+  justify-content: center;
+  align-content: start;
+}
+.arcanist-handout .arc-pips-5 .arc-gem { grid-column: 1 / -1; justify-self: center; margin-bottom: 7px; }
+.arcanist-handout .arc-pips-5 .arc-pip:nth-of-type(2) { grid-area: 2 / 1; }
+.arcanist-handout .arc-pips-5 .arc-pip:nth-of-type(3) { grid-area: 2 / 3; }
+.arcanist-handout .arc-pips-5 .arc-pip:nth-of-type(4) { grid-area: 3 / 2; }
+.arcanist-handout .arc-pips-5 .arc-pip:nth-of-type(5) { grid-area: 4 / 1; }
+.arcanist-handout .arc-pips-5 .arc-pip:nth-of-type(6) { grid-area: 4 / 3; }
+.arcanist-handout :is(.arc-pips-sig, .arc-pips-strike)::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-top: 6px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(45deg);
+  box-shadow: -4px -4px 0 -2px var(--arc-c), -4px -4px 0 0 #fff;
+}
+
+.arcanist-handout .arc-card { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.arcanist-handout .arc-card document-embed { display: contents; }
+.arcanist-handout .arc-head {
+  order: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  padding: 2px 8px;
+  background: var(--arc-c);
+  color: #fff;
+  font-size: 1.11em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.arcanist-handout .arc-head a.content-link { color: inherit; background: none; border: none; padding: 0; }
+.arcanist-handout .arc-head a.content-link i { display: none; }
+.arcanist-handout .arc-tag { white-space: nowrap; }
+.arcanist-handout .arc-card section.metadata { order: 1; margin: 0; }
+.arcanist-handout .arc-card .arc-component { order: 2; margin: 0; padding: 0 8px 4px; }
+.arcanist-handout .arc-card :is(section.effect, section.powerResult) { order: 3; margin: 0; }
+.arcanist-handout .arc-card section:not(:has(*)) { display: none; }
+.arcanist-handout .arc-card p.flavor { margin: 0; padding: 2px 8px; background: var(--arc-row); }
+.arcanist-handout .arc-card section.metadata dl {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  column-gap: 0.4em;
+  row-gap: 1px;
+  margin: 0;
+  padding: 4px 8px 2px;
+}
+.arcanist-handout .arc-card section.metadata :is(dt, dd) { margin: 0; }
+.arcanist-handout .arc-card section.metadata :is(dt.keywords, dt.type) { display: none; }
+.arcanist-handout .arc-card dd.keywords { grid-area: 1 / 1 / 2 / 3; font-weight: 700; }
+.arcanist-handout .arc-card dd.keywords::before {
+  content: "\f084";
+  font-family: var(--font-awesome);
+  font-weight: 900;
+  margin-right: 0.35em;
+}
+.arcanist-handout .arc-card dd.type { grid-area: 1 / 3 / 2 / 5; text-align: right; font-weight: 700; }
+.arcanist-handout .arc-card dt.distance { grid-area: 2 / 1; }
+.arcanist-handout .arc-card dd.distance { grid-area: 2 / 2; }
+.arcanist-handout .arc-card dt.target { grid-area: 2 / 3; }
+.arcanist-handout .arc-card dd.target { grid-area: 2 / 4; text-align: right; }
+.arcanist-handout .arc-card dt.trigger {
+  grid-area: 3 / 1 / 4 / 3;
+  justify-self: start;
+  align-self: start;
+  z-index: 1;
+  width: 5.6em;
+  margin-top: 4px;
+  text-align: center;
+}
+.arcanist-handout .arc-card dd.trigger { grid-area: 3 / 1 / 4 / 5; margin-top: 4px; text-indent: 4.45em; }
+.arcanist-handout .arc-card :is(section.effect, section.powerResult) { padding: 3px 8px; }
+.arcanist-handout .arc-card :is(section.effect, section.powerResult):nth-of-type(even) { background: var(--arc-row); }
+.arcanist-handout .arc-card section.effect dl { display: block; margin: 0; }
+.arcanist-handout .arc-card section.effect dl dd { display: inline; margin: 0; }
+.arcanist-handout .arc-card section.effect dl dd > p:first-child { display: inline; }
+.arcanist-handout .arc-card section.effect dl dd > p { margin: 0; }
+.arcanist-handout .arc-card :is(dt.trigger, section.effect dt) {
+  display: inline-block;
+  margin-right: 0.35em;
+  padding: 0 0.5em;
+  border: 1.5px solid var(--arc-pill-ink);
+  border-radius: 0.6em;
+  font-size: 0.72em;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+}
+.arcanist-handout .arc-card dt.trigger { background: var(--arc-pill-ink); color: var(--arc-pill-paper); }
+.arcanist-handout .arc-chr {
+  display: inline-block;
+  min-width: 1.15em;
+  padding: 0 0.2em;
+  border-radius: 2px;
+  background: var(--arc-pill-ink);
+  color: var(--arc-pill-paper);
+  font-size: 0.8em;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+  vertical-align: 0.08em;
+}
+.arcanist-handout .arc-card section.powerResult > p { margin: 0 0 2px; }
+.arcanist-handout .arc-card section.powerResult dl.power-roll-display { margin: 0; row-gap: 1px; }
+.arcanist-handout .arc-card section.powerResult dl.power-roll-display :is(dt, dd) { margin-block: 0; }
+.arcanist-handout .arc-card p.resource { display: none; }
+.arcanist-handout h4:has(> a.content-link) { font-size: 1.35em; margin-bottom: 4px; }
+.arcanist-handout :is(h3, h4) > a.content-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+.arcanist-handout :is(h3, h4) > a.content-link:hover { text-decoration: underline; }
+.arcanist-handout :is(h3, h4) > a.content-link > i { display: none; }
+.arcanist-handout .arc-glyph {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: 0.2em;
+  vertical-align: -0.32em;
+  background-color: currentColor;
+  mask: var(--arc-glyph) center / contain no-repeat;
+}
+.arcanist-handout :is(h3, h4) > .arc-glyph {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.2em;
+  background-color: var(--color-text-primary);
+}
+.arcanist-handout .arc-glyph-abjuration { --arc-glyph: url("../assets/glyphs/abjuration.png"); }
+.arcanist-handout .arc-glyph-chronomancy { --arc-glyph: url("../assets/glyphs/chronomancy.png"); }
+.arcanist-handout .arc-glyph-conjuration { --arc-glyph: url("../assets/glyphs/conjuration.png"); }
+.arcanist-handout .arc-glyph-divination { --arc-glyph: url("../assets/glyphs/divination.png"); }
+.arcanist-handout .arc-glyph-enchantment { --arc-glyph: url("../assets/glyphs/enchantment.png"); }
+.arcanist-handout .arc-glyph-evocation { --arc-glyph: url("../assets/glyphs/evocation.png"); }
+.arcanist-handout .arc-glyph-graviturgy { --arc-glyph: url("../assets/glyphs/graviturgy.png"); }
+.arcanist-handout .arc-glyph-illusion { --arc-glyph: url("../assets/glyphs/illusion.png"); }
+.arcanist-handout .arc-glyph-necromancy { --arc-glyph: url("../assets/glyphs/necromancy.png"); }
+.arcanist-handout .arc-glyph-transmutation { --arc-glyph: url("../assets/glyphs/transmutation.png"); }
+.arcanist-handout .arc-glyph-orb { --arc-glyph: url("../assets/glyphs/orb.png"); }
+.arcanist-handout .arc-glyph-staff { --arc-glyph: url("../assets/glyphs/staff.png"); }
+.arcanist-handout .arc-glyph-sword { --arc-glyph: url("../assets/glyphs/sword.png"); }
+.arcanist-handout .arc-glyph-tome { --arc-glyph: url("../assets/glyphs/tome.png"); }
+.arcanist-handout .arc-glyph-wand { --arc-glyph: url("../assets/glyphs/wand.png"); }
+.arcanist-handout { --arc-title: #184773; }
+.theme-dark .arcanist-handout,
+.themed.theme-dark .arcanist-handout { --arc-title: #9cc3ea; }
+.themed.theme-light .arcanist-handout { --arc-title: #184773; }
+.arcanist-handout :is(h1, h2, h3, h4, h5) { color: var(--arc-title); }
+.arcanist-handout h1 { font-size: 3em; }
+.arcanist-handout h2 { font-size: 2.4em; }
+.arcanist-handout h3:not(aside h3) { font-size: 2.1em; }
+.arcanist-handout h4:not(:has(> a.content-link)) { font-size: 1.71em; }
+.arcanist-handout h5 { font-size: 1.5em; }
+.arcanist-handout aside :is(h3, h4) { color: var(--color-text-primary); }
+.arcanist-handout :is(p.hanging-indent, p.hanging) > strong,
+.arcanist-handout p.hanging > strong > a.content-link,
+.arcanist-handout table caption strong { color: var(--arc-title); }
+.arcanist-handout p.hanging > strong > a.content-link {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+}
+.arcanist-handout p.hanging > strong > a.content-link:hover { text-decoration: underline; }
+.arcanist-handout p.hanging > strong > a.content-link > i { display: none; }

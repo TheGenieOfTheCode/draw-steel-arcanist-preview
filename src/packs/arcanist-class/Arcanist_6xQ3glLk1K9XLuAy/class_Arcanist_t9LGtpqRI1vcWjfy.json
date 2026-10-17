@@ -6,7 +6,7 @@
   "img": "icons/sundries/books/book-embossed-jewel-gold-green.webp",
   "system": {
     "description": {
-      "value": "<p>An Arcanist is a monument to knowledge. You command the battlefield with a wide variety of spells and abilities, and provide great utility to your allies when exploring the timescape.</p><p>As an Arcanist, you use a vast collection of different abilities, calling upon them when the need arises, always having the perfect spell for every situation.</p><p><strong>Starting Characteristics:</strong> You start with a Reason of 2, and choose one of the following arrays for your other characteristic scores: 2, 2, -1, -1; 2, 1, 1, -1; 2, 1, 0, 0; 1, 1, 1, 0.</p><h3>Draw Steel Master Class</h3><p>The Arcanist is an example of a master class in Draw Steel. Master classes are intended for players who are familiar with the game and have played a few sessions already. They are not recommended for first time players. You need to know the rules before we start breaking them on you!</p><h3>Prepared at 1st Level</h3><p>Two signature abilities, one 3-focus ability, and one 5-focus ability; one triggered action; two grimoires (of the three you know).</p>",
+      "value": "<p>An Arcanist is a monument to knowledge. You command the battlefield with a wide variety of spells and abilities, and provide great utility to your allies when exploring the timescape. As an Arcanist, you use a vast collection of different abilities, calling upon them when the need arises, always having the perfect spell for every situation.</p>",
       "director": ""
     },
     "source": {
