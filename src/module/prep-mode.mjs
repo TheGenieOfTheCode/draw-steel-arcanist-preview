@@ -4,6 +4,7 @@ import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparat
 const _states = new WeakMap();
 
 const esc = (s) => foundry.utils.escapeHTML(String(s ?? ""));
+const link = (uuid, name) => `@UUID[${uuid}]{${String(name).replace(/[{}[\]]/g, "")}}`;
 export const preparing = (sheet) => _states.has(sheet);
 
 export const kindLabel = (kind) => (kind === "signature" ? L("KindSignature") : kind === "triggered" ? L("KindTriggered")
@@ -134,7 +135,28 @@ async function finish(sheet, event) {
   const prepared = new Map();
   for (const kind of kindsOf(actor)) for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
   await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed, usePore: state.mode === "pore" });
+  await report(actor, state.mode, changes, shift && isIllegal ? illegal : { over: [], under: [] });
   await sheet.render();
+}
+
+async function report(actor, mode, changes, { over, under }) {
+  const names = (on) => changes.filter((c) => c.on === on).map((c) => link(c.uuid, c.name));
+  const line = (key, list) => (list.length ? `<p><strong>${esc(L(key))}:</strong> ${list.join(", ")}</p>` : "");
+  const method = L(mode === "flash" ? "ModeFlash" : "ModePore");
+  let content = `<p>${L("ReportWho", { name: link(actor.uuid, actor.name), method: esc(method) })}</p>`
+    + line("ReportPrepared", names(true)) + line("ReportUnprepared", names(false));
+  const warn = (key, kinds) => (kinds.length ? `<p class="arcanist-report-over"><i class="fa-solid fa-triangle-exclamation" inert></i> ${esc(L(key, { kinds: kindList(kinds) }))}</p>` : "");
+  content += warn("ReportOver", over) + warn("ReportUnder", under);
+  const whisper = game.users.filter((u) => u.isGM || actor.testUserPermission(u, "OWNER")).map((u) => u.id);
+  await ChatMessage.implementation.create({
+    title: method,
+    type: "standard",
+    speaker: { scene: null, actor: null, token: null, alias: L("ReportSpeaker") },
+    whisper,
+    content,
+    "system.parts": [{ type: "content" }],
+    flags: { [MODULE_ID]: { preparation: true } },
+  });
 }
 
 function toggleEntry(sheet, key, shift = false) {

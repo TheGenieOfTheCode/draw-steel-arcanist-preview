@@ -70,3 +70,7 @@ li.arcanist-unprepared-row:hover > .item-row {
   opacity: .4;
   cursor: not-allowed;
 }
+
+.arcanist-report-over {
+  color: var(--color-level-warning, #c4862b);
+}
