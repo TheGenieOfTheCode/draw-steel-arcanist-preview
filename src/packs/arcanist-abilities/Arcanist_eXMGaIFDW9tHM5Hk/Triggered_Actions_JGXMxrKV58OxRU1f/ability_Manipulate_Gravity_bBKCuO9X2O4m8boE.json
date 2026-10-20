@@ -32,7 +32,7 @@
     },
     "damageDisplay": "melee",
     "target": {
-      "type": "creature",
+      "type": "selfOrCreature",
       "value": 1,
       "custom": ""
     },

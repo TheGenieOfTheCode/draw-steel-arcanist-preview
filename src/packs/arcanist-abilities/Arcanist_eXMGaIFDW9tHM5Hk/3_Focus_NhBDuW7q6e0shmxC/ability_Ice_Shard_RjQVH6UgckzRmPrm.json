@@ -54,7 +54,7 @@
           "sort": 0,
           "damage": {
             "tier1": {
-              "value": "4",
+              "value": "4 + @chr",
               "types": [
                 "cold"
               ],
@@ -65,7 +65,7 @@
               }
             },
             "tier2": {
-              "value": "6",
+              "value": "6 + @chr",
               "types": [
                 "cold"
               ],
@@ -76,41 +76,11 @@
               }
             },
             "tier3": {
-              "value": "10",
+              "value": "10 + @chr",
               "types": [
                 "cold"
               ],
               "ignoredImmunities": [],
-              "potency": {
-                "value": "@potency.strong",
-                "characteristic": ""
-              }
-            }
-          }
-        },
-        "YzmAL3jeMCNTDFrG": {
-          "_id": "YzmAL3jeMCNTDFrG",
-          "name": "Splash",
-          "img": null,
-          "type": "other",
-          "sort": 300,
-          "other": {
-            "tier1": {
-              "display": "The target and each enemy adjacent to the target takes 2 × R cold damage",
-              "potency": {
-                "value": "@potency.weak",
-                "characteristic": "none"
-              }
-            },
-            "tier2": {
-              "display": "The target and each enemy adjacent to the target takes 2 × R cold damage",
-              "potency": {
-                "value": "@potency.average",
-                "characteristic": ""
-              }
-            },
-            "tier3": {
-              "display": "The target and each enemy adjacent to the target takes 2 × R cold damage",
               "potency": {
                 "value": "@potency.strong",
                 "characteristic": ""
@@ -127,7 +97,17 @@
       "value": "",
       "level": null
     },
-    "effects": {}
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>Each enemy adjacent to the target takes [[/damage 2*@R cold]]{2 × R cold damage}.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
   },
   "effects": [],
   "sort": 0,

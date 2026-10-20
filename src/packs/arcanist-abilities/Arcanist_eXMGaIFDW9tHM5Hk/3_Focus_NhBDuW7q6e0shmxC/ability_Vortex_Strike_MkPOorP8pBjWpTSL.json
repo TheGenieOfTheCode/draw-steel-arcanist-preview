@@ -18,15 +18,15 @@
     "story": "You teleport a creature into the perfect position for an attack.",
     "keywords": [
       "magic",
-      "melee"
+      "ranged"
     ],
     "type": "maneuver",
     "category": "heroic",
     "resource": 3,
     "trigger": "",
     "distance": {
-      "type": "melee",
-      "primary": "1",
+      "type": "ranged",
+      "primary": "10",
       "secondary": "1",
       "tertiary": "1"
     },
