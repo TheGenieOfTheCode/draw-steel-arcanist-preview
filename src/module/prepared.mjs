@@ -151,7 +151,7 @@ export async function clearLocks(actor, kind = null) {
 const triggersApi = () => game.modules.get("draw-steel-triggers")?.active ? game.modules.get("draw-steel-triggers").api : null;
 export const refreshTriggers = () => { try { triggersApi()?.refreshIgnored?.(); } catch (err) { console.warn(`${MODULE_ID} | Triggers refresh`, err); } };
 
-function wrap(path, wrapper, type = "WRAPPER") {
+export function wrap(path, wrapper, type = "WRAPPER") {
   if (game.modules.get("lib-wrapper")?.active) return libWrapper.register(MODULE_ID, path, wrapper, type);
   const parts = path.split(".");
   const name = parts.pop();
