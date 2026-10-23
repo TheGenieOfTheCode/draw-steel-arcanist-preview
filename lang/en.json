@@ -48,6 +48,16 @@
       "ChatUsed": "Flash Recall Used",
       "Notice": "{name} is preparing with {mode}: {hint} Use the book in the sheet's header to finish."
     },
+    "Augury": {
+      "Flavor": "{name}: noted outcome",
+      "Tier": "Tier {tier}",
+      "NoteTip": "Noted roll: {dice}",
+      "QueueTip": "Noted rolls, oldest first. Augury uses the first; the rest wait their turn.",
+      "BaseRoll": "Base roll",
+      "Estimate": "est.",
+      "StackTip": "The triggering roll's dice become the next noted roll. Its own modifiers still apply, so the estimate counts the ones known now and can still change.",
+      "UsedLabel": "Noted roll used"
+    },
     "Components": {
       "Category": "Components",
       "Missing": "No Component",

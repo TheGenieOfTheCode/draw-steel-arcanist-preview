@@ -4,6 +4,8 @@ import { registerPrepared } from "./prepared.mjs";
 import { registerHandout } from "./handout.mjs";
 import { registerComponents } from "./components.mjs";
 import { registerPaths } from "./paths.mjs";
+import { registerAugury } from "./augury.mjs";
+import { registerRoundStart } from "./round-start.mjs";
 
 Hooks.once("init", () => {
   registerConditions();
@@ -11,5 +13,7 @@ Hooks.once("init", () => {
   registerPrepared();
   registerHandout();
   registerComponents();
+  registerRoundStart();
   registerPaths();
+  registerAugury();
 });

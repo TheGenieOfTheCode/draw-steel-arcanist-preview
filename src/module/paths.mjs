@@ -1,5 +1,6 @@
 import { MODULE_ID } from "./constants.mjs";
 import { wrap } from "./prepared.mjs";
+import { onRoundStart } from "./round-start.mjs";
 
 const PONDER = "arcanist-ponder";
 const DOMINION = "arcanist-destructive-dominion";
@@ -32,17 +33,15 @@ export function registerPaths() {
     return wrapped(combatant, ...args);
   }, "MIXED");
 
-  wrap("CONFIG.Combat.documentClass.prototype._onStartRound", async function (wrapped, ...args) {
-    const result = await wrapped(...args);
+  onRoundStart(async (combat) => {
     const seen = new Set();
-    for (const combatant of this.combatants) {
+    for (const combatant of combat.combatants) {
       const actor = combatant.actor;
       if (actor?.type !== "hero" || seen.has(actor.id) || !owns(actor, PONDER) || actor.statuses.has("dead")) continue;
       seen.add(actor.id);
       _roundGain.add(actor);
       try { await actor.system._onStartTurn(combatant); } catch (err) { console.error(`${MODULE_ID} | Ponder round gain`, err); } finally { _roundGain.delete(actor); }
     }
-    return result;
   });
 
   wrap("CONFIG.Actor.dataModels.hero.prototype.startCombat", async function (wrapped, ...args) {

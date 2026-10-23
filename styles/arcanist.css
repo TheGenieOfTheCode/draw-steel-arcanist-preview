@@ -365,3 +365,98 @@ li.arcanist-unprepared-row:hover > .item-row {
 }
 .arcanist-handout p.hanging > strong > a.content-link:hover { text-decoration: underline; }
 .arcanist-handout p.hanging > strong > a.content-link > i { display: none; }
+
+.arcanist-augury-queue {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.arcanist-augury-tier {
+  font-family: "Draw Steel Glyphs";
+  font-size: var(--font-size-20, 20px);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.arcanist-augury-note {
+  display: inline-flex;
+  align-items: center;
+}
+
+.arcanist-augury-note.is-queued {
+  opacity: .4;
+}
+
+.arcanist-augury-note + .arcanist-augury-note {
+  margin-left: 4px;
+  padding-left: 4px;
+  border-left: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+}
+
+.arcanist-augury-queue .dsct-dice-formula {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.arcanist-augury-queue .dsct-die {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.arcanist-augury-arrow {
+  opacity: .6;
+}
+
+.arcanist-augury-est {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 6px;
+  opacity: .85;
+}
+
+.arcanist-augury-used {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 6px 0;
+  padding: 6px 0;
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+}
+
+.arcanist-augury-used-label {
+  font-size: var(--font-size-11, 11px);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-text-secondary);
+}
+
+.arcanist-augury-used-roll {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arcanist-augury-used-roll .dsct-dice-formula {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arcanist-augury-used-total {
+  font-size: var(--font-size-20, 20px);
+  font-weight: bold;
+}
+
+.arcanist-augury-used-roll .arcanist-augury-tier {
+  font-size: var(--font-size-28, 28px);
+}
+
+.arcanist-augury-faces {
+  font-family: var(--font-monospace, monospace);
+}

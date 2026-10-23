@@ -265,6 +265,7 @@ export function registerPrepared() {
     const api = triggersApi();
     if (!api?.registerIgnoreRule) return;
     
-    api.registerIgnoreRule(MODULE_ID, (item) => unprepared(item) || dsidOf(item) === RULES_FEATURE);
+    api.registerIgnoreRule(MODULE_ID, (item) => unprepared(item) || dsidOf(item) === RULES_FEATURE
+      || (dsidOf(item) === "arcanist-augury" && !item.actor?.getFlag(MODULE_ID, "auguryNotes")?.length));
   });
 }
