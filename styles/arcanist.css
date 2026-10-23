@@ -396,28 +396,6 @@ li.arcanist-unprepared-row:hover > .item-row {
   border-left: 1px solid color-mix(in srgb, currentColor 25%, transparent);
 }
 
-.arcanist-augury-queue .dsct-dice-formula {
-  display: inline-flex;
-  gap: 2px;
-}
-
-.arcanist-augury-queue .dsct-die {
-  width: 1.5em;
-  height: 1.5em;
-}
-
-.arcanist-augury-arrow {
-  opacity: .6;
-}
-
-.arcanist-augury-est {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  margin-left: 6px;
-  opacity: .85;
-}
-
 .arcanist-augury-used {
   display: flex;
   flex-direction: column;
@@ -442,21 +420,11 @@ li.arcanist-unprepared-row:hover > .item-row {
   gap: 10px;
 }
 
-.arcanist-augury-used-roll .dsct-dice-formula {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+.arcanist-augury-used-label:not(#_) {
+  font-size: var(--font-size-11, 11px);
 }
 
-.arcanist-augury-used-total {
-  font-size: var(--font-size-20, 20px);
-  font-weight: bold;
-}
-
-.arcanist-augury-used-roll .arcanist-augury-tier {
-  font-size: var(--font-size-28, 28px);
-}
-
-.arcanist-augury-faces {
-  font-family: var(--font-monospace, monospace);
+.arcanist-augury-used-roll .arcanist-augury-tier:not(#_) {
+  font-size: 1.875rem;
+  line-height: 1;
 }

@@ -49,14 +49,13 @@
       "Notice": "{name} is preparing with {mode}: {hint} Use the book in the sheet's header to finish."
     },
     "Augury": {
-      "Flavor": "{name}: noted outcome",
+      "Flavor": "{name}: Noted Outcome",
       "Tier": "Tier {tier}",
-      "NoteTip": "Noted roll: {dice}",
-      "QueueTip": "Noted rolls, oldest first. Augury uses the first; the rest wait their turn.",
-      "BaseRoll": "Base roll",
-      "Estimate": "est.",
-      "StackTip": "The triggering roll's dice become the next noted roll. Its own modifiers still apply, so the estimate counts the ones known now and can still change.",
-      "UsedLabel": "Noted roll used"
+      "NoteTip": "Noted Outcome: Tier {tier}",
+      "QueueTip": "Noted outcomes, oldest first. Augury uses the first; the rest wait their turn.",
+      "NotedOutcome": "Noted Outcome",
+      "StackTip": "The triggering roll gets the next noted tier outcome. Anything else that shifts its tier still applies.",
+      "UsedLabel": "Noted Outcome Used"
     },
     "Components": {
       "Category": "Components",

@@ -5,7 +5,6 @@ import { onRoundStart } from "./round-start.mjs";
 export const AUGURY = "arcanist-augury";
 export const NOTES = "auguryNotes";
 const USED = "auguryUsed";
-const CT = "draw-steel-combat-tools";
 const TIER_GLYPH = { 1: "!", 2: "@", 3: "#" };
 
 const LA = (key, data) => game.i18n.format(`ARCANIST.Augury.${key}`, data ?? {});
@@ -20,20 +19,9 @@ async function setNotes(actor, notes) {
   refreshTriggers();
 }
 
-const diceOf = (note) => (note.dice?.length ? note.dice : []);
-const diceTotal = (note) => (note.dice?.length ? note.dice.reduce((a, b) => a + b, 0) : Number(note.total) - (Number(note.modifier) || 0));
+const tierGlyph = (tier, tooltip = LA("Tier", { tier })) => `<span class="arcanist-augury-tier" data-tooltip="${esc(tooltip)}">${TIER_GLYPH[tier] ?? tier}</span>`;
 
-const tierGlyph = (tier) => `<span class="arcanist-augury-tier" data-tooltip="${esc(LA("Tier", { tier }))}">${TIER_GLYPH[tier] ?? tier}</span>`;
-
-function diceHTML(note) {
-  const faces = diceOf(note);
-  if (game.modules.get(CT)?.active && faces.length) {
-    return `<span class="dsct-dice-formula">${faces.map((f) => `<img class="dsct-die" src="modules/${CT}/assets/Dice/die-${f}.png" alt="${f}">`).join("")}</span>`;
-  }
-  return `<span class="arcanist-augury-faces">${faces.length ? faces.join(" + ") : diceTotal(note)}</span>`;
-}
-
-const queueHTML = (notes) => notes.map((n, i) => `<span class="arcanist-augury-note ${i ? "is-queued" : "is-next"}" data-tooltip="${esc(LA("NoteTip", { dice: diceOf(n).join(" + ") || diceTotal(n) }))}">${diceHTML(n)}</span>`).join("");
+const queueHTML = (notes) => notes.map((n, i) => `<span class="arcanist-augury-note ${i ? "is-queued" : "is-next"}">${tierGlyph(n.tier, LA("NoteTip", { tier: n.tier }))}</span>`).join("");
 
 async function noteOutcome(actor, combatant) {
   const item = auguryOf(actor);
@@ -43,9 +31,7 @@ async function noteOutcome(actor, combatant) {
     speaker: ChatMessage.implementation.getSpeaker({ token: combatant.token, actor }),
     flavor: LA("Flavor", { name: item.name }),
   });
-  const dice = roll.dice.flatMap((d) => d.results.map((r) => r.result));
-  const note = { tier: roll.product, total: roll.total, dice, modifier: roll.total - dice.reduce((a, b) => a + b, 0), round: combatant.combat?.round ?? null };
-  await setNotes(actor, [...notesOf(actor), note]);
+  await setNotes(actor, [...notesOf(actor), { tier: roll.product, round: combatant.combat?.round ?? null }]);
 }
 
 const useMessageOf = (item) => [...game.messages.contents].reverse().find((m) => Date.now() - m.timestamp < 120000
@@ -54,10 +40,9 @@ const useMessageOf = (item) => [...game.messages.contents].reverse().find((m) =>
 async function provideRoll({ item, actor, messageId }) {
   const [note, ...rest] = notesOf(actor);
   if (!item || !note) return null;
-  const rollMod = { diceTotal: diceTotal(note), dice: diceOf(note) };
-  const resultTier = triggersApi()?.estimateRollModTier?.({ messageId, rollMod }) ?? null;
+  const rollMod = { autoTier: note.tier };
   await setNotes(actor, rest);
-  await useMessageOf(item)?.setFlag(MODULE_ID, USED, { ...note, resultTier });
+  await useMessageOf(item)?.setFlag(MODULE_ID, USED, { tier: note.tier, round: note.round ?? null });
   return rollMod;
 }
 
@@ -85,15 +70,10 @@ function onStack(app, html) {
     const notes = notesOf(item.actor);
     const chip = li.querySelector(".dst-impact--auto");
     if (!chip || !notes.length) continue;
-    const held = mirror.find((e) => e.kind === "resolutionHeld" && e.resolutionId === entry.resolutionId);
-    const estimate = held?.resolution?.messageId
-      ? api.estimateRollModTier?.({ messageId: held.resolution.messageId, targetKey: entry.subjectTargetKey ?? null, rollMod: { diceTotal: diceTotal(notes[0]) } })
-      : null;
-    const est = estimate ? `<span class="arcanist-augury-est">${esc(LA("Estimate"))} ${tierGlyph(estimate)}</span>` : "";
     chip.dataset.tooltip = LA("StackTip");
     chip.querySelector(":scope > span")?.replaceWith(Object.assign(document.createElement("span"), {
       className: "arcanist-augury-chip",
-      innerHTML: `${esc(LA("BaseRoll"))} <span class="arcanist-augury-queue">${queueHTML(notes)}</span>${est}`,
+      innerHTML: `${esc(LA("NotedOutcome"))} <span class="arcanist-augury-queue">${queueHTML(notes)}</span>`,
     }));
   }
 }
@@ -121,11 +101,10 @@ function replaceSpecial(message, html) {
   if (!special) return;
   const note = message.getFlag(MODULE_ID, USED);
   if (!note) return void special.remove();
-  const result = note.resultTier ? `<i class="fa-solid fa-arrow-right arcanist-augury-arrow" inert></i>${tierGlyph(note.resultTier)}` : "";
   special.replaceWith(Object.assign(document.createElement("div"), {
     className: "arcanist-augury-used",
     innerHTML: `<div class="arcanist-augury-used-label">${esc(LA("UsedLabel"))}</div>
-      <div class="arcanist-augury-used-roll">${diceHTML(note)}${result}</div>`,
+      <div class="arcanist-augury-used-roll">${tierGlyph(note.tier)}</div>`,
   }));
 }
 
