@@ -125,7 +125,15 @@
       "type": "base",
       "_id": "rVjIr8sEkNVLq8Yg",
       "system": {
-        "changes": [],
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.recurring.fire",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         }
