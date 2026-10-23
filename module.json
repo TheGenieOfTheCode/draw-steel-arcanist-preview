@@ -102,6 +102,22 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "arcanist-enhanced",
+      "label": "Arcanist: Enhanced Abilities",
+      "path": "packs/arcanist-enhanced",
+      "type": "Item",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true
+        }
+      }
     }
   ],
   "packFolders": [
@@ -114,7 +130,8 @@
         "arcanist-class",
         "arcanist-abilities",
         "arcanist-components",
-        "arcanist-effects"
+        "arcanist-effects",
+        "arcanist-enhanced"
       ]
     }
   ]

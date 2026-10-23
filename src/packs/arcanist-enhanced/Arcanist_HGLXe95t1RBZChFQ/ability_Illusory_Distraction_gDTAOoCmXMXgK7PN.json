@@ -1,0 +1,160 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Illusory Distraction",
+  "type": "ability",
+  "_id": "gDTAOoCmXMXgK7PN",
+  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-illusory-distraction",
+    "story": "You create a harmless sensory illusion.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": true,
+        "description": "<p>You create an auditory or visual illusion to distract the target. The target takes a bane on their next ability roll.</p><section class=\"secret\"><p><em>Draw Steel: Combat Tools automates part of this.</em></p></section>"
+      },
+      "after00000000009": {
+        "_id": "after00000000009",
+        "type": "base",
+        "name": "Spend",
+        "img": null,
+        "sort": 100000,
+        "before": false,
+        "description": "<p>The target's potencies are reduced by 1 until the end of their next turn.</p>"
+      },
+      "dsctApplied00001": {
+        "_id": "dsctApplied00001",
+        "type": "dsct.flatApplied",
+        "name": "Illusory Distraction",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "",
+          "display": "",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "tFYv5NDl4MK3HPYe",
+          "exclusiveSelf": false,
+          "end": "turn",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Illusory Distraction",
+      "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+      "type": "base",
+      "_id": "tFYv5NDl4MK3HPYe",
+      "system": {
+        "changes": [
+          {
+            "key": "system.potency.bonuses",
+            "type": "add",
+            "value": "-1",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Your potencies are reduced by 1.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true
+        }
+      },
+      "_key": "!items.effects!gDTAOoCmXMXgK7PN.tFYv5NDl4MK3HPYe",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.gDTAOoCmXMXgK7PN"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "illusion",
+      "slot": "grimoireManeuver"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!gDTAOoCmXMXgK7PN"
+}
