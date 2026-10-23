@@ -1,0 +1,35 @@
+{
+  "folder": "bQVyEKBvzL9kbkZY",
+  "name": "Petrified Newt Heart",
+  "type": "treasure",
+  "_id": "jRDuLW8q3CS7jnN0",
+  "img": "icons/commodities/gems/gem-rough-heart-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>The petrified heart of a newt.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.CtPD7It7pOlqcek5]{Dispel the Supernatural}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-dispel-the-supernatural-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-dispel-the-supernatural"
+    }
+  },
+  "_key": "!items!jRDuLW8q3CS7jnN0"
+}

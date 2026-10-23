@@ -6,7 +6,7 @@
   "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A fractured prismacore</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.yRDj9PjLvZRWKjHe]{A fractured prismacore}</p>",
       "director": ""
     },
     "source": {

@@ -6,7 +6,7 @@
   "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The elemental dust of a galeweaver</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.uwPQI8Wai5nBBRah]{The elemental dust of a galeweaver}</p>",
       "director": ""
     },
     "source": {

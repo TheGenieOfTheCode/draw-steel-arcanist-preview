@@ -1,0 +1,35 @@
+{
+  "folder": "bQVyEKBvzL9kbkZY",
+  "name": "Death Snail Visceral Sac",
+  "type": "treasure",
+  "_id": "7Kc2vHwxpBGb0cvc",
+  "img": "icons/commodities/biological/organ-bladder-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>The visceral sac of a death snail.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.Fy0dTgN69aeNyYXb]{Noxious Cloud}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "15",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-noxious-cloud-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-noxious-cloud"
+    }
+  },
+  "_key": "!items!7Kc2vHwxpBGb0cvc"
+}

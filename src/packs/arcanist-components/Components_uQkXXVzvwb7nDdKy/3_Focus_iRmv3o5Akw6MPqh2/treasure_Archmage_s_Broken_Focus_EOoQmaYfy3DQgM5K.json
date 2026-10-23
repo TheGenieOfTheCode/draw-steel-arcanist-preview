@@ -1,0 +1,35 @@
+{
+  "folder": "iRmv3o5Akw6MPqh2",
+  "name": "Archmage's Broken Focus",
+  "type": "treasure",
+  "_id": "EOoQmaYfy3DQgM5K",
+  "img": "icons/commodities/treasure/stone-cracked-lightning-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>The broken arcane focus of an archmage.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.fGPbFglSVkkJT6NC]{Counterspell}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-counterspell-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-counterspell"
+    }
+  },
+  "_key": "!items!EOoQmaYfy3DQgM5K"
+}

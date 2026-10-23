@@ -6,7 +6,7 @@
   "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A piece of starmetal cut into a dodecahedron</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.nyP5AOGp8aZs8Jmu]{A piece of starmetal cut into a dodecahedron}</p>",
       "director": ""
     },
     "source": {

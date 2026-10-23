@@ -6,7 +6,7 @@
   "img": "icons/magic/lightning/bolt-strike-streak-yellow.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A toad struck by lightning</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.LjIRCfhBMSRiRbek]{A toad struck by lightning}</p>",
       "director": ""
     },
     "source": {

@@ -6,7 +6,7 @@
   "img": "icons/magic/fire/blast-jet-stream-embers-orange.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A small bag of silver fulminate</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.2js996dZK2Vxg3IO]{A small bag of silver fulminate}</p>",
       "director": ""
     },
     "source": {

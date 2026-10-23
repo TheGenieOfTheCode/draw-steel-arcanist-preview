@@ -1,0 +1,35 @@
+{
+  "folder": "iRmv3o5Akw6MPqh2",
+  "name": "Golden Beetle in Amber",
+  "type": "treasure",
+  "_id": "KF7AQfFt1vAAmlCG",
+  "img": "icons/commodities/gems/gem-amber-insect-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>A golden beetle encased in amber.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.30Z0QLa9xLLyymRZ]{Stasis}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-stasis-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-stasis"
+    }
+  },
+  "_key": "!items!KF7AQfFt1vAAmlCG"
+}

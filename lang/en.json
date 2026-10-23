@@ -48,6 +48,13 @@
       "ChatUsed": "Flash Recall Used",
       "Notice": "{name} is preparing with {mode}: {hint} Use the book in the sheet's header to finish."
     },
+    "Components": {
+      "Category": "Components",
+      "Missing": "No Component",
+      "MissingTooltip": "You don't have this ability's Component Prerequisite, so you can't prepare it.",
+      "MissingNotice": "You don't have the Component Prerequisite for {name}, so you can't prepare it.",
+      "MissingNoticeGM": "You don't have the Component Prerequisite for {name}, so you can't prepare it. Hold Shift to prepare it anyway."
+    },
     "Settings": {
       "ShowUnprepared": {
         "name": "Show Unprepared Abilities",

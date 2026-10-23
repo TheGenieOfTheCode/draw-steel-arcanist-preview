@@ -6,7 +6,7 @@
   "img": "icons/magic/fire/projectile-fireball-smoke-orange.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A single phoenix feather</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.ZPgYt2JHEvroZfJd]{A single phoenix feather}</p>",
       "director": ""
     },
     "source": {

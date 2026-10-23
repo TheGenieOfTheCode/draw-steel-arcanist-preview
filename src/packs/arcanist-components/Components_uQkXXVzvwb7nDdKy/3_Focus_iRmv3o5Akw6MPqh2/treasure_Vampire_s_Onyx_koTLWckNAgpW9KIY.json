@@ -1,0 +1,35 @@
+{
+  "folder": "iRmv3o5Akw6MPqh2",
+  "name": "Vampire's Onyx",
+  "type": "treasure",
+  "_id": "koTLWckNAgpW9KIY",
+  "img": "icons/commodities/gems/gem-faceted-round-black.webp",
+  "system": {
+    "description": {
+      "value": "<p>An onyx purloined from a vampire.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.KprgoDTiNinKxuqi]{Vitality Drain}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-vitality-drain-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-vitality-drain"
+    }
+  },
+  "_key": "!items!koTLWckNAgpW9KIY"
+}

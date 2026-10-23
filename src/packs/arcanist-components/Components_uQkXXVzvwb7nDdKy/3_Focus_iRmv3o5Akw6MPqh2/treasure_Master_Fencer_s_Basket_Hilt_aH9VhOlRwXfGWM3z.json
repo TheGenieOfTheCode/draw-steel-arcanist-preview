@@ -1,0 +1,35 @@
+{
+  "folder": "iRmv3o5Akw6MPqh2",
+  "name": "Master Fencer's Basket Hilt",
+  "type": "treasure",
+  "_id": "aH9VhOlRwXfGWM3z",
+  "img": "icons/weapons/swords/greatsword-guard-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>The rapier basket handle of a world renowned fencer.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.MkPOorP8pBjWpTSL]{Vortex Strike}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-vortex-strike-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-vortex-strike"
+    }
+  },
+  "_key": "!items!aH9VhOlRwXfGWM3z"
+}

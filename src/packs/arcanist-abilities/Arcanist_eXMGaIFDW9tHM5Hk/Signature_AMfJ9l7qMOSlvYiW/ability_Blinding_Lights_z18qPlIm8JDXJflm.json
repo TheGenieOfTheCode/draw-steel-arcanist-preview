@@ -6,7 +6,7 @@
   "img": "icons/magic/light/explosion-star-glow-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A prism covered in glitter</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.vLr979zsT2iuPqiA]{A prism covered in glitter}</p>",
       "director": ""
     },
     "source": {

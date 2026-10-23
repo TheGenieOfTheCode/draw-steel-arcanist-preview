@@ -6,7 +6,7 @@
   "img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The scale of a shieldscale drangolin</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.CrZV0hRQ5jyhf9mO]{The scale of a shieldscale drangolin}</p>",
       "director": ""
     },
     "source": {

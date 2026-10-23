@@ -6,7 +6,7 @@
   "img": "icons/magic/unholy/projectile-missile-green.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The skull of a creature who has been dead for over 100 years</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.eojYMD474iUNsQLX]{The skull of a creature who has been dead for over 100 years}</p>",
       "director": ""
     },
     "source": {

@@ -71,6 +71,17 @@
       }
     },
     {
+      "name": "arcanist-components",
+      "label": "Arcanist: Components",
+      "path": "packs/arcanist-components",
+      "type": "Item",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
       "name": "arcanist-effects",
       "label": "Arcanist: Effects",
       "path": "packs/arcanist-effects",
@@ -102,6 +113,7 @@
         "arcanist-journal",
         "arcanist-class",
         "arcanist-abilities",
+        "arcanist-components",
         "arcanist-effects"
       ]
     }

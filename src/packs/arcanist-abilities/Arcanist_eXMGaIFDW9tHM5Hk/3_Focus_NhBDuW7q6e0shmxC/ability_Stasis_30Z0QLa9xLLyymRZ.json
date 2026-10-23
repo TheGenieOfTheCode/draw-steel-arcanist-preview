@@ -6,7 +6,7 @@
   "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A golden beetle encased in amber</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.KF7AQfFt1vAAmlCG]{A golden beetle encased in amber}</p>",
       "director": ""
     },
     "source": {

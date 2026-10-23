@@ -6,7 +6,7 @@
   "img": "icons/magic/air/wind-weather-snow-gusts.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A frozen cocoon</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.yIregQfjv5Q7u9rH]{A frozen cocoon}</p>",
       "director": ""
     },
     "source": {

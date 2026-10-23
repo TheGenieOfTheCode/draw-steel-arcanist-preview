@@ -1,5 +1,6 @@
 import { MODULE_ID } from "./constants.mjs";
 import { L, isArcanist, kindsOf, itemsOfKind, limitOf, isPrepared, applyPreparation, swapPerks, locksOf, lockKey, poreReady } from "./prepared.mjs";
+import { LC, componentMissing, learnableEntries, learnAbilities } from "./components.mjs";
 
 const FLASH_RECALL = "arcanist-flash-recall";
 const _states = new WeakMap();
@@ -40,8 +41,11 @@ async function perkEntries(actor) {
 
 function entriesOf(sheet, kind) {
   if (kind === "perk") return _states.get(sheet)?.perks ?? [];
-  return itemsOfKind(sheet.document, kind).map((item) => ({ key: item.id, item, uuid: item.uuid, name: item.name, img: item.img }));
+  const owned = itemsOfKind(sheet.document, kind).map((item) => ({ key: item.id, item, uuid: item.uuid, name: item.name, img: item.img }));
+  return [...owned, ...(_states.get(sheet)?.learnable?.get(kind) ?? [])];
 }
+
+const missingComponent = (entry) => !!entry.item && componentMissing(entry.item);
 
 const baseOf = (entry) => (entry.item ? isPrepared(entry.item) : false);
 const draftOf = (sheet, entry) => !!_states.get(sheet)?.draft.get(entry.key);
@@ -143,14 +147,16 @@ async function start(sheet, mode, { messageId = null, render = true } = {}) {
   if ((render && sheet.isPlayMode) || preparing(sheet)) return;
   const kinds = kindsOf(actor);
   const perks = kinds.includes("perk") ? await perkEntries(actor) : [];
+  const learnable = await learnableEntries(actor);
   const draft = new Map();
   for (const kind of kinds) {
     if (kind === "perk") for (const e of perks) draft.set(e.key, !!e.item);
     else for (const item of itemsOfKind(actor, kind)) draft.set(item.id, isPrepared(item));
+    for (const e of learnable.get(kind) ?? []) draft.set(e.key, false);
   }
-  
+
   const notice = ui.notifications.info(L("Notice", { name: actor.name, mode: L(mode === "flash" ? "ModeFlash" : "ModePore"), hint: L(mode === "flash" ? "HintFlash" : "HintPore") }), { permanent: true });
-  _states.set(sheet, { mode, draft, perks, messageId, notice });
+  _states.set(sheet, { mode, draft, perks, learnable, messageId, notice });
   if (!render) return;
   sheet.changeTab?.("abilities", "primary");
   await sheet.render();
@@ -180,8 +186,10 @@ async function finish(sheet, event) {
   const prepared = new Map();
   for (const kind of kindsOf(actor)) if (kind !== "perk") for (const e of entriesOf(sheet, kind)) prepared.set(e.key, state.draft.get(e.key));
   await applyPreparation(actor, prepared, { flash: state.mode === "flash", changedKinds: changed, usePore: state.mode === "pore" });
-  const perkChanges = changes.filter((c) => !c.item || c.item.type === "perk");
+  const perkChanges = changes.filter((c) => (!c.item && !c.learn) || c.item?.type === "perk");
   await swapPerks(actor, perkChanges.filter((c) => c.item && !c.on).map((c) => c.item), perkChanges.filter((c) => !c.item && c.on).map((c) => c.doc));
+  const learned = await learnAbilities(actor, changes.filter((c) => c.learn && c.on).map((c) => c.doc));
+  for (const c of changes) if (c.learn) c.uuid = learned.find((i) => i._stats?.compendiumSource === c.uuid)?.uuid ?? c.uuid;
   const message = state.messageId ? game.messages.get(state.messageId) : null;
   if (message?.isOwner) await message.setFlag(MODULE_ID, "flashRecallUsed", true);
   await report(actor, state.mode, changes, shift && isIllegal ? illegal : { over: [], under: [] });
@@ -215,6 +223,9 @@ function toggleEntry(sheet, key, shift = false) {
   const entry = entriesOf(sheet, kind).find((e) => e.key === key);
   const blocked = flashBlock(sheet, kind, entry, shift);
   if (blocked) return void ui.notifications.info(L(blocked === "locked" ? "Locked" : "FlashOneSwap"));
+  if (!state.draft.get(key) && missingComponent(entry) && !(game.user.isGM && shift)) {
+    return void ui.notifications.info(LC(game.user.isGM ? "MissingNoticeGM" : "MissingNotice", { name: entry.name }));
+  }
   state.draft.set(key, !state.draft.get(key));
   drawView(sheet, sheet.element);
   syncHeader(sheet);
@@ -229,12 +240,37 @@ function prepRow(li, sheet, kind, entry, withAction) {
   li.classList.add("arcanist-prep-row");
   li.dataset.arcanistKey = entry.key;
   li.classList.toggle("arcanist-on", draftOf(sheet, entry));
-  li.classList.toggle("arcanist-blocked", !!flashBlock(sheet, kind, entry, false));
+  const missing = !draftOf(sheet, entry) && missingComponent(entry);
+  li.classList.toggle("arcanist-blocked", missing || !!flashBlock(sheet, kind, entry, false));
+  li.classList.toggle("arcanist-missing", missing);
   for (const el of li.querySelectorAll('[data-action="useAbility"]')) { el.removeAttribute("data-action"); el.classList.remove("rollable"); }
-  li.querySelector(".arcanist-unprepared")?.remove();
+  li.querySelectorAll(".arcanist-unprepared, .arcanist-no-component").forEach((el) => el.remove());
   li.classList.remove("arcanist-unprepared-row");
-  if (!draftOf(sheet, entry) && game.settings.get(MODULE_ID, "unpreparedBadge")) li.querySelector(".name .label, .item-name .label, .name")?.insertAdjacentHTML("beforeend", ` <span class="arcanist-unprepared">${esc(L("Badge"))}</span>`);
-  if (withAction && entry.item) li.querySelector(".item-row > .item-column.item-cost")?.insertAdjacentHTML("afterend", `<div class="item-column item-action">${esc(actionLabel(entry.item))}</div>`);
+  const label = li.querySelector(".name .label, .item-name .label, .name");
+  if (!draftOf(sheet, entry) && game.settings.get(MODULE_ID, "unpreparedBadge")) label?.insertAdjacentHTML("beforeend", ` <span class="arcanist-unprepared">${esc(L("Badge"))}</span>`);
+  if (missing) label?.insertAdjacentHTML("beforeend", ` <span class="arcanist-no-component" data-tooltip="${esc(LC("MissingTooltip"))}">${esc(LC("Missing"))}</span>`);
+  const source = entry.item ?? entry.doc;
+  if (withAction && source) li.querySelector(".item-row > .item-column.item-cost")?.insertAdjacentHTML("afterend", `<div class="item-column item-action">${esc(actionLabel(source))}</div>`);
+  return li;
+}
+
+function abilityRow(template, entry, coreResource) {
+  const li = template.cloneNode(true);
+  li.dataset.documentUuid = entry.uuid;
+  const img = li.querySelector("img.item-image");
+  if (img) { img.src = entry.img; img.alt = entry.name; }
+  const labels = (entry.view ?? entry.doc).system?.formattedLabels ?? {};
+  const set = (selector, text) => { const el = li.querySelector(selector); if (el) el.textContent = text ?? ""; };
+  set(".name .label", entry.name);
+  set(".name .keywords", labels.keywords);
+  set(".item-column.item-cost", entry.doc.system?.resource ? `${entry.doc.system.resource} ${coreResource ?? ""}`.trim() : "");
+  set(".item-column.item-distance", labels.distance);
+  set(".item-column.item-target", labels.target);
+  li.querySelector(".restricted-warning")?.remove();
+  const expand = li.querySelector('[data-action="toggleDocumentDescription"]');
+  if (expand) { expand.removeAttribute("data-action"); expand.classList.add("arcanist-expand"); }
+  li.querySelector('[data-action="documentListContext"]')?.remove();
+  li.querySelector(".document-description")?.replaceChildren();
   return li;
 }
 
@@ -295,10 +331,11 @@ function drawView(sheet, html) {
     section.append(header);
     const list = document.createElement("ol");
     list.className = `item-list ${feature ? "features-list" : "abilities-list"}`;
+    const abilityTemplate = entries.map((e) => e.item && nativeRow(html, e.uuid)).find(Boolean);
     for (const entry of entries) {
-      const source = entry.item ? nativeRow(html, entry.uuid) : featureTemplate;
+      const source = entry.item ? nativeRow(html, entry.uuid) : entry.learn ? abilityTemplate : featureTemplate;
       if (!source) continue;
-      const li = entry.item ? source.cloneNode(true) : perkRow(html, source, entry);
+      const li = entry.item ? source.cloneNode(true) : entry.learn ? abilityRow(source, entry, actor.system?.coreResource?.name) : perkRow(html, source, entry);
       list.append(prepRow(li, sheet, kind, entry, !feature));
     }
     section.append(list);
@@ -306,7 +343,7 @@ function drawView(sheet, html) {
   }
   view.addEventListener("click", async (event) => {
     const expand = event.target.closest(".arcanist-expand");
-    if (expand) return expandPerk(expand.closest("li"));
+    if (expand) return expandPerk(sheet, expand.closest("li"));
     if (event.target.closest(".item-controls, .document-description")) return;
     const key = keyAt(event.target);
     if (key) toggleEntry(sheet, key, event.shiftKey);
@@ -314,12 +351,15 @@ function drawView(sheet, html) {
   tab.prepend(view);
 }
 
-async function expandPerk(li) {
+async function expandPerk(sheet, li) {
   const box = li?.querySelector(".document-description");
   if (!box) return;
   if (!box.childElementCount) {
-    const doc = await fromUuid(li.dataset.documentUuid);
-    box.innerHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(doc?.system?.description?.value ?? "");
+    const learn = [...(_states.get(sheet)?.learnable?.values() ?? [])].flat().find((e) => e.uuid === li.dataset.documentUuid);
+    const doc = learn?.view ?? await fromUuid(li.dataset.documentUuid);
+    const embed = doc?.type === "ability" ? await doc.toEmbed({ includeName: false }) : null;
+    if (embed) box.replaceChildren(embed);
+    else box.innerHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(doc?.system?.description?.value ?? "");
   }
   li.classList.toggle("expanded");
 }

@@ -6,7 +6,7 @@
   "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The visceral sac of a death snail</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.7Kc2vHwxpBGb0cvc]{The visceral sac of a death snail}</p>",
       "director": ""
     },
     "source": {

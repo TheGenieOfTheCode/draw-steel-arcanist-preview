@@ -6,7 +6,7 @@
   "img": "icons/magic/time/clock-spinning-gold-pink.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A starmetal pocket watch</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.8Q7edlWaKg7mFTXM]{A starmetal pocket watch}</p>",
       "director": ""
     },
     "source": {
@@ -32,7 +32,7 @@
     },
     "damageDisplay": "melee",
     "target": {
-      "type": "selfOrAlly",
+      "type": "ally",
       "value": 1,
       "custom": ""
     },

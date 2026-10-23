@@ -6,7 +6,7 @@
   "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The finger bone of a creature with telekinesis</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.bntFHNHo4LTpnLaF]{The finger bone of a creature with telekinesis}</p>",
       "director": ""
     },
     "source": {

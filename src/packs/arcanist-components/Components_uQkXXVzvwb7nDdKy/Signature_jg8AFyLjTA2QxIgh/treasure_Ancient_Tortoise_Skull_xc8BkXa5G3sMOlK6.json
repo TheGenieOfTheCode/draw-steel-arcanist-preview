@@ -1,0 +1,35 @@
+{
+  "folder": "jg8AFyLjTA2QxIgh",
+  "name": "Ancient Tortoise Skull",
+  "type": "treasure",
+  "_id": "xc8BkXa5G3sMOlK6",
+  "img": "icons/commodities/biological/shell-turtle-grey.webp",
+  "system": {
+    "description": {
+      "value": "<p>The skull of a tortoise who died of old age.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.rpS2BXIdXJPjTuP4]{Disrupt Flow}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "12",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-disrupt-flow-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-disrupt-flow"
+    }
+  },
+  "_key": "!items!xc8BkXa5G3sMOlK6"
+}

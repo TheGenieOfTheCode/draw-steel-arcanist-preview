@@ -1,0 +1,35 @@
+{
+  "folder": "bQVyEKBvzL9kbkZY",
+  "name": "Phoenix Feather",
+  "type": "treasure",
+  "_id": "ZPgYt2JHEvroZfJd",
+  "img": "icons/commodities/materials/feather-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>A single phoenix feather.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.2hk7O2xGv0yvESUK]{Splinterflame}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "15",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-splinterflame-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-splinterflame"
+    }
+  },
+  "_key": "!items!ZPgYt2JHEvroZfJd"
+}

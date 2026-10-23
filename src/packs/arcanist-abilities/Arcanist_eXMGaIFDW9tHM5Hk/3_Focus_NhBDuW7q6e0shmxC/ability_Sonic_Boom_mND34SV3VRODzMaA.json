@@ -6,7 +6,7 @@
   "img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The bottled high note of an opera singer</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.ccmoqcUBuDWDfsKe]{The bottled high note of an opera singer}</p>",
       "director": ""
     },
     "source": {

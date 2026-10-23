@@ -1,0 +1,35 @@
+{
+  "folder": "iRmv3o5Akw6MPqh2",
+  "name": "Ice Bat Fang",
+  "type": "treasure",
+  "_id": "vYl2eHceH9mq5Gjf",
+  "img": "icons/commodities/bones/tooth-canine-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>The fang of an ice bat.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.RjQVH6UgckzRmPrm]{Ice Shard}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-ice-shard-component",
+    "kind": "other",
+    "category": "component",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "ability": "arcanist-ice-shard"
+    }
+  },
+  "_key": "!items!vYl2eHceH9mq5Gjf"
+}

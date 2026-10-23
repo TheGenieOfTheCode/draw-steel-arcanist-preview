@@ -6,7 +6,7 @@
   "img": "icons/magic/defensive/barrier-shield-dome-deflect-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The broken arcane focus of an archmage</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.EOoQmaYfy3DQgM5K]{The broken arcane focus of an archmage}</p>",
       "director": ""
     },
     "source": {

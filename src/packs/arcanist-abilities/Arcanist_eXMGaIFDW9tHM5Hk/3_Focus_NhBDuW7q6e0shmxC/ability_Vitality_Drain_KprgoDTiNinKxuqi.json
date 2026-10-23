@@ -6,7 +6,7 @@
   "img": "icons/magic/unholy/strike-body-life-soul-green.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> An onyx purloined from a vampire</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.koTLWckNAgpW9KIY]{An onyx purloined from a vampire}</p>",
       "director": ""
     },
     "source": {

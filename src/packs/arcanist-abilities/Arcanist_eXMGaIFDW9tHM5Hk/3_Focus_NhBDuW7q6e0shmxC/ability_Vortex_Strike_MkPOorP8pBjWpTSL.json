@@ -6,7 +6,7 @@
   "img": "icons/magic/air/wind-vortex-swirl-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> The rapier basket handle of a world renowned fencer</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.aH9VhOlRwXfGWM3z]{The rapier basket handle of a world renowned fencer}</p>",
       "director": ""
     },
     "source": {

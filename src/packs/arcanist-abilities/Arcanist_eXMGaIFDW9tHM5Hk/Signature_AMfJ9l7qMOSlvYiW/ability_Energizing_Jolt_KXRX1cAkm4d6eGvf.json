@@ -6,7 +6,7 @@
   "img": "icons/magic/lightning/fist-unarmed-strike-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A lightning rod blessed by a priest</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.QnQdLPOJzl2UUMIl]{A lightning rod blessed by a priest}</p>",
       "director": ""
     },
     "source": {

@@ -6,7 +6,7 @@
   "img": "icons/magic/acid/dissolve-pool-bubbles.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> A pork chop aged in butter for a decade</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.XxfZk9MHbYYDrBBC]{A pork chop aged in butter for a decade}</p>",
       "director": ""
     },
     "source": {
