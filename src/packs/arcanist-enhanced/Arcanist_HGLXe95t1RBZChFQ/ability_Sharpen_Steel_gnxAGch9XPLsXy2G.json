@@ -1,0 +1,129 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Sharpen Steel",
+  "type": "ability",
+  "_id": "gnxAGch9XPLsXy2G",
+  "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.z8Xe4n7e5tUqJmC7]{A diamond whetstone that has sharpened a magical weapon}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-sharpen-steel",
+    "story": "Your magic strengthens a target's tools of battle.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target gains 10 temporary Stamina and gains 1 surge.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctHeal00000001": {
+        "_id": "dsctHeal00000001",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "The target gains 10 temporary Stamina",
+          "display": "Temp Stamina",
+          "spendRecovery": false,
+          "recoverySource": "self",
+          "amountType": "custom",
+          "amountFormula": "10",
+          "recoveryValueSource": "self",
+          "tempStamina": true,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "target",
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctResour000002": {
+        "_id": "dsctResour000002",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "The target gains 1 surge",
+          "display": "1 Surge",
+          "amount": 1,
+          "type": "surge",
+          "recipient": "target",
+          "preApplied": false,
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A diamond whetstone that has sharpened a magical weapon"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!gnxAGch9XPLsXy2G"
+}

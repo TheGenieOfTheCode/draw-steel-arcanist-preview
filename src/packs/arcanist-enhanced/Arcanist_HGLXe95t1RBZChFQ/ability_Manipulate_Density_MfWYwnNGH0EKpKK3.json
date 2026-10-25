@@ -1,0 +1,95 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Manipulate Density",
+  "type": "ability",
+  "_id": "MfWYwnNGH0EKpKK3",
+  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "8",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-manipulate-density",
+    "story": "You alter a creature's density, allowing them to be stagnant or unstable.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrCreature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p><span class=\"dsct-manual\">Until the start of your next turn, the target gains a +[[lookup @R]]{R} bonus to stability.</span></p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "description": "<p><span class=\"dsct-manual\">Forced movement that affects the target has its distance increased by 2 instead.</span></p>",
+        "before": false,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "name": "",
+        "img": null,
+        "sort": 100000
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "transmutation",
+      "slot": "grimoireManeuver"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!MfWYwnNGH0EKpKK3"
+}

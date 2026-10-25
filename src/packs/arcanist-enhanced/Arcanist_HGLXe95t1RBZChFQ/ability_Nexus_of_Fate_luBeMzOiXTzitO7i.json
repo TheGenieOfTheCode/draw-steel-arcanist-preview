@@ -1,0 +1,180 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Nexus of Fate",
+  "type": "ability",
+  "_id": "luBeMzOiXTzitO7i",
+  "img": "icons/magic/time/clock-spinning-gold-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.8Q7edlWaKg7mFTXM]{A starmetal pocket watch}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "15",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-nexus-of-fate",
+    "story": "You peer into the future and guide an ally to change their fate.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You can cleanse one effect the target is suffering. <span class=\"dsct-manual\">If the target hasn't acted yet this combat round, they can take their turn immediately after yours. If they do, they gain an additional 1 of their Heroic Resource at the start of that turn</span>, and they have an edge on the next power roll they make.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctCleans000001": {
+        "_id": "dsctCleans000001",
+        "type": "dsct.flatCleanse",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatCleanse": {
+          "displayText": "Ends one effect on the target",
+          "display": "Cleanse an Effect",
+          "expiryFilter": [
+            "turnEnd",
+            "save"
+          ],
+          "statusFilter": [],
+          "repeatable": false,
+          "all": false,
+          "recipient": "target",
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00002": {
+        "_id": "dsctApplied00002",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "An edge on the next power roll they make",
+          "display": "Edge on Next Roll",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "GRdTkKvYiFlDUy9h",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Nexus of Fate",
+      "img": "icons/magic/time/clock-spinning-gold-pink.webp",
+      "type": "abilityModifier",
+      "_id": "GRdTkKvYiFlDUy9h",
+      "system": {
+        "changes": [
+          {
+            "key": "power.roll.edges",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": []
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have an edge on the next power roll you make.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "abilityRoll"
+        }
+      },
+      "_key": "!items.effects!luBeMzOiXTzitO7i.GRdTkKvYiFlDUy9h",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.luBeMzOiXTzitO7i"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A starmetal pocket watch"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!luBeMzOiXTzitO7i"
+}

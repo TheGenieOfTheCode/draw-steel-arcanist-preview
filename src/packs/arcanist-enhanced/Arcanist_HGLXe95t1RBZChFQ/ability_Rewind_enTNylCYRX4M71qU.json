@@ -1,0 +1,95 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Rewind",
+  "type": "ability",
+  "_id": "enTNylCYRX4M71qU",
+  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "7",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-rewind",
+    "story": "\"Wait, that's not supposed to happen... friendly duel?\"",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "",
+    "resource": null,
+    "trigger": "The target is targeted by a strike.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p><span class=\"dsct-manual\">You can use this ability after seeing the result of the triggering roll. You can change the target of the triggering strike to yourself or one ally. The new target must be within distance and able to be targeted by the triggering ability.</span></p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "description": "<p><span class=\"dsct-manual\">The triggering ability's damage is halved.</span></p>",
+        "before": false,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "name": "",
+        "img": null,
+        "sort": 100000
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "chronomancy",
+      "slot": "triggered"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!enTNylCYRX4M71qU"
+}

@@ -1,0 +1,156 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Blade Guard",
+  "type": "ability",
+  "_id": "PHByqkNddhsnNQjR",
+  "img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.CrZV0hRQ5jyhf9mO]{The scale of a shieldscale drangolin}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "11",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-blade-guard",
+    "story": "You strike with an arcane force, then transfer the impact into a magical ward.",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "SOJTuf04qhR2JWNW": {
+          "_id": "SOJTuf04qhR2JWNW",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>Two allies within 5 squares of you each gain R temporary Stamina. You can target yourself instead of one ally.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctHeal00000001": {
+        "_id": "dsctHeal00000001",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "R temporary Stamina",
+          "display": "Temp Stamina",
+          "spendRecovery": false,
+          "recoverySource": "self",
+          "amountType": "custom",
+          "amountFormula": "@R",
+          "recoveryValueSource": "self",
+          "tempStamina": true,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "others",
+          "others": {
+            "mode": "pick",
+            "origin": "self",
+            "range": 5,
+            "disposition": "ally",
+            "count": 2,
+            "includeSelf": true
+          },
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "signature",
+      "component": "The scale of a shieldscale drangolin"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!PHByqkNddhsnNQjR"
+}

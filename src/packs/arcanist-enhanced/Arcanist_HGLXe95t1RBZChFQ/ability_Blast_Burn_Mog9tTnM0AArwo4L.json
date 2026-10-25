@@ -1,0 +1,151 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Blast Burn",
+  "type": "ability",
+  "_id": "Mog9tTnM0AArwo4L",
+  "img": "icons/magic/fire/blast-jet-stream-embers-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.2js996dZK2Vxg3IO]{A small bag of silver fulminate}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "12",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-blast-burn",
+    "story": "You conjure a pillar of fire that lingers in an area.",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "2",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "5fmwMGWR4j4ERUnn": {
+          "_id": "5fmwMGWR4j4ERUnn",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>The area lasts until the start of your next turn. Any enemy who enters the area for the first time on a turn or starts their turn there takes R fire damage.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "signature",
+      "component": "A small bag of silver fulminate"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true,
+      "templateOngoing": true,
+      "templateEnd": "turnStart",
+      "templateRegionData": {
+        "behaviors": [
+          {
+            "name": "Blast Burn",
+            "type": "draw-steel-combat-tools.damageEvents",
+            "disabled": false,
+            "system": {
+              "dispositions": [
+                "hostile"
+              ],
+              "events": [
+                "tokenEnter",
+                "tokenTurnStart"
+              ],
+              "formula": "@R",
+              "damageType": "fire",
+              "oncePerTurn": true
+            }
+          }
+        ]
+      }
+    }
+  },
+  "_key": "!items!Mog9tTnM0AArwo4L"
+}

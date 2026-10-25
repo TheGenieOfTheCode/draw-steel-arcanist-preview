@@ -1,0 +1,159 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Ice Shard",
+  "type": "ability",
+  "_id": "amHbQjXLUWTyxbM7",
+  "img": "icons/magic/water/projectile-ice-faceted-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.vYl2eHceH9mq5Gjf]{The fang of an ice bat}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "13",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-ice-shard",
+    "story": "You launch an icicle projectile, which explodes on contact.",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "65vJnvrDWiCmEzxm": {
+          "_id": "65vJnvrDWiCmEzxm",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "4 + @chr",
+              "types": [
+                "cold"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [
+                "cold"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10 + @chr",
+              "types": [
+                "cold"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>Each enemy adjacent to the target takes 2 × R cold damage.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctDamage000001": {
+        "_id": "dsctDamage000001",
+        "type": "dsct.flatDamage",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatDamage": {
+          "displayText": "2 × R cold damage to each adjacent enemy",
+          "display": "Cold Damage",
+          "value": "2*@R",
+          "types": [
+            "cold"
+          ],
+          "ignoredImmunities": [],
+          "recipient": "others",
+          "others": {
+            "mode": "all",
+            "origin": "target",
+            "range": 1,
+            "disposition": "enemy",
+            "count": 1,
+            "includeSelf": false
+          },
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "The fang of an ice bat"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!amHbQjXLUWTyxbM7"
+}

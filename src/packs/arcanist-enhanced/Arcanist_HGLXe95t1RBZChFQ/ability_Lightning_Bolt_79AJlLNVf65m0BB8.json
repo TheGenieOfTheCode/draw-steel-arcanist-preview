@@ -1,0 +1,156 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Lightning Bolt",
+  "type": "ability",
+  "_id": "79AJlLNVf65m0BB8",
+  "img": "icons/magic/lightning/bolt-strike-streak-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.LjIRCfhBMSRiRbek]{A toad struck by lightning}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "15",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-lightning-bolt",
+    "story": "A streak of lightning crackles from your fingertips.",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "line",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "TLOEq3Lu7cALJxvK": {
+          "_id": "TLOEq3Lu7cALJxvK",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "5",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "8",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "11",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>Each ally in the area gains 1 surge.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctResour000001": {
+        "_id": "dsctResour000001",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "Each ally in the area gains 1 surge",
+          "display": "1 Surge",
+          "amount": 1,
+          "type": "surge",
+          "recipient": "others",
+          "preApplied": false,
+          "others": {
+            "mode": "all",
+            "origin": "area",
+            "range": 0,
+            "disposition": "ally",
+            "count": 1,
+            "includeSelf": false
+          },
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "heroic",
+      "component": "A toad struck by lightning"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!79AJlLNVf65m0BB8"
+}

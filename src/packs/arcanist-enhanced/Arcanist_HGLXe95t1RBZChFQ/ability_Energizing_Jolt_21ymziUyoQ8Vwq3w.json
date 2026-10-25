@@ -1,0 +1,157 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Energizing Jolt",
+  "type": "ability",
+  "_id": "21ymziUyoQ8Vwq3w",
+  "img": "icons/magic/lightning/fist-unarmed-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.QnQdLPOJzl2UUMIl]{A lightning rod blessed by a priest}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "12",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-energizing-jolt",
+    "story": "Your arcane strike empowers a nearby ally.",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "q7S9jWCEhEFHPE85": {
+          "_id": "q7S9jWCEhEFHPE85",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>Two allies within 5 squares of you gain 1 surge. You can target yourself instead of one ally.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctResour000001": {
+        "_id": "dsctResour000001",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "Gains 1 surge",
+          "display": "1 Surge",
+          "amount": 1,
+          "type": "surge",
+          "recipient": "others",
+          "preApplied": false,
+          "others": {
+            "mode": "pick",
+            "origin": "self",
+            "range": 5,
+            "disposition": "ally",
+            "count": 2,
+            "includeSelf": true
+          },
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "slot": "signature",
+      "component": "A lightning rod blessed by a priest"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!21ymziUyoQ8Vwq3w"
+}
