@@ -17,6 +17,8 @@ export const L = (key, data) => (data ? game.i18n.format(`ARCANIST.Prepared.${ke
 
 const dsidOf = (item) => item?.system?._dsid ?? "";
 
+const dropKey = () => new foundry.data.operators.ForcedDeletion();
+
 export const isArcanist = (actor) => !!actor?.items?.some((i) => i.type === "class" && dsidOf(i) === CLASS_DSID);
 
 export function arcanistLevel(actor) {
@@ -126,7 +128,7 @@ export async function applyPreparation(actor, prepared, { flash = false, changed
     for (const k of changedKinds) locks[lockKey(k)] = { at: Date.now() };
     actorUpdate[`flags.${MODULE_ID}.${LOCKS}`] = locks;
   }
-  if (usePore && poreReady(actor)) actorUpdate[`flags.${MODULE_ID}.-=${PORE}`] = null;
+  if (usePore && poreReady(actor)) actorUpdate[`flags.${MODULE_ID}.${PORE}`] = dropKey();
   if (Object.keys(actorUpdate).length) await actor.update(actorUpdate, { render: false });
   refreshTriggers();
   return updates.length;
@@ -145,7 +147,7 @@ export async function swapPerks(actor, removed, added) {
 
 export async function clearLocks(actor, kind = null) {
   if (!kind) return actor.unsetFlag(MODULE_ID, LOCKS);
-  return actor.update({ [`flags.${MODULE_ID}.${LOCKS}.-=${lockKey(kind)}`]: null });
+  return actor.update({ [`flags.${MODULE_ID}.${LOCKS}.${lockKey(kind)}`]: dropKey() });
 }
 
 const triggersApi = () => game.modules.get("draw-steel-triggers")?.active ? game.modules.get("draw-steel-triggers").api : null;
@@ -232,7 +234,7 @@ export function registerPrepared() {
   wrap("CONFIG.Actor.dataModels.hero.prototype.takeRespite", async function (wrapped, ...args) {
     const result = await wrapped(...args);
     const actor = this.parent;
-    if (isArcanist(actor)) await actor.update({ [`flags.${MODULE_ID}.-=${LOCKS}`]: null, [`flags.${MODULE_ID}.${PORE}`]: true }, { render: false });
+    if (isArcanist(actor)) await actor.update({ [`flags.${MODULE_ID}.${LOCKS}`]: dropKey(), [`flags.${MODULE_ID}.${PORE}`]: true }, { render: false });
     return result;
   });
 
@@ -241,7 +243,7 @@ export function registerPrepared() {
     if (game.users.activeGM?.id !== game.user.id) return;
     for (const c of combat.combatants) {
       const actor = c.actor;
-      if (poreReady(actor)) actor.update({ [`flags.${MODULE_ID}.-=${PORE}`]: null }, { render: false });
+      if (poreReady(actor)) actor.update({ [`flags.${MODULE_ID}.${PORE}`]: dropKey() }, { render: false });
     }
   });
 
