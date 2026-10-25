@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>You teleport the target a number of squares equal to [[lookup @R]]{your Reason score}.</p>",
+        "description": "<p>You teleport the target [[lookup @R]]{R} squares.</p>",
         "before": true,
         "name": "",
         "img": null,

@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p>All of the target's characteristics are chosen instead ([[/apply 8VwUnlpjzBk9jQC3]]{All Characteristics}).</p>",
+        "description": "<p>All of the target's [[/apply 8VwUnlpjzBk9jQC3]]{characteristics} are chosen instead.</p>",
         "before": false,
         "resource": {
           "value": 1,

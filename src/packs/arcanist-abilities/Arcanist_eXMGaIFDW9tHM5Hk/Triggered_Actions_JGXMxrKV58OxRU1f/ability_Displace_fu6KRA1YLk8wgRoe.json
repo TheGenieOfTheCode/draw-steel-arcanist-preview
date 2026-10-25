@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The damage is halved, and the target can teleport a number of squares equal to your Reason score after the triggering effect resolves.</p>",
+        "description": "<p>The damage is halved, and the target can teleport [[lookup @R]]{R} squares after the triggering effect resolves.</p>",
         "before": true,
         "name": "",
         "img": null,

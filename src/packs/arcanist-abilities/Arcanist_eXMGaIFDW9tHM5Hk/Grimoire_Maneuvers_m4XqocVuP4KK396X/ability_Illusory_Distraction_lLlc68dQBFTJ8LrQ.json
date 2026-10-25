@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p>The target's potencies are reduced by 1 until the end of their next turn ([[/apply tFYv5NDl4MK3HPYe turn]]{Illusory Distraction}).</p>",
+        "description": "<p>The target's [[/apply tFYv5NDl4MK3HPYe turn]]{potencies are reduced by 1} until the end of their next turn.</p>",
         "before": false,
         "resource": {
           "value": 1,

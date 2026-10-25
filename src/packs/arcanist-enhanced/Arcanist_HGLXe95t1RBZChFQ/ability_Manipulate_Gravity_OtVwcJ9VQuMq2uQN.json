@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">The triggering forced movement distance gains a bonus equal to or is reduced by [[lookup @R]]{your Reason score}, or the effective height of the triggering fall is increased or reduced by [[lookup @R]]{your Reason score}.</span></p>",
+        "description": "<p><span class=\"dsct-manual\">The triggering forced movement distance gains a bonus equal to or is reduced by [[lookup @R]]{R}, or the effective height of the triggering fall is increased or reduced by [[lookup @R]]{R}.</span></p>",
         "before": true,
         "name": "",
         "img": null,
@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p><span class=\"dsct-manual\">The amount is equal to 2 × your Reason score instead.</span></p>",
+        "description": "<p><span class=\"dsct-manual\">The amount is equal to 2 × [[lookup @R]]{R} instead.</span></p>",
         "before": false,
         "resource": {
           "value": 1,

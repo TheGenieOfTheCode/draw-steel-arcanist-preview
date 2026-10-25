@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p>You gain [[/surge 1]]{1 surge}. Until the end of the encounter, your surges can deal cold, fire, or lightning damage ([[/apply Hb2ipRdnWJC65hC9 encounter]]{Elemental Surges}).</p>",
+        "description": "<p>You gain [[/surge 1]]{1 surge}. Until the end of the encounter, [[/apply Hb2ipRdnWJC65hC9 encounter]]{your surges} can deal cold, fire, or lightning damage.</p>",
         "before": false,
         "resource": {
           "value": 1,

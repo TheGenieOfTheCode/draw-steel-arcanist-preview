@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
   "system": {
     "description": {
-      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to teleport up to a number of squares equal to 2 × [[lookup @R]]{your Reason score}.</p>",
+      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to teleport up to a number of squares equal to 2 × [[lookup @R]]{R}.</p>",
       "director": ""
     },
     "source": {

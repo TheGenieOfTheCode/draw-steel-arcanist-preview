@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target takes half the triggering damage, and you gain [[/surge 2]]{2 surges}. Until the end of the encounter, your surges can deal cold, fire, or lightning damage ([[/apply EmSmN1HZWkvZ5wdT encounter]]{Elemental Surges}).</p>",
+        "description": "<p>The target takes half the triggering damage, and you gain [[/surge 2]]{2 surges}. Until the end of the encounter, [[/apply EmSmN1HZWkvZ5wdT encounter]]{your surges} can deal cold, fire, or lightning damage.</p>",
         "before": true,
         "name": "",
         "img": null,
