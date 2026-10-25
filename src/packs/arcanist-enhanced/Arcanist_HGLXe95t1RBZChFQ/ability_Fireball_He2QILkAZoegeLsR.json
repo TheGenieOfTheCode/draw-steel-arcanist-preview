@@ -101,7 +101,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>Choose one of the following effects:</p><ul><li><p>The area becomes a 5 cube, and this ability targets each creature and object in the area.</p></li><li><p>Each target takes 4 additional fire damage.</p></li><li><p>Each target is pushed 2 squares away from the center of the area.</p></li><li><p>Each target with [[potency A strong]] has recurring fire 2 (save ends) (Recurring Fire 2).</p></li></ul>",
+        "description": "[[/choose dsctChoose000001]]{Choose one of the following effects:}",
         "before": false,
         "name": "",
         "img": null,
@@ -132,7 +132,7 @@
             {
               "name": "Bigger Area",
               "icon": "",
-              "preview": "",
+              "preview": "The area becomes a 5 cube, and this ability targets each creature and object in the area.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -151,7 +151,7 @@
             {
               "name": "Extra Fire",
               "icon": "",
-              "preview": "",
+              "preview": "Each target takes [[/flat dsctDamage000001]]{4 additional fire damage}.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -172,7 +172,7 @@
             {
               "name": "Push",
               "icon": "",
-              "preview": "",
+              "preview": "Each target is [[/flat dsctForced000002]]{pushed 2 squares} away from the center of the area.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -193,7 +193,7 @@
             {
               "name": "Recurring Fire",
               "icon": "",
-              "preview": "",
+              "preview": "Each target with [[potency A strong]] has [[/flat dsctApplied00003]]{recurring fire 2} (save ends).",
               "story": "",
               "keywords": [],
               "distance": {
