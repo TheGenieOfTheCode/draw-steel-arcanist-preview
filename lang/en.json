@@ -1,5 +1,18 @@
 {
   "ARCANIST": {
+    "Analyze": {
+      "Speaker": "Analyze",
+      "Title": "Analyze: {name}",
+      "Keywords": "Keywords",
+      "Immunities": "Damage Immunities",
+      "Weaknesses": "Damage Weaknesses",
+      "Malice": "Malice Abilities",
+      "Properties": "Properties",
+      "Cost": "{name} ({cost} Malice)",
+      "AllDamage": "All damage",
+      "SquareStamina": "Stamina per square",
+      "None": "None"
+    },
     "Status": {
       "Disoriented": "Disoriented",
       "DisorientedDescription": "A disoriented creature has line of effect only within 3 squares."
