@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target takes half the triggering damage, and you gain 2 surges. Until the end of the encounter, <span class=\"dsct-manual\">your surges can deal cold, fire, or lightning damage</span>.</p>",
+        "description": "<p>The target takes half the triggering damage, and you gain 2 surges. Until the end of the encounter, your surges can deal cold, fire, or lightning damage.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -130,7 +130,15 @@
       "type": "base",
       "_id": "EmSmN1HZWkvZ5wdT",
       "system": {
-        "changes": [],
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.surgeTypes",
+            "type": "override",
+            "value": "cold,fire,lightning",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         }

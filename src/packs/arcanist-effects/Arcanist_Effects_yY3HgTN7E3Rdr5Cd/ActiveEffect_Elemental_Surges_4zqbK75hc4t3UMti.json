@@ -4,7 +4,15 @@
   "type": "base",
   "_id": "4zqbK75hc4t3UMti",
   "system": {
-    "changes": [],
+    "changes": [
+      {
+        "key": "flags.draw-steel-combat-tools.surgeTypes",
+        "type": "override",
+        "value": "cold,fire,lightning",
+        "phase": "initial",
+        "priority": null
+      }
+    ],
     "end": {
       "roll": "1d10 + @combat.save.bonus"
     }

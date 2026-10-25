@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>You gain 1 surge. Until the end of the encounter, <span class=\"dsct-manual\">your surges can deal cold, fire, or lightning damage</span>.</p>"
+        "description": "<p>You gain 1 surge. Until the end of the encounter, your surges can deal cold, fire, or lightning damage.</p>"
       },
       "dsctDamage000001": {
         "_id": "dsctDamage000001",
@@ -150,7 +150,15 @@
       "type": "base",
       "_id": "Hb2ipRdnWJC65hC9",
       "system": {
-        "changes": [],
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.surgeTypes",
+            "type": "override",
+            "value": "cold,fire,lightning",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         }
