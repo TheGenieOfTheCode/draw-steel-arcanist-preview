@@ -100,7 +100,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>Each ally in the area gains 1 surge.</p>",
+        "description": "<p>Each ally in the area gains [[/flat dsctResour000001]]{1 surge}.</p>",
         "before": false,
         "name": "",
         "img": null,

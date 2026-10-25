@@ -101,7 +101,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>You gain temporary Stamina equal to half the damage dealt.</p>",
+        "description": "<p>You gain [[/flat dsctHeal00000001]]{temporary Stamina} equal to half the damage dealt.</p>",
         "before": false,
         "name": "",
         "img": null,

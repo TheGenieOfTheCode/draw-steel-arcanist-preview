@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>You can cleanse each effect the target is suffering <span class=\"dsct-manual\">that was supernaturally imposed</span>. The target gains 2 surges and can spend a Recovery.</p>",
+        "description": "<p>You can [[/flat dsctCleans000001]]{cleanse} each effect the target is suffering <span class=\"dsct-manual\">that was supernaturally imposed</span>. The target gains [[/flat dsctResour000002]]{2 surges} and can [[/flat dsctHeal00000003]]{spend a Recovery}.</p>",
         "before": true,
         "name": "",
         "img": null,

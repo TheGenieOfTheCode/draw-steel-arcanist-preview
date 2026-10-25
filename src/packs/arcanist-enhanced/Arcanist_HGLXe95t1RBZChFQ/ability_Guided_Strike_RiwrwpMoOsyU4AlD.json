@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target has an edge on their next strike until the start of your turn.</p>",
+        "description": "<p>The target has [[/flat dsctApplied00001]]{an edge} on their next strike until the start of your turn.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target has a double edge on the next strike they make before the start of your next turn instead, <span class=\"dsct-manual\">and that strike ignores cover and concealment</span>.</p>"
+        "description": "<p>The target has [[/flat dsctApplied00002]]{a double edge} on the next strike they make before the start of your next turn instead, <span class=\"dsct-manual\">and that strike ignores cover and concealment</span>.</p>"
       },
       "dsctApplied00001": {
         "_id": "dsctApplied00001",

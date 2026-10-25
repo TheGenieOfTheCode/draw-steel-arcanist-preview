@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>All of the target's characteristics are chosen instead.</p>"
+        "description": "<p>All of the target's [[/flat dsctApplied00006]]{characteristics} are chosen instead.</p>"
       },
       "dsctChoose000001": {
         "_id": "dsctChoose000001",
@@ -84,7 +84,7 @@
             {
               "name": "Might",
               "icon": "",
-              "preview": "The target treats their Might as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00001]]{Might} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -105,7 +105,7 @@
             {
               "name": "Agility",
               "icon": "",
-              "preview": "The target treats their Agility as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00002]]{Agility} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -126,7 +126,7 @@
             {
               "name": "Reason",
               "icon": "",
-              "preview": "The target treats their Reason as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00003]]{Reason} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -147,7 +147,7 @@
             {
               "name": "Intuition",
               "icon": "",
-              "preview": "The target treats their Intuition as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00004]]{Intuition} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -168,7 +168,7 @@
             {
               "name": "Presence",
               "icon": "",
-              "preview": "The target treats their Presence as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00005]]{Presence} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {

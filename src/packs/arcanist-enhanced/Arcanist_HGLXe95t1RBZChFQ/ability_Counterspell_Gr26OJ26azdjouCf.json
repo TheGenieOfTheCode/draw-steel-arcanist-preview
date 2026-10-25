@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">All damage from the triggering ability is halved, and any potencies associated with the damage are reduced by [[lookup @R]]{your Reason score}.</span></p>",
+        "description": "<p>All damage from the triggering ability is halved, and any potencies associated with the damage are reduced by [[lookup @R]]{your Reason score}.</p>",
         "before": true,
         "name": "",
         "img": null,

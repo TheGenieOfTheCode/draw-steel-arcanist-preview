@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The damage is halved, and strikes against them take a bane until the end of their next turn.</p>",
+        "description": "<p>The damage is halved, and strikes against them [[/flat dsctApplied00001]]{take a bane} until the end of their next turn.</p>",
         "before": true,
         "name": "",
         "img": null,

@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">One ally within 10 squares of the target can lose a Recovery to allow</span> the target to regain Stamina equal to the target's recovery value.</p>",
+        "description": "<p><span class=\"dsct-manual\">One ally within 10 squares of the target can lose a Recovery to allow</span> the target to [[/flat dsctHeal00000001]]{regain Stamina} equal to the target's recovery value.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>You can cleanse one effect the target is suffering, or they can stand up if they are prone.</p>"
+        "description": "<p>You can [[/flat dsctCleans000002]]{cleanse one effect} the target is suffering, or they can [[/flat dsctCleans000003]]{stand up} if they are prone.</p>"
       },
       "dsctHeal00000001": {
         "_id": "dsctHeal00000001",

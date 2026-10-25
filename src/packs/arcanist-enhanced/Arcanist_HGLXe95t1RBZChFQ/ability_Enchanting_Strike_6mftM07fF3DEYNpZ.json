@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target gains 2 surges, which they can use on the triggering strike.</p>",
+        "description": "<p>The target gains [[/flat dsctResour000001]]{2 surges}, which they can use on the triggering strike.</p>",
         "before": true,
         "name": "",
         "img": null,

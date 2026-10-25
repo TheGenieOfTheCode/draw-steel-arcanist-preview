@@ -101,7 +101,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>Each enemy adjacent to the target takes 2 × R cold damage.</p>",
+        "description": "<p>Each enemy adjacent to the target takes [[/flat dsctDamage000001]]{2 × R cold damage}.</p>",
         "before": false,
         "name": "",
         "img": null,

@@ -101,7 +101,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>Two allies within 5 squares of you gain 1 surge. You can target yourself instead of one ally.</p>",
+        "description": "<p>Two allies within 5 squares of you gain [[/flat dsctResour000001]]{1 surge}. You can target yourself instead of one ally.</p>",
         "before": false,
         "name": "",
         "img": null,

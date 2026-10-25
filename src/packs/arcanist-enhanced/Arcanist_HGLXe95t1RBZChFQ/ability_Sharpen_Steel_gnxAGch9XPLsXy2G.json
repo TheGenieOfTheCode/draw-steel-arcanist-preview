@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target gains 10 temporary Stamina and gains 1 surge.</p>",
+        "description": "<p>The target gains [[/flat dsctHeal00000001]]{10 temporary Stamina} and gains [[/flat dsctResour000002]]{1 surge}.</p>",
         "before": true,
         "name": "",
         "img": null,

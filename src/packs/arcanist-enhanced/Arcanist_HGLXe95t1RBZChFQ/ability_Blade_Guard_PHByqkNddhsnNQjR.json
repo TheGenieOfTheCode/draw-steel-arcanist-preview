@@ -95,7 +95,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>Two allies within 5 squares of you each gain R temporary Stamina. You can target yourself instead of one ally.</p>",
+        "description": "<p>Two allies within 5 squares of you each gain [[/flat dsctHeal00000001]]{R temporary Stamina}. You can target yourself instead of one ally.</p>",
         "before": false,
         "name": "",
         "img": null,

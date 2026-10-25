@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target's potencies are reduced by 1 until the end of their next turn.</p>"
+        "description": "<p>The target's [[/flat dsctApplied00001]]{potencies are reduced by 1} until the end of their next turn.</p>"
       },
       "dsctApplied00001": {
         "_id": "dsctApplied00001",

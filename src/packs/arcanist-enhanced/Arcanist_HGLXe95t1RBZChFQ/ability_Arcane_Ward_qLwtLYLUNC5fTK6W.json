@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target gains R temporary Stamina <span class=\"dsct-manual\">until the start of your next turn</span>.</p>",
+        "description": "<p>The target gains [[/flat dsctHeal00000001]]{R temporary Stamina} <span class=\"dsct-manual\">until the start of your next turn</span>.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target gains 2 × R temporary Stamina instead. While the target has this temporary Stamina, strikes against them take a bane <span class=\"dsct-manual\">and they have an edge on reactive tests</span>.</p>"
+        "description": "<p>The target gains [[/flat dsctHeal00000002]]{2 × R temporary Stamina} instead. While the target has this temporary Stamina, strikes against them [[/flat dsctApplied00003]]{take a bane} <span class=\"dsct-manual\">and they have an edge on reactive tests</span>.</p>"
       },
       "dsctHeal00000001": {
         "_id": "dsctHeal00000001",

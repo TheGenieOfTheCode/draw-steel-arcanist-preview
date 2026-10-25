@@ -103,7 +103,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p><span class=\"dsct-manual\">The forced movement gains a +[[lookup @R]]{R} bonus.</span></p>",
+        "description": "<p>The forced movement gains a +[[lookup @R]]{R} bonus.</p>",
         "before": false,
         "resource": {
           "value": 1,
@@ -127,7 +127,8 @@
     },
     "draw-steel-combat-tools": {
       "enhanced": true,
-      "enhancedSpecific": true
+      "enhancedSpecific": true,
+      "fmSpendBonus": "@R"
     }
   },
   "_key": "!items!9NmhD2mIlyOle611"

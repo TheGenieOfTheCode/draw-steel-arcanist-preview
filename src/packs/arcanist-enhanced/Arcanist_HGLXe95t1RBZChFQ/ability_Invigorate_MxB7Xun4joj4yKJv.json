@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target gains 1 surge.</p>",
+        "description": "<p>The target gains [[/flat dsctResour000001]]{1 surge}.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target gains an edge on their next power roll.</p>"
+        "description": "<p>The target gains [[/flat dsctApplied00002]]{an edge} on their next power roll.</p>"
       },
       "dsctResour000001": {
         "_id": "dsctResour000001",

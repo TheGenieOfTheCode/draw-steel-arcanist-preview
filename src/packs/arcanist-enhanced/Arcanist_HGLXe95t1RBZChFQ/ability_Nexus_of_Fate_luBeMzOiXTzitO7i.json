@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>You can cleanse one effect the target is suffering. <span class=\"dsct-manual\">If the target hasn't acted yet this combat round, they can take their turn immediately after yours. If they do, they gain an additional 1 of their Heroic Resource at the start of that turn</span>, and they have an edge on the next power roll they make.</p>",
+        "description": "<p>You can [[/flat dsctCleans000001]]{cleanse} one effect the target is suffering. <span class=\"dsct-manual\">If the target hasn't acted yet this combat round, they can take their turn immediately after yours. If they do, they gain an additional 1 of their Heroic Resource at the start of that turn</span>, and they have [[/flat dsctApplied00002]]{an edge} on the next power roll they make.</p>",
         "before": true,
         "name": "",
         "img": null,
