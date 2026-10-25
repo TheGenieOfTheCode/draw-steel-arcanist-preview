@@ -172,7 +172,7 @@
             {
               "name": "Push",
               "icon": "",
-              "preview": "Each target is [[/flat dsctForced000002]]{pushed 2 squares} away from the center of the area.",
+              "preview": "Each target is [[/flat dsctForced000002]] squares away from the center of the area.",
               "story": "",
               "keywords": [],
               "distance": {
