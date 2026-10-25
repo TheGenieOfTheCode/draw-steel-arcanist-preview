@@ -6,6 +6,7 @@ import { registerComponents } from "./components.mjs";
 import { registerPaths } from "./paths.mjs";
 import { registerAugury } from "./augury.mjs";
 import { registerRoundStart } from "./round-start.mjs";
+import { registerGrimoirePool } from "./grimoire-pool.mjs";
 
 Hooks.once("init", () => {
   registerConditions();
@@ -16,4 +17,5 @@ Hooks.once("init", () => {
   registerRoundStart();
   registerPaths();
   registerAugury();
+  registerGrimoirePool();
 });
