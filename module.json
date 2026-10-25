@@ -45,6 +45,20 @@
           "verified": "1.1.2"
         }
       }
+    ],
+    "recommends": [
+      {
+        "id": "draw-steel-combat-tools",
+        "type": "module",
+        "manifest": "https://github.com/TheGenieOfTheCode/draw-steel-combat-tools/releases/latest/download/module.json",
+        "reason": "[Arcanist] Applies ability effects from chat messages: potency checks, recurring damage and the Enhanced abilities."
+      },
+      {
+        "id": "draw-steel-triggers",
+        "type": "module",
+        "manifest": "https://github.com/TheGenieOfTheCode/draw-steel-triggers/releases/latest/download/module.json",
+        "reason": "[Arcanist] Reminds you when a prepared triggered action or a school focus gain applies, and only for prepared abilities."
+      }
     ]
   },
   "packs": [
