@@ -84,7 +84,7 @@
             {
               "name": "Might",
               "icon": "",
-              "preview": "The target treats their [[/flat dsctApplied00001]]{Might} as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00001 short=M]]{Might} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -105,7 +105,7 @@
             {
               "name": "Agility",
               "icon": "",
-              "preview": "The target treats their [[/flat dsctApplied00002]]{Agility} as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00002 short=A]]{Agility} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -126,7 +126,7 @@
             {
               "name": "Reason",
               "icon": "",
-              "preview": "The target treats their [[/flat dsctApplied00003]]{Reason} as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00003 short=R]]{Reason} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -147,7 +147,7 @@
             {
               "name": "Intuition",
               "icon": "",
-              "preview": "The target treats their [[/flat dsctApplied00004]]{Intuition} as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00004 short=I]]{Intuition} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -168,7 +168,7 @@
             {
               "name": "Presence",
               "icon": "",
-              "preview": "The target treats their [[/flat dsctApplied00005]]{Presence} as 1 lower against potencies.",
+              "preview": "The target treats their [[/flat dsctApplied00005 short=P]]{Presence} as 1 lower against potencies.",
               "story": "",
               "keywords": [],
               "distance": {
@@ -350,7 +350,7 @@
   "effects": [
     {
       "name": "Harrowing Atrophy (Might)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-might.webp",
       "type": "base",
       "_id": "O4FO4Vm9XwUMDD2s",
       "system": {
@@ -396,7 +396,7 @@
     },
     {
       "name": "Harrowing Atrophy (Agility)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-agility.webp",
       "type": "base",
       "_id": "29FcaxjAHhdzbps1",
       "system": {
@@ -488,7 +488,7 @@
     },
     {
       "name": "Harrowing Atrophy (Intuition)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-intuition.webp",
       "type": "base",
       "_id": "bLhkGOCXvhCbjLRD",
       "system": {
@@ -534,7 +534,7 @@
     },
     {
       "name": "Harrowing Atrophy (Presence)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-presence.webp",
       "type": "base",
       "_id": "Gj5MNdaAtYUop0JG",
       "system": {
