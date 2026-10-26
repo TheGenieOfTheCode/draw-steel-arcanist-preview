@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target gains [[/flat dsctHeal00000002]]{2 × R temporary Stamina} instead. While the target has this temporary Stamina, strikes against them [[/flat dsctApplied00003]]{take a bane} and they have an edge on reactive tests.</p>"
+        "description": "<p>The target gains [[/flat dsctHeal00000002]]{2 × R temporary Stamina} instead. While the target has this temporary Stamina, strikes against them [[/flat dsctApplied00003]]{take a bane and they have an edge on reactive tests}.</p>"
       },
       "dsctHeal00000001": {
         "_id": "dsctHeal00000001",
