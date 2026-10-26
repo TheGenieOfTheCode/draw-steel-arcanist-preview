@@ -95,7 +95,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>This ability ignores concealment and cover, <span class=\"dsct-manual\">and doesn't need line of effect to use if a size 1 opening exists between you and the target</span>.</p>",
+        "description": "<p>This ability ignores concealment and cover, and doesn't need line of effect to use if a size 1 opening exists between you and the target.</p>",
         "before": false,
         "name": "",
         "img": null,
@@ -104,7 +104,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p><span class=\"dsct-manual\">You can target an additional creature for every 3 focus spent, up to a maximum of two additional creatures.</span></p>",
+        "description": "<p>You can target an additional creature for every 3 focus spent, up to a maximum of two additional creatures.</p>",
         "before": false,
         "resource": {
           "value": 3,
@@ -129,7 +129,12 @@
       "enhanced": true,
       "enhancedSpecific": true,
       "ignoresCover": true,
-      "ignoresConcealment": true
+      "ignoresConcealment": true,
+      "openingReach": true,
+      "spendTargets": {
+        "per": 3,
+        "max": 2
+      }
     }
   },
   "_key": "!items!MivKdkbdZww6MMw2"

@@ -262,6 +262,9 @@
             "expiry": "turnStart",
             "rounds": 1
           }
+        },
+        "draw-steel-battle-log": {
+          "gmOnly": true
         }
       },
       "_key": "!items.effects!qLwtLYLUNC5fTK6W.dR8fsAG6riUyJ9ab",

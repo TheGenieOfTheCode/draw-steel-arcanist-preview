@@ -39,7 +39,9 @@
     "power": {
       "roll": {
         "formula": "@chr",
-        "characteristics": [],
+        "characteristics": [
+          "reason"
+        ],
         "reactive": false
       },
       "effects": {}
@@ -87,7 +89,7 @@
           "display": "",
           "mode": "normal",
           "mover": "target",
-          "distance": "@R + @spend",
+          "distance": "@chr + @spend",
           "animate": true,
           "color": "#a030ff",
           "duration": 600,

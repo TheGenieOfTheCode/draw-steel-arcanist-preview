@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">One ally within 10 squares of the target can lose a Recovery to allow</span> the target to [[/flat dsctHeal00000001]]{regain Stamina} equal to the target's recovery value.</p>",
+        "description": "<p>One ally within 10 squares of the target can lose a Recovery to allow the target to [[/flat dsctHeal00000001]]{regain Stamina} equal to the target's recovery value.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -79,10 +79,10 @@
         "description": "",
         "before": false,
         "flatHeal": {
-          "displayText": "The target regains Stamina equal to their recovery value",
+          "displayText": "An ally within 10 squares of the target loses a Recovery, and the target regains Stamina equal to their recovery value",
           "display": "Regain Stamina",
-          "spendRecovery": false,
-          "recoverySource": "target",
+          "spendRecovery": true,
+          "recoverySource": "ally",
           "amountType": "recoveryValue",
           "amountFormula": "0",
           "recoveryValueSource": "target",

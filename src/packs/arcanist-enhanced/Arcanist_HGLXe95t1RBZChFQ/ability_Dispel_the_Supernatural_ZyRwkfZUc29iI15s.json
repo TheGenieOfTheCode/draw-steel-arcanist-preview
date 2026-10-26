@@ -70,7 +70,7 @@
         "description": "",
         "before": false,
         "flatCleanse": {
-          "displayText": "Ends each supernaturally imposed effect on the target, one press each",
+          "displayText": "Ends each supernaturally imposed effect on the target",
           "display": "Cleanse Effects",
           "expiryFilter": [],
           "statusFilter": [],
@@ -78,8 +78,8 @@
             "magic",
             "psionic"
           ],
-          "repeatable": true,
-          "all": false,
+          "repeatable": false,
+          "all": true,
           "recipient": "target",
           "spend": {
             "enabled": false,

@@ -146,7 +146,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">The ground beneath the area becomes @UUID[Compendium.draw-steel.monsters.Actor.d8YitCdNB3SmnKVY]{Flammable Oil} (see <em>Draw Steel: Monsters</em> pg. 336). When lit, it burns until the end of the round.</span></p>",
+        "description": "<p>The ground beneath the area becomes @UUID[Compendium.draw-steel.monsters.Actor.d8YitCdNB3SmnKVY]{Flammable Oil} (see <em>Draw Steel: Monsters</em> pg. 336). <span class=\"dsct-manual\">When lit, it burns until the end of the round</span>.</p>",
         "before": false,
         "name": "",
         "img": null,
@@ -166,7 +166,13 @@
     },
     "draw-steel-combat-tools": {
       "enhanced": true,
-      "enhancedSpecific": true
+      "enhancedSpecific": true,
+      "templateOngoing": true,
+      "templateEnd": "combatEnd",
+      "templateSpawn": {
+        "name": "Flammable Oil",
+        "uuid": "Compendium.draw-steel.monsters.Actor.d8YitCdNB3SmnKVY"
+      }
     }
   },
   "_key": "!items!1q67Hp81ShfwvCfe"

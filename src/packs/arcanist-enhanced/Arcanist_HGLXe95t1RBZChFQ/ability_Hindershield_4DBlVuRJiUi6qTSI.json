@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">The triggering strike takes a bane against the target</span> and the target takes half the damage.</p>",
+        "description": "<p>The triggering strike takes a bane against the target and the target takes half the damage.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p><span class=\"dsct-manual\">The damage is halved for all targets of the triggering strike instead.</span></p>",
+        "description": "<p>The damage is halved for all targets of the triggering strike instead.</p>",
         "before": false,
         "resource": {
           "value": 1,

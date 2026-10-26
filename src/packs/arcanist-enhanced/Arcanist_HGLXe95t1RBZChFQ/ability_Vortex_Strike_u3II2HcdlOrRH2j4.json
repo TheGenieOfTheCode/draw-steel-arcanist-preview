@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>You [[/flat dsctTelepo000001]] squares. The target gains [[/flat dsctResour000002]]{1 surge} <span class=\"dsct-manual\">and can then make a melee free strike</span>.</p>",
+        "description": "<p>You [[/flat dsctTelepo000001]] squares. The target gains [[/flat dsctResour000002]]{1 surge} and can then make a [[/freestrike melee by=target]]{melee free strike}.</p>",
         "before": true,
         "name": "",
         "img": null,
