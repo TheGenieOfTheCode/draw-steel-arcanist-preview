@@ -2,7 +2,7 @@
   "ARCANIST": {
     "Analyze": {
       "Speaker": "Analyze",
-      "Title": "Analyze: {name}",
+      "Title": "{name}",
       "Keywords": "Keywords",
       "Immunities": "Damage Immunities",
       "Weaknesses": "Damage Weaknesses",
@@ -11,7 +11,12 @@
       "Cost": "{name} ({cost} Malice)",
       "AllDamage": "All damage",
       "SquareStamina": "Stamina per square",
-      "None": "None"
+      "None": "None",
+      "Abilities": "Abilities",
+      "DeactivateHint": "Adjacent to it, you can try to deactivate it as part of this maneuver. Every test to deactivate it has a double edge.",
+      "Analyzed": "Analyzed: {name}",
+      "AnalyzedDescription": "You analyzed {name}: your tests to deactivate it have a double edge.",
+      "DeactivateReminder": "<strong>{name}</strong> analyzed {object}: this test to deactivate it has a double edge."
     },
     "Status": {
       "Disoriented": "Disoriented",

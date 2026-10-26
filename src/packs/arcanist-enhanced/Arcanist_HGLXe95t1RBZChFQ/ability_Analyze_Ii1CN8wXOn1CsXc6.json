@@ -64,7 +64,7 @@
       "spend00000000000": {
         "_id": "spend00000000000",
         "type": "spend",
-        "description": "<p><span class=\"dsct-manual\">If the target is a Dynamic Terrain Object, you learn all of its abilities and can attempt to deactivate it as a part of this maneuver if you are adjacent to it. That test and all future tests to deactivate it gain a double edge.</span></p>",
+        "description": "<p>If the target is a Dynamic Terrain Object, you learn all of its abilities and can attempt to deactivate it as a part of this maneuver if you are adjacent to it. That test and all future tests to deactivate it gain a double edge.</p>",
         "before": false,
         "resource": {
           "value": 1,

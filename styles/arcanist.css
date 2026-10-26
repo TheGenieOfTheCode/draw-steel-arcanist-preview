@@ -428,3 +428,64 @@ li.arcanist-unprepared-row:hover > .item-row {
   font-size: 1.875rem;
   line-height: 1;
 }
+
+.arcanist-analyze h3 {
+  margin: 0 0 4px;
+  font-size: var(--font-size-18, 18px);
+}
+
+.arcanist-analyze h4 {
+  margin: 8px 0 2px;
+  font-size: var(--font-size-14, 14px);
+}
+
+.arcanist-analyze .arcanist-analyze-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px 10px;
+  margin: 0;
+}
+
+.arcanist-analyze .arcanist-analyze-facts dt {
+  font-weight: bold;
+}
+
+.arcanist-analyze .arcanist-analyze-facts dd {
+  margin: 0;
+}
+
+.arcanist-analyze .arcanist-analyze-hint {
+  margin: 0 0 4px;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.arcanist-analyze .arcanist-analyze-feature {
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  padding: 3px 0;
+}
+
+.arcanist-analyze .arcanist-analyze-feature > summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.arcanist-analyze .arcanist-analyze-feature > p {
+  margin: 4px 0;
+}
+
+.arcanist-analyze dl.power-roll-display {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 4px 0;
+}
+
+.arcanist-analyze dl.power-roll-display dd {
+  margin: 0;
+}
+
+.arcanist-analyze dl.power-roll-display dt:not([class]) {
+  display: none;
+}
