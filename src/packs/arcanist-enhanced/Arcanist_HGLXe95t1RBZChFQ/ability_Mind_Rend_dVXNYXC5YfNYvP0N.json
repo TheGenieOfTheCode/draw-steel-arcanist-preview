@@ -101,15 +101,91 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">Until the end of the target's next turn, their location is always known to you. They can't benefit from concealment, being hidden, or being invisible as long as you are within 20 squares of them.</span></p>",
+        "description": "<p>Until the end of the target's next turn, their location is [[/flat dsctApplied00001]]{always known} to you. They can't benefit from concealment, being hidden, or being invisible as long as you are within 20 squares of them.</p>",
         "before": false,
         "name": "",
         "img": null,
         "sort": 0
+      },
+      "dsctApplied00001": {
+        "_id": "dsctApplied00001",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "Can't benefit from concealment, hidden or invisible within 20 squares of you (EoT)",
+          "display": "Exposed (EoT)",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "jg2pctE5xEEXfM0d",
+          "exclusiveSelf": false,
+          "end": "turn",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
       }
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "name": "Mind Rend",
+      "img": "icons/magic/perception/eye-tendrils-web-purple.webp",
+      "type": "base",
+      "_id": "jg2pctE5xEEXfM0d",
+      "system": {
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.exposed",
+            "type": "override",
+            "value": "true",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.exposedRange",
+            "type": "override",
+            "value": "20",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Your location is always known to the caster. You can't benefit from concealment, being hidden, or being invisible while the caster is within 20 squares of you.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true
+        }
+      },
+      "_key": "!items.effects!dVXNYXC5YfNYvP0N.jg2pctE5xEEXfM0d",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.dVXNYXC5YfNYvP0N"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0
