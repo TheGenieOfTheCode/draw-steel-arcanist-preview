@@ -152,7 +152,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>You can <span class=\"dsct-manual\">safely</span> [[/flat dsctForced000001]]{push} each creature frightened this way up to a number of squares equal to their speed, ignoring stability.</p>",
+        "description": "<p>You can safely [[/flat dsctForced000001]]{push} each creature frightened this way up to a number of squares equal to their speed, ignoring stability.</p>",
         "before": false,
         "name": "",
         "img": null,

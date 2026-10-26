@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target gains [[/flat dsctHeal00000001]]{R temporary Stamina} <span class=\"dsct-manual\">until the start of your next turn</span>.</p>",
+        "description": "<p>The target gains [[/flat dsctHeal00000001]]{R temporary Stamina} [[/flat dsctApplied00004]]{until the start of your next turn}.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target gains [[/flat dsctHeal00000002]]{2 × R temporary Stamina} instead. While the target has this temporary Stamina, strikes against them [[/flat dsctApplied00003]]{take a bane} <span class=\"dsct-manual\">and they have an edge on reactive tests</span>.</p>"
+        "description": "<p>The target gains [[/flat dsctHeal00000002]]{2 × R temporary Stamina} instead. While the target has this temporary Stamina, strikes against them [[/flat dsctApplied00003]]{take a bane} and they have an edge on reactive tests.</p>"
       },
       "dsctHeal00000001": {
         "_id": "dsctHeal00000001",
@@ -131,7 +131,7 @@
         "description": "",
         "before": false,
         "flatApplied": {
-          "displayText": "Strikes against them take a bane while this temporary Stamina lasts",
+          "displayText": "Strikes against them take a bane and they have an edge on reactive tests while this temporary Stamina lasts",
           "display": "Ward",
           "potency": {
             "characteristic": "",
@@ -144,6 +144,32 @@
           "properties": [],
           "spend": {
             "enabled": true,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00004": {
+        "_id": "dsctApplied00004",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200004,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "The ward's temporary Stamina ends at the start of your next turn",
+          "display": "Lasts Until Your Turn",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "dR8fsAG6riUyJ9ab",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": false,
             "value": 1
           }
         }
@@ -164,6 +190,13 @@
             "value": "1",
             "phase": "initial",
             "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.reactiveTests.edges",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
           }
         ],
         "end": {
@@ -178,7 +211,7 @@
         "expiry": null,
         "expired": false
       },
-      "description": "<p>Strikes against you take a bane while you have the ward's temporary Stamina.</p>",
+      "description": "<p>Strikes against you take a bane and you have an edge on reactive tests while you have the ward's temporary Stamina.</p>",
       "tint": "#ffffff",
       "transfer": false,
       "statuses": [],
@@ -192,6 +225,46 @@
         }
       },
       "_key": "!items.effects!qLwtLYLUNC5fTK6W.cNDLo120bYkuVwbQ",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
+    },
+    {
+      "name": "Arcane Ward (Temporary Stamina)",
+      "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+      "type": "base",
+      "_id": "dR8fsAG6riUyJ9ab",
+      "system": {
+        "changes": [],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>The ward's temporary Stamina lasts until the start of the caster's next turn.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "tempStamina",
+          "expiryClearsTempStamina": true,
+          "expiryReminder": {
+            "expiry": "turnStart",
+            "rounds": 1
+          }
+        }
+      },
+      "_key": "!items.effects!qLwtLYLUNC5fTK6W.dR8fsAG6riUyJ9ab",
       "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
     }
   ],

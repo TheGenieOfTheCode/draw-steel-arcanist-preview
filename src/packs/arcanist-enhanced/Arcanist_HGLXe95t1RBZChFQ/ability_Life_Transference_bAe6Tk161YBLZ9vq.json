@@ -112,6 +112,7 @@
             "save"
           ],
           "statusFilter": [],
+          "keywordFilter": [],
           "repeatable": false,
           "all": false,
           "recipient": "target",
@@ -136,6 +137,7 @@
           "statusFilter": [
             "prone"
           ],
+          "keywordFilter": [],
           "repeatable": false,
           "all": false,
           "recipient": "target",

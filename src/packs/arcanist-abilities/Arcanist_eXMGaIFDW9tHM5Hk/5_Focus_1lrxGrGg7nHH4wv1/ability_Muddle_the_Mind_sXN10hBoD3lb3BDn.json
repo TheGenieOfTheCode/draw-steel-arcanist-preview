@@ -202,6 +202,13 @@
             "value": "-1",
             "phase": "initial",
             "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.searchBanes",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
           }
         ],
         "end": {

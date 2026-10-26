@@ -1,5 +1,5 @@
-2026/10/25-18:48:32.079 9504 Delete type=3 #1
-2026/10/25-18:48:32.084 aaf8 Level-0 table #5: started
-2026/10/25-18:48:32.088 aaf8 Level-0 table #5: 46767 bytes OK
-2026/10/25-18:48:32.091 aaf8 Delete type=0 #3
-2026/10/25-18:48:32.091 aaf8 Manual compaction at level-0 from '!folders!1lrxGrGg7nHH4wv1' @ 72057594037927935 : 1 .. '!items.effects!vAzX8vGeMk18hfDq.EmSmN1HZWkvZ5wdT' @ 0 : 0; will stop at (end)
+2026/10/26-16:47:19.381 3ddc Delete type=3 #1
+2026/10/26-16:47:19.386 8a30 Level-0 table #5: started
+2026/10/26-16:47:19.390 8a30 Level-0 table #5: 46782 bytes OK
+2026/10/26-16:47:19.393 8a30 Delete type=0 #3
+2026/10/26-16:47:19.393 8a30 Manual compaction at level-0 from '!folders!1lrxGrGg7nHH4wv1' @ 72057594037927935 : 1 .. '!items.effects!vAzX8vGeMk18hfDq.EmSmN1HZWkvZ5wdT' @ 0 : 0; will stop at (end)

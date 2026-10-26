@@ -68,7 +68,7 @@
         "img": null,
         "sort": 100000,
         "before": false,
-        "description": "<p>The target has [[/flat dsctApplied00002]]{a double edge} on the next strike they make before the start of your next turn instead, <span class=\"dsct-manual\">and that strike ignores cover and concealment</span>.</p>"
+        "description": "<p>The target has [[/flat dsctApplied00002]]{a double edge} on the next strike they make before the start of your next turn instead, and that strike [[/flat dsctApplied00003]]{ignores cover and concealment}.</p>"
       },
       "dsctApplied00001": {
         "_id": "dsctApplied00001",
@@ -113,6 +113,32 @@
             "custom": ""
           },
           "statusId": "enpHLoiV5dZoPchy",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00003": {
+        "_id": "dsctApplied00003",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200003,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "Their next strike ignores cover and concealment",
+          "display": "Ignores Cover",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "ZiigcLXxmOS1HB4q",
           "exclusiveSelf": false,
           "end": "",
           "properties": [],
@@ -227,6 +253,60 @@
         }
       },
       "_key": "!items.effects!RiwrwpMoOsyU4AlD.enpHLoiV5dZoPchy",
+      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+    },
+    {
+      "name": "Guided Strike (Unerring)",
+      "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+      "type": "base",
+      "_id": "ZiigcLXxmOS1HB4q",
+      "system": {
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.ignoresCoverBane",
+            "type": "override",
+            "value": "true",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.ignoresConcealmentBane",
+            "type": "override",
+            "value": "true",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Your next strike ignores cover and concealment.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "strike",
+          "expiryReminder": {
+            "expiry": "turnStart",
+            "rounds": 1
+          }
+        }
+      },
+      "_key": "!items.effects!RiwrwpMoOsyU4AlD.ZiigcLXxmOS1HB4q",
       "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
     }
   ],

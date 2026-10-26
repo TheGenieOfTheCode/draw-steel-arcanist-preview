@@ -152,7 +152,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p>While slowed this way, targets treat their characteristics as 1 lower for the purposes of resisting potencies <span class=\"dsct-manual\">and take a bane on the Search for Hidden Creatures maneuver</span>.</p>",
+        "description": "<p>While slowed this way, targets treat their characteristics as 1 lower for the purposes of resisting potencies and take a bane on the Search for Hidden Creatures maneuver.</p>",
         "before": false,
         "name": "",
         "img": null,
@@ -200,6 +200,13 @@
             "key": "system.characteristics.presence.resist",
             "type": "add",
             "value": "-1",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.searchBanes",
+            "type": "add",
+            "value": "1",
             "phase": "initial",
             "priority": null
           }

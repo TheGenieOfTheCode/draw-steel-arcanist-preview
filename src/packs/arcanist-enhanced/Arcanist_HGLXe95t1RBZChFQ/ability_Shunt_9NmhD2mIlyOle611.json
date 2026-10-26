@@ -56,7 +56,7 @@
               "movement": [
                 "push"
               ],
-              "distance": "1",
+              "distance": "1 + (@chr * @spend)",
               "display": "{{forced}}",
               "properties": [],
               "potency": {
@@ -68,7 +68,7 @@
               "movement": [
                 "push"
               ],
-              "distance": "2",
+              "distance": "2 + (@chr * @spend)",
               "display": "{{forced}}",
               "properties": [],
               "potency": {
@@ -80,7 +80,7 @@
               "movement": [
                 "push"
               ],
-              "distance": "3",
+              "distance": "3 + (@chr * @spend)",
               "display": "{{forced}}",
               "properties": [],
               "potency": {
@@ -127,8 +127,7 @@
     },
     "draw-steel-combat-tools": {
       "enhanced": true,
-      "enhancedSpecific": true,
-      "fmSpendBonus": "@R"
+      "enhancedSpecific": true
     }
   },
   "_key": "!items!9NmhD2mIlyOle611"
