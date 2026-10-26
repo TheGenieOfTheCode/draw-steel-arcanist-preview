@@ -55,7 +55,11 @@
           "damage": {
             "tier1": {
               "value": "2",
-              "types": [],
+              "types": [
+                "cold",
+                "fire",
+                "lightning"
+              ],
               "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.weak",
@@ -64,7 +68,11 @@
             },
             "tier2": {
               "value": "5",
-              "types": [],
+              "types": [
+                "cold",
+                "fire",
+                "lightning"
+              ],
               "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.average",
@@ -73,7 +81,11 @@
             },
             "tier3": {
               "value": "7",
-              "types": [],
+              "types": [
+                "cold",
+                "fire",
+                "lightning"
+              ],
               "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.strong",
@@ -95,7 +107,7 @@
       "after00000000000": {
         "_id": "after00000000000",
         "type": "base",
-        "description": "<p><span class=\"dsct-manual\">The energy arcs from the first target to a second target within 2 squares of the first target, then arcs again to a third target within 2 squares of the second target. Use the same power roll for each target. You can have this ability deal cold, fire, or lightning damage.</span></p>",
+        "description": "<p>The energy arcs from the first target to a second target within 2 squares of the first target, then arcs again to a third target within 2 squares of the second target. Use the same power roll for each target. You can have this ability deal cold, fire, or lightning damage.</p>",
         "before": false,
         "name": "",
         "img": null,
@@ -115,7 +127,11 @@
     },
     "draw-steel-combat-tools": {
       "enhanced": true,
-      "enhancedSpecific": true
+      "enhancedSpecific": true,
+      "chainTargets": {
+        "links": 2,
+        "range": 2
+      }
     }
   },
   "_key": "!items!GaSwKmvI3DUSA0oJ"
