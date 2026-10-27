@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
   "system": {
     "description": {
-      "value": "<p>Once per round when you or an ally within 10 squares spends a Recovery, you can spend 1 focus as a free triggered action to grant that creature [[/surge 2]]{2 surges}.</p>",
+      "value": "<p>You gain the following free triggered action.</p>",
       "director": ""
     },
     "source": {
@@ -15,7 +15,30 @@
       "license": "Draw Steel Creator License"
     },
     "_dsid": "arcanist-equivalent-exchange",
-    "advancements": {},
+    "advancements": {
+      "R1odPEvvNhob2LtI": {
+        "_id": "R1odPEvvNhob2LtI",
+        "type": "itemGrant",
+        "name": "Equivalent Exchange",
+        "img": null,
+        "description": "<p>You gain the following free triggered action.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.sxzqWG19gw2SW5Iv"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
     "prerequisites": {
       "dsid": [
         "arcanist-transmutation"

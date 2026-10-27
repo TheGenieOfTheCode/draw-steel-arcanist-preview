@@ -1,0 +1,142 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Inflict Wounds",
+  "type": "ability",
+  "_id": "QmmC23q0LbArIuca",
+  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-inflict-wounds-action",
+    "story": "",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "The target starts their turn while bleeding, weakened, or winded.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target takes [[/flat dsctDamage000001]]{R corruption damage}, and you or an ally within 10 squares gains [[/flat dsctHeal00000002]]{temporary Stamina equal to the damage dealt}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctDamage000001": {
+        "_id": "dsctDamage000001",
+        "type": "dsct.flatDamage",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatDamage": {
+          "displayText": "R corruption damage",
+          "display": "R Corruption Damage",
+          "value": "@R",
+          "types": [
+            "corruption"
+          ],
+          "ignoredImmunities": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctHeal00000002": {
+        "_id": "dsctHeal00000002",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "You or an ally within 10 squares gains temporary Stamina equal to the damage dealt",
+          "display": "Temporary Stamina",
+          "spendRecovery": false,
+          "recoverySource": "self",
+          "amountType": "custom",
+          "amountFormula": "@dealt",
+          "recoveryValueSource": "self",
+          "tempStamina": true,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "others",
+          "others": {
+            "mode": "pick",
+            "origin": "self",
+            "range": 10,
+            "disposition": "ally",
+            "count": 1,
+            "includeSelf": true
+          },
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "necromancy",
+      "slot": "schoolFeature",
+      "limit": "round"
+    },
+    "draw-steel-triggers": {
+      "once": "round"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!QmmC23q0LbArIuca"
+}

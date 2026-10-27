@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
   "system": {
     "description": {
-      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to grant an ally within 10 squares 1 of their Heroic Resource.</p>",
+      "value": "<p>You gain the following free maneuver.</p>",
       "director": ""
     },
     "source": {
@@ -15,7 +15,30 @@
       "license": "Draw Steel Creator License"
     },
     "_dsid": "arcanist-foresee",
-    "advancements": {},
+    "advancements": {
+      "dd4gbNdmgtAlZesd": {
+        "_id": "dd4gbNdmgtAlZesd",
+        "type": "itemGrant",
+        "name": "Foresee",
+        "img": null,
+        "description": "<p>You gain the following free maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.FBkTOJ4rAHThbUw2"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
     "prerequisites": {
       "dsid": [
         "arcanist-divination"

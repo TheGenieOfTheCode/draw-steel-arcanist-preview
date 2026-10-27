@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
   "system": {
     "description": {
-      "value": "<p>Once per round when an enemy starts their turn while bleeding, weakened or winded, you can spend 1 focus as a free triggered action to deal [[/damage @R corruption]]{R corruption damage} to that creature and grant you or an ally within 10 squares temporary Stamina equal to the damage dealt.</p>",
+      "value": "<p>You gain the following free triggered action.</p>",
       "director": ""
     },
     "source": {
@@ -15,7 +15,30 @@
       "license": "Draw Steel Creator License"
     },
     "_dsid": "arcanist-inflict-wounds",
-    "advancements": {},
+    "advancements": {
+      "BlPffmP8Yq3vxhP8": {
+        "_id": "BlPffmP8Yq3vxhP8",
+        "type": "itemGrant",
+        "name": "Inflict Wounds",
+        "img": null,
+        "description": "<p>You gain the following free triggered action.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.sD18BM2iAIW8JUG7"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
     "prerequisites": {
       "dsid": [
         "arcanist-necromancy"

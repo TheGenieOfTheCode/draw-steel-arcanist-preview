@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
   "system": {
     "description": {
-      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to take a move action.</p>",
+      "value": "<p>You gain the following free maneuver.</p>",
       "director": ""
     },
     "source": {
@@ -15,7 +15,30 @@
       "license": "Draw Steel Creator License"
     },
     "_dsid": "arcanist-fast-forward",
-    "advancements": {},
+    "advancements": {
+      "O0Z6aW3ZJ1cjhE7b": {
+        "_id": "O0Z6aW3ZJ1cjhE7b",
+        "type": "itemGrant",
+        "name": "Fast Forward",
+        "img": null,
+        "description": "<p>You gain the following free maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.xSGBBfxYuB9ZtQHg"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
     "prerequisites": {
       "dsid": [
         "arcanist-chronomancy"

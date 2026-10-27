@@ -1,0 +1,110 @@
+{
+  "folder": "HGLXe95t1RBZChFQ",
+  "name": "Explosive Reaction",
+  "type": "ability",
+  "_id": "ehG1vdQ6T7PwaOt1",
+  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-explosive-reaction-action",
+    "story": "",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "The target takes damage from one or more surges.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target takes [[/flat dsctDamage000001]]{2 × R damage}. You can have this damage be cold, fire, or lightning.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctDamage000001": {
+        "_id": "dsctDamage000001",
+        "type": "dsct.flatDamage",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatDamage": {
+          "displayText": "2 × R cold, fire, or lightning damage",
+          "display": "2 × R Damage",
+          "value": "2 * @R",
+          "types": [
+            "cold",
+            "fire",
+            "lightning"
+          ],
+          "ignoredImmunities": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist": {
+      "school": "evocation",
+      "slot": "schoolFeature",
+      "limit": "round"
+    },
+    "draw-steel-triggers": {
+      "once": "round"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!ehG1vdQ6T7PwaOt1"
+}

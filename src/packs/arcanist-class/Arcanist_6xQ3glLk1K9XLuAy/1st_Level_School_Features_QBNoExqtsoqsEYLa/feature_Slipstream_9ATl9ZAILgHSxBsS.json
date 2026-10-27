@@ -6,7 +6,7 @@
   "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
   "system": {
     "description": {
-      "value": "<p>Once on each of your turns in combat, you can spend 1 focus as a free maneuver to allow you or an ally within 10 squares to teleport up to a number of squares equal to 2 × [[lookup @R]]{R}.</p>",
+      "value": "<p>You gain the following free maneuver.</p>",
       "director": ""
     },
     "source": {
@@ -15,7 +15,30 @@
       "license": "Draw Steel Creator License"
     },
     "_dsid": "arcanist-slipstream",
-    "advancements": {},
+    "advancements": {
+      "GDIAokPVw0ZrEIiw": {
+        "_id": "GDIAokPVw0ZrEIiw",
+        "type": "itemGrant",
+        "name": "Slipstream",
+        "img": null,
+        "description": "<p>You gain the following free maneuver.</p>",
+        "requirements": {
+          "level": 1
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.ndrycWW9jujoX6o2"
+          }
+        ],
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
     "prerequisites": {
       "dsid": [
         "arcanist-conjuration"
