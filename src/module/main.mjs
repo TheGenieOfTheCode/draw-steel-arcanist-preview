@@ -8,6 +8,7 @@ import { registerAugury } from "./augury.mjs";
 import { registerRoundStart } from "./round-start.mjs";
 import { registerGrimoirePool } from "./grimoire-pool.mjs";
 import { registerAnalyze } from "./analyze.mjs";
+import { registerFormChanges } from "./form-changes.mjs";
 
 Hooks.once("init", () => {
   registerConditions();
@@ -20,4 +21,5 @@ Hooks.once("init", () => {
   registerAugury();
   registerGrimoirePool();
   registerAnalyze();
+  registerFormChanges();
 });

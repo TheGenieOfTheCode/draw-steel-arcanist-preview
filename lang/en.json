@@ -99,6 +99,31 @@
         "name": "Require Using Flash Recall",
         "hint": "Flash Recall's preparation mode only opens from the button on its ability message, once per message. Director can bypass by holding Shift."
       }
+    },
+    "FormChanges": {
+      "title": "Form-Changing Abilities",
+      "menu": {
+        "name": "Form-Changing Abilities",
+        "label": "Edit List",
+        "hint": "The abilities Transmutation Focus counts as a creature changing its form. Size changes from effects always count."
+      },
+      "intro": "Transmutation Focus gives focus when you or a creature within 10 squares changes its form. These are the abilities that count, matched by name. Add your own for homebrew.",
+      "name": "Ability name",
+      "mode": {
+        "label": "Who changes",
+        "self": "The user",
+        "effect": "Whoever its effect lands on",
+        "targets": "Its targets"
+      },
+      "modeHint": {
+        "self": "the creature using the ability changes, as with Bat Form.",
+        "effect": "a creature changes when the ability's effect is applied to it, so a resisted Petrify does not count.",
+        "targets": "each creature it targets changes, or the user when it targets nobody, as with Abyssal Evolution."
+      },
+      "remove": "Remove",
+      "add": "Add Ability",
+      "reset": "Restore Defaults",
+      "save": "Save Changes"
     }
   }
 }
