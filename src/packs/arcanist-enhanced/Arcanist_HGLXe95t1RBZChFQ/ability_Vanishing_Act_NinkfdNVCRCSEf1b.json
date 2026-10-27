@@ -55,7 +55,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "<p>The target turns [[/flat dsctApplied00001]]{invisible} until the start of your next turn. <span class=\"dsct-manual\">While invisible this way, the target can hide even while observed.</span></p>",
+        "description": "<p>The target turns [[/flat dsctApplied00001]]{invisible} until the start of your next turn. While invisible this way, the target can hide even while observed.</p>",
         "before": true,
         "name": "",
         "img": null,
@@ -70,7 +70,7 @@
         "description": "",
         "before": false,
         "flatApplied": {
-          "displayText": "Invisible until the start of your next turn",
+          "displayText": "Invisible until the start of your next turn, and can hide even while observed",
           "display": "Invisible",
           "potency": {
             "characteristic": "",
@@ -96,7 +96,15 @@
       "type": "base",
       "_id": "X9j0ckXoCT2SCyKg",
       "system": {
-        "changes": [],
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.hideWhileObserved",
+            "type": "override",
+            "value": "true",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         }
