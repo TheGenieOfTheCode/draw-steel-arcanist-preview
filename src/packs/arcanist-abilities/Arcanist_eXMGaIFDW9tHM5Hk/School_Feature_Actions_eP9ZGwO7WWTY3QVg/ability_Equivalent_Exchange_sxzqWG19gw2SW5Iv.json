@@ -16,10 +16,7 @@
     },
     "_dsid": "arcanist-equivalent-exchange-action",
     "story": "",
-    "keywords": [
-      "magic",
-      "ranged"
-    ],
+    "keywords": [],
     "type": "freeTriggered",
     "category": "",
     "resource": 1,
