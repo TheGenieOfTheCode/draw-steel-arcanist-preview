@@ -23,3 +23,7 @@ Hooks.once("init", () => {
   registerAnalyze();
   registerFormChanges();
 });
+
+Hooks.once("ready", () => {
+  game.modules.get("draw-steel-animations")?.api?.registerWeaponFeature?.("arcanist-bladed-spells", ["light", "medium", "heavy"]);
+});
