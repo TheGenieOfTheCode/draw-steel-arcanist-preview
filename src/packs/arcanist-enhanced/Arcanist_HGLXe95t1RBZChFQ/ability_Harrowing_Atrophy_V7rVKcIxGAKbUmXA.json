@@ -59,7 +59,7 @@
         "img": null,
         "sort": 0,
         "before": true,
-        "description": "<p>Choose a characteristic. Until the start of your next turn, the target treats their chosen characteristic as 1 lower for the purpose of resisting potencies.</p><section class=\"secret\"><p><em>Draw Steel: Combat Tools automates part of this.</em></p></section>"
+        "description": "<p>Choose a characteristic. Until the start of your next turn, the target treats their chosen characteristic as 1 lower for the purpose of resisting potencies.</p>"
       },
       "after00000000009": {
         "_id": "after00000000009",

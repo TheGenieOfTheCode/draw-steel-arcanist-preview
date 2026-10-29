@@ -167,7 +167,7 @@
         "description": "",
         "before": false,
         "flatForced": {
-          "displayText": "Push up to their speed, ignoring stability",
+          "displayText": "Safely push up to their speed, ignoring stability",
           "display": "Push (Speed)",
           "movement": [
             "push"
@@ -176,7 +176,7 @@
           "distance": "@target.movement.value",
           "requiresStatus": "frightened",
           "properties": [
-            "no-collision-damage",
+            "safely",
             "ignore-stability"
           ],
           "spend": {
