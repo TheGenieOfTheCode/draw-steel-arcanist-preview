@@ -6,7 +6,7 @@
   "img": "icons/magic/water/projectile-ice-faceted-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.vYl2eHceH9mq5Gjf]{The fang of an ice bat}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.vYl2eHceH9mq5Gjf]{The fang of an ice bat}</p>",
       "director": ""
     },
     "source": {
@@ -146,7 +146,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "The fang of an ice bat"
     },

@@ -3,7 +3,7 @@
   "name": "Illusion Focus",
   "type": "feature",
   "_id": "4Z1kPA0egztTpo0r",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or a creature within 10 squares of you takes psychic damage, or is made dazed, frightened, or taunted.</p>",
@@ -30,7 +30,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "schoolFocus"
     }

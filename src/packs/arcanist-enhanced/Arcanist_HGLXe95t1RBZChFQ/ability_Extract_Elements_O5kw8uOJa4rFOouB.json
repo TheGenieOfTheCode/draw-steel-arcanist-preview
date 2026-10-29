@@ -3,7 +3,7 @@
   "name": "Extract Elements",
   "type": "ability",
   "_id": "O5kw8uOJa4rFOouB",
-  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/transmutation.webp",
   "system": {
     "description": {
       "value": "",
@@ -160,7 +160,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!O5kw8uOJa4rFOouB.EmSmN1HZWkvZ5wdT",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.O5kw8uOJa4rFOouB"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.O5kw8uOJa4rFOouB"
     }
   ],
   "sort": 0,
@@ -168,7 +168,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "transmutation",
       "slot": "triggered"
     },

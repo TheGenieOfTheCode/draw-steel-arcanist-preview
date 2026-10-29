@@ -6,7 +6,7 @@
   "img": "icons/commodities/gems/gem-faceted-round-black.webp",
   "system": {
     "description": {
-      "value": "<p>An onyx purloined from a vampire.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.KprgoDTiNinKxuqi]{Vitality Drain}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>An onyx purloined from a vampire.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.KprgoDTiNinKxuqi]{Vitality Drain}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-vitality-drain"
     }
   },

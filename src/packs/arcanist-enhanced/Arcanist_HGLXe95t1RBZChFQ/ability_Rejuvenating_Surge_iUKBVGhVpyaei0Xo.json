@@ -3,7 +3,7 @@
   "name": "Rejuvenating Surge",
   "type": "ability",
   "_id": "iUKBVGhVpyaei0Xo",
-  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
   "system": {
     "description": {
       "value": "",
@@ -92,7 +92,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "enchantment",
       "slot": "schoolFeature",
       "limit": "round"

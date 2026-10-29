@@ -3,7 +3,7 @@
   "name": "Rewind",
   "type": "ability",
   "_id": "AuePDq2FfjQcYQbB",
-  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "chronomancy",
       "slot": "triggered"
     }

@@ -6,7 +6,7 @@
   "img": "icons/commodities/materials/bowl-powder-teal.webp",
   "system": {
     "description": {
-      "value": "<p>The elemental dust of a galeweaver.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.ZNIQ1I02EpcBKAPF]{Soundquake}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>The elemental dust of a galeweaver.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.ZNIQ1I02EpcBKAPF]{Soundquake}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-soundquake"
     }
   },

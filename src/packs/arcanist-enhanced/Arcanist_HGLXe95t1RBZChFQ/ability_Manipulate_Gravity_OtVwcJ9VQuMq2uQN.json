@@ -3,7 +3,7 @@
   "name": "Manipulate Gravity",
   "type": "ability",
   "_id": "OtVwcJ9VQuMq2uQN",
-  "img": "modules/draw-steel-arcanist/assets/icons/graviturgy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/graviturgy.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "graviturgy",
       "slot": "triggered"
     },

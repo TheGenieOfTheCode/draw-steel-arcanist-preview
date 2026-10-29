@@ -3,7 +3,7 @@
   "name": "Explosive Reaction",
   "type": "ability",
   "_id": "ehG1vdQ6T7PwaOt1",
-  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/evocation.webp",
   "system": {
     "description": {
       "value": "",
@@ -90,7 +90,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "evocation",
       "slot": "schoolFeature",
       "limit": "round"

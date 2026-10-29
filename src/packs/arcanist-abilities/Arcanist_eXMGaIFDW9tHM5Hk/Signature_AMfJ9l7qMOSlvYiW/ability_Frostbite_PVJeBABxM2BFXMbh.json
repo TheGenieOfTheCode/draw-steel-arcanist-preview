@@ -6,7 +6,7 @@
   "img": "icons/magic/air/wind-weather-snow-gusts.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.yIregQfjv5Q7u9rH]{A frozen cocoon}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.yIregQfjv5Q7u9rH]{A frozen cocoon}</p>",
       "director": ""
     },
     "source": {
@@ -187,7 +187,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!PVJeBABxM2BFXMbh.3xWrunK2wfyl8hIi",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.PVJeBABxM2BFXMbh"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.PVJeBABxM2BFXMbh"
     }
   ],
   "sort": 0,
@@ -195,7 +195,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "signature",
       "component": "A frozen cocoon"
     }

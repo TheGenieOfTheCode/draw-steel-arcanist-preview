@@ -3,7 +3,7 @@
   "name": "Grimoire of Empowerment",
   "type": "feature",
   "_id": "XFzltoxJYiFWKUo3",
-  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Guidance:</strong> You gain a double edge on tests made to assist another hero's test. When you assist another hero's test during a montage, you can assist two heroes at once.</p><p><strong>Invigorate:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.98wa8naOguMiNQOO"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.98wa8naOguMiNQOO"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "enchantment",
       "slot": "grimoire"
     }

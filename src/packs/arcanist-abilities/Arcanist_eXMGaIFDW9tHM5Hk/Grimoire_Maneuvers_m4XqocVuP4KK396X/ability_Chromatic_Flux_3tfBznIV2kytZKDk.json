@@ -3,7 +3,7 @@
   "name": "Chromatic Flux",
   "type": "ability",
   "_id": "3tfBznIV2kytZKDk",
-  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/evocation.webp",
   "system": {
     "description": {
       "value": "",
@@ -113,7 +113,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!3tfBznIV2kytZKDk.Hb2ipRdnWJC65hC9",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.3tfBznIV2kytZKDk"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.3tfBznIV2kytZKDk"
     }
   ],
   "sort": 0,
@@ -121,7 +121,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "evocation",
       "slot": "grimoireManeuver"
     }

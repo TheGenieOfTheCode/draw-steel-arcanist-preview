@@ -3,7 +3,7 @@
   "name": "Misdirection",
   "type": "ability",
   "_id": "MVzFDpuuamfjyASz",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "triggered"
     }

@@ -1,5 +1,5 @@
 const DSID = "arcanist-analyze";
-const MODULE = "draw-steel-arcanist";
+const MODULE = "draw-steel-arcanist-preview";
 
 const L = (key, data) => (data ? game.i18n.format(`ARCANIST.Analyze.${key}`, data) : game.i18n.localize(`ARCANIST.Analyze.${key}`));
 const esc = (text) => foundry.utils.escapeHTML(String(text ?? ""));
@@ -101,7 +101,7 @@ function onTestClick(event) {
   const was = link.dataset.edges;
   if (!(Number(was) >= 2)) link.dataset.edges = "2";
   setTimeout(() => { if (was === undefined) delete link.dataset.edges; else link.dataset.edges = was; }, 0);
-  for (const actor of testers) remind(actor, item.actor).catch((err) => console.warn("draw-steel-arcanist | Analyze", err));
+  for (const actor of testers) remind(actor, item.actor).catch((err) => console.warn("draw-steel-arcanist-preview | Analyze", err));
 }
 
 export function registerAnalyze() {
@@ -112,7 +112,7 @@ export function registerAnalyze() {
     if (item?.system?._dsid !== DSID) return;
     const spent = (Number(String(message.flavor ?? "").match(/^Spent (\d+)/i)?.[1]) || 0) > (Number(item.system.resource) || 0);
     for (const token of game.user.targets) {
-      if (token.actor) report(token, { spent, caster: item.actor }).catch((err) => console.warn("draw-steel-arcanist | Analyze", err));
+      if (token.actor) report(token, { spent, caster: item.actor }).catch((err) => console.warn("draw-steel-arcanist-preview | Analyze", err));
     }
   });
   

@@ -3,7 +3,7 @@
   "name": "Misdirection",
   "type": "ability",
   "_id": "4imBuVtCeNh3x424",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "",
@@ -105,7 +105,7 @@
   "effects": [
     {
       "name": "Misdirection",
-      "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
       "type": "base",
       "_id": "H6zh8hUsTov3wmXo",
       "system": {
@@ -143,7 +143,7 @@
         }
       },
       "_key": "!items.effects!4imBuVtCeNh3x424.H6zh8hUsTov3wmXo",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.4imBuVtCeNh3x424"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.4imBuVtCeNh3x424"
     }
   ],
   "sort": 0,
@@ -151,7 +151,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "triggered"
     },

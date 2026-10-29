@@ -3,7 +3,7 @@
   "name": "Graviturgy",
   "type": "subclass",
   "_id": "CdR9QiX9elESdLHN",
-  "img": "modules/draw-steel-arcanist/assets/icons/graviturgy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/graviturgy.webp",
   "system": {
     "description": {
       "value": "<p>The magic of force.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.yZtKIXHSZzspNwQw"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.yZtKIXHSZzspNwQw"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.bBKCuO9X2O4m8boE"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.bBKCuO9X2O4m8boE"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.kQx1MCz1AAAjqHnI"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.kQx1MCz1AAAjqHnI"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "graviturgy",
       "slot": "school"
     }

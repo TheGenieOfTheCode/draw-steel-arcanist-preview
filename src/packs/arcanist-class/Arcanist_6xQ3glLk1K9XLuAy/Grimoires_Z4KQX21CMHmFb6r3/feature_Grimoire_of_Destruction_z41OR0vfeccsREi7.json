@@ -3,7 +3,7 @@
   "name": "Grimoire of Destruction",
   "type": "feature",
   "_id": "z41OR0vfeccsREi7",
-  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/evocation.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Immolate:</strong> You can spend 1 minute performing a ritual to disintegrate an adjacent mundane 1T object. If the object is larger, such as a wall, you can instead spend 10 minutes per square you wish to disintegrate.</p><p><strong>Chromatic Flux:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.3tfBznIV2kytZKDk"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.3tfBznIV2kytZKDk"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "evocation",
       "slot": "grimoire"
     }

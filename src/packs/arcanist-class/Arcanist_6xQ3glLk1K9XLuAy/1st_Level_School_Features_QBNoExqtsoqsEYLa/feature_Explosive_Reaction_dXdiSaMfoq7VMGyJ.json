@@ -3,7 +3,7 @@
   "name": "Explosive Reaction",
   "type": "feature",
   "_id": "dXdiSaMfoq7VMGyJ",
-  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/evocation.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following free triggered action.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.LpudwtP0WJp5uEjb"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.LpudwtP0WJp5uEjb"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "evocation",
       "slot": "schoolFeature",
       "limit": "round"

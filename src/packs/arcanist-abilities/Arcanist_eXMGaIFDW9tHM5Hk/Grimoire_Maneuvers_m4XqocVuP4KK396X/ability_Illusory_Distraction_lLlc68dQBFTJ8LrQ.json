@@ -3,7 +3,7 @@
   "name": "Illusory Distraction",
   "type": "ability",
   "_id": "lLlc68dQBFTJ8LrQ",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "",
@@ -79,7 +79,7 @@
   "effects": [
     {
       "name": "Illusory Distraction",
-      "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
       "type": "base",
       "_id": "tFYv5NDl4MK3HPYe",
       "system": {
@@ -113,7 +113,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!lLlc68dQBFTJ8LrQ.tFYv5NDl4MK3HPYe",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.lLlc68dQBFTJ8LrQ"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.lLlc68dQBFTJ8LrQ"
     }
   ],
   "sort": 0,
@@ -121,7 +121,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "grimoireManeuver"
     }

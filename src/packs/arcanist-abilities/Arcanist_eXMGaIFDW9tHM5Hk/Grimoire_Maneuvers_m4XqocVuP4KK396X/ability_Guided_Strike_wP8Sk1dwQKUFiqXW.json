@@ -3,7 +3,7 @@
   "name": "Guided Strike",
   "type": "ability",
   "_id": "wP8Sk1dwQKUFiqXW",
-  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "chronomancy",
       "slot": "grimoireManeuver"
     }

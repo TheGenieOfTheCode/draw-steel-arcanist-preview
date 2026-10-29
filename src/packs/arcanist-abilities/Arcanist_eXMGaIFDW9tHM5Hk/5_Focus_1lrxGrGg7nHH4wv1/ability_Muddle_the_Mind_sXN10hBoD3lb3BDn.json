@@ -6,7 +6,7 @@
   "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.yRDj9PjLvZRWKjHe]{A fractured prismacore}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.yRDj9PjLvZRWKjHe]{A fractured prismacore}</p>",
       "director": ""
     },
     "source": {
@@ -234,7 +234,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!sXN10hBoD3lb3BDn.eqKt5dGw9SYWFQ0F",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.sXN10hBoD3lb3BDn"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.sXN10hBoD3lb3BDn"
     }
   ],
   "sort": 0,
@@ -242,7 +242,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "A fractured prismacore"
     }

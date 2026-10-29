@@ -3,7 +3,7 @@
   "name": "Expanded Collection",
   "type": "feature",
   "_id": "e6vVQu9Bti564QJm",
-  "img": "modules/draw-steel-arcanist/assets/icons/tome.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/tome.webp",
   "system": {
     "description": {
       "value": "<p><strong>Tome.</strong> You wield a collection of scrolls or books that contain mass amounts of magical knowledge to give you every advantage possible. You gain one skill from the lore skill group. Your known grimoires are increased by 1. Additionally, you don't take a bane on project rolls that use a language related to one you know.</p>",
@@ -39,7 +39,7 @@
         "_id": "9kGHfKnFVdj6rgso",
         "type": "itemGrant",
         "name": "Expanded Collection Grimoire",
-        "img": "modules/draw-steel-arcanist/assets/icons/tome.webp",
+        "img": "modules/draw-steel-arcanist-preview/assets/icons/tome.webp",
         "description": "<p>Your known grimoires are increased by 1. Choose a grimoire you don't already know.</p>",
         "requirements": {
           "level": 1
@@ -49,34 +49,34 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.lwpyuWnPRYoA4MKA"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.lwpyuWnPRYoA4MKA"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.Toh9gofgxnFDE7Xo"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.Toh9gofgxnFDE7Xo"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.FN05DsJl0ZPHKgYp"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.FN05DsJl0ZPHKgYp"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.T9DtYqB2ebqItlfH"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.T9DtYqB2ebqItlfH"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.XFzltoxJYiFWKUo3"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.XFzltoxJYiFWKUo3"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.z41OR0vfeccsREi7"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.z41OR0vfeccsREi7"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.kQx1MCz1AAAjqHnI"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.kQx1MCz1AAAjqHnI"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.DJDBop2TvShw0nwG"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.DJDBop2TvShw0nwG"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.fCwoWmz33lVxh7JO"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.fCwoWmz33lVxh7JO"
           },
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.7vduxj30ovtsqJX3"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.7vduxj30ovtsqJX3"
           }
         ],
         "additional": {
@@ -97,7 +97,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "path"
     }
   },

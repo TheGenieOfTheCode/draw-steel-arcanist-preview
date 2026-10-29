@@ -6,7 +6,7 @@
   "img": "icons/commodities/gems/gem-faceted-diamond-silver-.webp",
   "system": {
     "description": {
-      "value": "<p>A diamond whetstone that has sharpened a magical weapon.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.jHkrEF7vDKL0fcVt]{Sharpen Steel}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>A diamond whetstone that has sharpened a magical weapon.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.jHkrEF7vDKL0fcVt]{Sharpen Steel}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-sharpen-steel"
     }
   },

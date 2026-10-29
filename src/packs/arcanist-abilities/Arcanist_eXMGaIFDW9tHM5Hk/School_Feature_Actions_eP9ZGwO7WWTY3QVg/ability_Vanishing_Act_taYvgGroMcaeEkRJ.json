@@ -3,7 +3,7 @@
   "name": "Vanishing Act",
   "type": "ability",
   "_id": "taYvgGroMcaeEkRJ",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "",
@@ -66,7 +66,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "schoolFeature",
       "limit": "turn"

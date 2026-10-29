@@ -3,7 +3,7 @@
   "name": "Ponder",
   "type": "feature",
   "_id": "Oss8FeKNKBfvNEzu",
-  "img": "modules/draw-steel-arcanist/assets/icons/orb.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/orb.webp",
   "system": {
     "description": {
       "value": "<p><strong>Orb.</strong> You wield a crystal ball or scrying crystal to peer into the fabric of reality, and bend it to your will. You gain the Alertness skill. Instead of rolling to gain focus at the start of your turn, you roll at the start of each combat round. Additionally, you can't be flanked or surprised.</p>",
@@ -45,7 +45,7 @@
   "effects": [
     {
       "name": "Ponder: Can't Be Flanked or Surprised",
-      "img": "modules/draw-steel-arcanist/assets/icons/orb.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/orb.webp",
       "type": "base",
       "_id": "Jm4Q49bepR0BNu0j",
       "system": {
@@ -86,7 +86,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!Oss8FeKNKBfvNEzu.Jm4Q49bepR0BNu0j",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.Oss8FeKNKBfvNEzu"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.Oss8FeKNKBfvNEzu"
     }
   ],
   "sort": 1000,
@@ -94,7 +94,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "path"
     }
   },

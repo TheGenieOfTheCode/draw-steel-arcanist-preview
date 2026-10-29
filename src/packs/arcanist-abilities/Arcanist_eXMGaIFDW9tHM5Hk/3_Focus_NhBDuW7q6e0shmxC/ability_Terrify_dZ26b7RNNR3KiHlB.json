@@ -6,7 +6,7 @@
   "img": "icons/magic/control/fear-fright-shadow-monster-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.S4zl1OgVkJhUpmW9]{Demon snot or mucus}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.S4zl1OgVkJhUpmW9]{Demon snot or mucus}</p>",
       "director": ""
     },
     "source": {
@@ -166,7 +166,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "Demon snot or mucus"
     }

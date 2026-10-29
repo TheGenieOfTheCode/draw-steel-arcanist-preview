@@ -3,7 +3,7 @@
   "name": "Invigorate",
   "type": "ability",
   "_id": "98wa8naOguMiNQOO",
-  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "enchantment",
       "slot": "grimoireManeuver"
     }

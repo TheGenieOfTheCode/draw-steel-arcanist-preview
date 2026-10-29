@@ -3,7 +3,7 @@
   "name": "Chronomancy",
   "type": "subclass",
   "_id": "4uMwU310LTcNtmHf",
-  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
   "system": {
     "description": {
       "value": "<p>The magic of time.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.ClMuGqz5ZCPHU5Up"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.ClMuGqz5ZCPHU5Up"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.AuePDq2FfjQcYQbB"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.AuePDq2FfjQcYQbB"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.Toh9gofgxnFDE7Xo"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.Toh9gofgxnFDE7Xo"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "chronomancy",
       "slot": "school"
     }

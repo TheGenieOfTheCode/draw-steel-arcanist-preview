@@ -6,7 +6,7 @@
   "img": "icons/commodities/materials/slime-thick-green.webp",
   "system": {
     "description": {
-      "value": "<p>Demon snot or mucus.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.dZ26b7RNNR3KiHlB]{Terrify}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>Demon snot or mucus.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.dZ26b7RNNR3KiHlB]{Terrify}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-terrify"
     }
   },

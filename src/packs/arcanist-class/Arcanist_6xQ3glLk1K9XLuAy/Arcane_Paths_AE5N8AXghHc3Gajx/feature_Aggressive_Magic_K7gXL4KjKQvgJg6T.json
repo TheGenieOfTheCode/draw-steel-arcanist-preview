@@ -3,7 +3,7 @@
   "name": "Aggressive Magic",
   "type": "feature",
   "_id": "K7gXL4KjKQvgJg6T",
-  "img": "modules/draw-steel-arcanist/assets/icons/wand.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/wand.webp",
   "system": {
     "description": {
       "value": "<p><strong>Wand.</strong> You wield a finely carved wand that amplifies your targeted magic, best served for overwhelming your opponents in duels. You gain the Carpentry skill. You gain a +2 bonus to the rolled damage of your Magic Strike abilities.</p>",
@@ -45,7 +45,7 @@
   "effects": [
     {
       "name": "Aggressive Magic",
-      "img": "modules/draw-steel-arcanist/assets/icons/wand.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/wand.webp",
       "type": "abilityModifier",
       "_id": "ubIKsPbg2K6Ystz8",
       "system": {
@@ -85,7 +85,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!K7gXL4KjKQvgJg6T.ubIKsPbg2K6Ystz8",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.K7gXL4KjKQvgJg6T"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.K7gXL4KjKQvgJg6T"
     }
   ],
   "sort": 5000,
@@ -93,7 +93,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "path"
     }
   },

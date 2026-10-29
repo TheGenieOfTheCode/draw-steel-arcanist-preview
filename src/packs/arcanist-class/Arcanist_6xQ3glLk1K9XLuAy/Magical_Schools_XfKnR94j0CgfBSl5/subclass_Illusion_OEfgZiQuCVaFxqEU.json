@@ -3,7 +3,7 @@
   "name": "Illusion",
   "type": "subclass",
   "_id": "OEfgZiQuCVaFxqEU",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "<p>The magic of deception.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.4Z1kPA0egztTpo0r"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.4Z1kPA0egztTpo0r"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.MVzFDpuuamfjyASz"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.MVzFDpuuamfjyASz"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.DJDBop2TvShw0nwG"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.DJDBop2TvShw0nwG"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "school"
     }

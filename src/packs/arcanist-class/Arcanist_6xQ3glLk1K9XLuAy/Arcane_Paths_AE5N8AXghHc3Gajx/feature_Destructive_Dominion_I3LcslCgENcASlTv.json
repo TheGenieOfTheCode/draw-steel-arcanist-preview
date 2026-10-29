@@ -3,7 +3,7 @@
   "name": "Destructive Dominion",
   "type": "feature",
   "_id": "I3LcslCgENcASlTv",
-  "img": "modules/draw-steel-arcanist/assets/icons/staff.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/staff.webp",
   "system": {
     "description": {
       "value": "<p><strong>Staff.</strong> You wield a magical staff that channels expansive and destructive magic. You gain the Sabotage skill. You gain a +1 bonus to the rolled damage of your Magic Area abilities. Additionally, you gain [[/surge 1]]{1 surge} at the beginning of any combat encounter.</p>",
@@ -45,7 +45,7 @@
   "effects": [
     {
       "name": "Destructive Dominion",
-      "img": "modules/draw-steel-arcanist/assets/icons/staff.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/staff.webp",
       "type": "abilityModifier",
       "_id": "tLXV0SSkiN91pnTE",
       "system": {
@@ -85,7 +85,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!I3LcslCgENcASlTv.tLXV0SSkiN91pnTE",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.I3LcslCgENcASlTv"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.I3LcslCgENcASlTv"
     }
   ],
   "sort": 2000,
@@ -93,7 +93,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "path"
     }
   },

@@ -3,7 +3,7 @@
   "name": "Manipulate Density",
   "type": "ability",
   "_id": "MfWYwnNGH0EKpKK3",
-  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/transmutation.webp",
   "system": {
     "description": {
       "value": "",
@@ -131,7 +131,7 @@
   "effects": [
     {
       "name": "Manipulate Density (Stagnant)",
-      "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/transmutation.webp",
       "type": "base",
       "_id": "i0vAsnSSG8RGjSTD",
       "system": {
@@ -174,11 +174,11 @@
         }
       },
       "_key": "!items.effects!MfWYwnNGH0EKpKK3.i0vAsnSSG8RGjSTD",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.MfWYwnNGH0EKpKK3"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.MfWYwnNGH0EKpKK3"
     },
     {
       "name": "Manipulate Density (Unstable)",
-      "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/transmutation.webp",
       "type": "base",
       "_id": "z0sh4AYaNhrQeEaH",
       "system": {
@@ -220,7 +220,7 @@
         }
       },
       "_key": "!items.effects!MfWYwnNGH0EKpKK3.z0sh4AYaNhrQeEaH",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.MfWYwnNGH0EKpKK3"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.MfWYwnNGH0EKpKK3"
     }
   ],
   "sort": 0,
@@ -228,7 +228,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "transmutation",
       "slot": "grimoireManeuver"
     },

@@ -6,7 +6,7 @@
   "img": "icons/magic/acid/dissolve-pool-bubbles.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.XxfZk9MHbYYDrBBC]{A pork chop aged in butter for a decade}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.XxfZk9MHbYYDrBBC]{A pork chop aged in butter for a decade}</p>",
       "director": ""
     },
     "source": {
@@ -160,7 +160,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "A pork chop aged in butter for a decade"
     }

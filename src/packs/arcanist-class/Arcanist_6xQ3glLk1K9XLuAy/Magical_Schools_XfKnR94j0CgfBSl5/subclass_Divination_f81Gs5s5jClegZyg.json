@@ -3,7 +3,7 @@
   "name": "Divination",
   "type": "subclass",
   "_id": "f81Gs5s5jClegZyg",
-  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/divination.webp",
   "system": {
     "description": {
       "value": "<p>The magic of information.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.IT4JnADL7nCxFuXn"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.IT4JnADL7nCxFuXn"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.VkPVp11Exvo3ERBC"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.VkPVp11Exvo3ERBC"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.T9DtYqB2ebqItlfH"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.T9DtYqB2ebqItlfH"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "divination",
       "slot": "school"
     }

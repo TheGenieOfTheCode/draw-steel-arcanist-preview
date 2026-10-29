@@ -3,7 +3,7 @@
   "name": "Remove Curse",
   "type": "ability",
   "_id": "95DAOg8i0rygekxC",
-  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
   "system": {
     "description": {
       "value": "",
@@ -66,7 +66,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "abjuration",
       "slot": "schoolFeature",
       "limit": "round"

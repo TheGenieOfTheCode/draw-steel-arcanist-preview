@@ -6,7 +6,7 @@
   "img": "icons/magic/fire/explosion-fireball-large-orange.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.cCtZZBgIS2BUuaFX]{The nectar of a fire beetle}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.cCtZZBgIS2BUuaFX]{The nectar of a fire beetle}</p>",
       "director": ""
     },
     "source": {
@@ -324,7 +324,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!He2QILkAZoegeLsR.rVjIr8sEkNVLq8Yg",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.He2QILkAZoegeLsR"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.He2QILkAZoegeLsR"
     }
   ],
   "sort": 0,
@@ -332,7 +332,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "The nectar of a fire beetle"
     },

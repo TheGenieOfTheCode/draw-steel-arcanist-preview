@@ -6,7 +6,7 @@
   "img": "icons/magic/defensive/barrier-shield-dome-deflect-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.EOoQmaYfy3DQgM5K]{The broken arcane focus of an archmage}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.EOoQmaYfy3DQgM5K]{The broken arcane focus of an archmage}</p>",
       "director": ""
     },
     "source": {
@@ -69,7 +69,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "The broken arcane focus of an archmage"
     }

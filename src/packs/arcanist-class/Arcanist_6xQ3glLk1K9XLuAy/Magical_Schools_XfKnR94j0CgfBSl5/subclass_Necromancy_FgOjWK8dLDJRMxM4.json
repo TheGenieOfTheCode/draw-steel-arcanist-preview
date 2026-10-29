@@ -3,7 +3,7 @@
   "name": "Necromancy",
   "type": "subclass",
   "_id": "FgOjWK8dLDJRMxM4",
-  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
   "system": {
     "description": {
       "value": "<p>The magic of death.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.g7LGscE4zZDqvpnn"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.g7LGscE4zZDqvpnn"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.fsV7NaWadClyZtMq"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.fsV7NaWadClyZtMq"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.fCwoWmz33lVxh7JO"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.fCwoWmz33lVxh7JO"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "necromancy",
       "slot": "school"
     }

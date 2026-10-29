@@ -6,7 +6,7 @@
   "img": "icons/commodities/tech/electrode-copper.webp",
   "system": {
     "description": {
-      "value": "<p>A lightning rod blessed by a priest.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.KXRX1cAkm4d6eGvf]{Energizing Jolt}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>A lightning rod blessed by a priest.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.KXRX1cAkm4d6eGvf]{Energizing Jolt}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-energizing-jolt"
     }
   },

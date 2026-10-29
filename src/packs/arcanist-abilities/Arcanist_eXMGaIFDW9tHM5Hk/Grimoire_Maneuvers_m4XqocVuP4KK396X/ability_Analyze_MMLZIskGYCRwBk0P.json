@@ -3,7 +3,7 @@
   "name": "Analyze",
   "type": "ability",
   "_id": "MMLZIskGYCRwBk0P",
-  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/divination.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "divination",
       "slot": "grimoireManeuver"
     }

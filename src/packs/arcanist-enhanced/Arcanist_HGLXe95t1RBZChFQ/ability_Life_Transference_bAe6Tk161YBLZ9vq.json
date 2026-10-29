@@ -3,7 +3,7 @@
   "name": "Life Transference",
   "type": "ability",
   "_id": "bAe6Tk161YBLZ9vq",
-  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
   "system": {
     "description": {
       "value": "",
@@ -155,7 +155,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "necromancy",
       "slot": "triggered"
     },

@@ -6,7 +6,7 @@
   "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.z8Xe4n7e5tUqJmC7]{A diamond whetstone that has sharpened a magical weapon}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.z8Xe4n7e5tUqJmC7]{A diamond whetstone that has sharpened a magical weapon}</p>",
       "director": ""
     },
     "source": {
@@ -116,7 +116,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "A diamond whetstone that has sharpened a magical weapon"
     },

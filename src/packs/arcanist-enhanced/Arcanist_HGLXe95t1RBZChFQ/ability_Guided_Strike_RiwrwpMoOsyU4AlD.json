@@ -3,7 +3,7 @@
   "name": "Guided Strike",
   "type": "ability",
   "_id": "RiwrwpMoOsyU4AlD",
-  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
   "system": {
     "description": {
       "value": "",
@@ -153,7 +153,7 @@
   "effects": [
     {
       "name": "Guided Strike",
-      "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
       "type": "abilityModifier",
       "_id": "Eje3xkjxU9BgUp2l",
       "system": {
@@ -201,11 +201,11 @@
         }
       },
       "_key": "!items.effects!RiwrwpMoOsyU4AlD.Eje3xkjxU9BgUp2l",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
     },
     {
       "name": "Guided Strike (Double Edge)",
-      "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
       "type": "abilityModifier",
       "_id": "enpHLoiV5dZoPchy",
       "system": {
@@ -253,11 +253,11 @@
         }
       },
       "_key": "!items.effects!RiwrwpMoOsyU4AlD.enpHLoiV5dZoPchy",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
     },
     {
       "name": "Guided Strike (Unerring)",
-      "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
       "type": "base",
       "_id": "ZiigcLXxmOS1HB4q",
       "system": {
@@ -307,7 +307,7 @@
         }
       },
       "_key": "!items.effects!RiwrwpMoOsyU4AlD.ZiigcLXxmOS1HB4q",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
     }
   ],
   "sort": 0,
@@ -315,7 +315,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "chronomancy",
       "slot": "grimoireManeuver"
     },

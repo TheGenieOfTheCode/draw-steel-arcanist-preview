@@ -3,7 +3,7 @@
   "name": "Static Retaliation",
   "type": "ability",
   "_id": "AbSelTgUR8uBl3Ff",
-  "img": "modules/draw-steel-arcanist/assets/icons/evocation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/evocation.webp",
   "system": {
     "description": {
       "value": "",
@@ -69,7 +69,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "evocation",
       "slot": "triggered"
     }

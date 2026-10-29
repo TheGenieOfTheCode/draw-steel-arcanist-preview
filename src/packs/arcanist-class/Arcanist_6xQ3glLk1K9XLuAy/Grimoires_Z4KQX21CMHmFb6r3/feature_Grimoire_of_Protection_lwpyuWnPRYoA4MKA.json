@@ -3,7 +3,7 @@
   "name": "Grimoire of Protection",
   "type": "feature",
   "_id": "lwpyuWnPRYoA4MKA",
-  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Invisible Alarm:</strong> You can spend 10 minutes creating an invisible trip wire that encompasses 10 connected squares. You can designate any number of creatures who won't trigger the trip wire. If a non-designated creature enters a square where the trip wire is, you are mentally alerted as long as you are within one mile of it. You can choose to have a loud ringing bell sound to emanate from the area.</p><p>The trip wire lasts for 24 hours, until it's triggered, or you use this feature again.</p><p><strong>Arcane Ward:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.hEWFFjXlms2jGm8W"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.hEWFFjXlms2jGm8W"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "abjuration",
       "slot": "grimoire"
     }

@@ -3,7 +3,7 @@
   "name": "Bladed Spells",
   "type": "feature",
   "_id": "nbt8SZpVyJgIpPN9",
-  "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/sword.webp",
   "system": {
     "description": {
       "value": "<p><strong>Sword.</strong> You wield a blade, using it to unleash devastating attacks infused with spells. You gain the Blacksmithing skill. You gain a +3 bonus to Stamina per echelon, and a +1 bonus to Stability. Additionally, you can use weapon and armor treasures, gain a +1 bonus to the rolled damage of your Melee Weapon abilities, and your Magic Strike abilities gain the Melee and Weapon keywords, with a distance of Melee 1. If you have a kit, you can't take this path.</p>",
@@ -45,7 +45,7 @@
   "effects": [
     {
       "name": "Bladed Spells: Stamina and Stability",
-      "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/sword.webp",
       "type": "base",
       "_id": "vVVZQDlPZ0QHPzTw",
       "system": {
@@ -86,11 +86,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!nbt8SZpVyJgIpPN9.vVVZQDlPZ0QHPzTw",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.nbt8SZpVyJgIpPN9"
     },
     {
       "name": "Bladed Spells: Melee Weapon Damage",
-      "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/sword.webp",
       "type": "abilityModifier",
       "_id": "0QnZvaSdftHIhBt4",
       "system": {
@@ -130,11 +130,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!nbt8SZpVyJgIpPN9.0QnZvaSdftHIhBt4",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.nbt8SZpVyJgIpPN9"
     },
     {
       "name": "Bladed Spells: Magic Strike Keywords",
-      "img": "modules/draw-steel-arcanist/assets/icons/sword.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/sword.webp",
       "type": "abilityModifier",
       "_id": "EOlEM4SSJhUrTE6S",
       "system": {
@@ -181,7 +181,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!nbt8SZpVyJgIpPN9.EOlEM4SSJhUrTE6S",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-class.Item.nbt8SZpVyJgIpPN9"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.nbt8SZpVyJgIpPN9"
     }
   ],
   "sort": 3000,
@@ -189,7 +189,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "path"
     }
   },

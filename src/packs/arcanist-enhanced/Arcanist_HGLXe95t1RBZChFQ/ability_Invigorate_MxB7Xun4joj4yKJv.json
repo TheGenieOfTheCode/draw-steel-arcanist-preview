@@ -3,7 +3,7 @@
   "name": "Invigorate",
   "type": "ability",
   "_id": "MxB7Xun4joj4yKJv",
-  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
   "system": {
     "description": {
       "value": "",
@@ -122,7 +122,7 @@
   "effects": [
     {
       "name": "Invigorate",
-      "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
       "type": "abilityModifier",
       "_id": "iB2pnUnf89gxhppr",
       "system": {
@@ -164,7 +164,7 @@
         }
       },
       "_key": "!items.effects!MxB7Xun4joj4yKJv.iB2pnUnf89gxhppr",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.MxB7Xun4joj4yKJv"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.MxB7Xun4joj4yKJv"
     }
   ],
   "sort": 0,
@@ -172,7 +172,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "enchantment",
       "slot": "grimoireManeuver"
     },

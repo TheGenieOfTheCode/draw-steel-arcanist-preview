@@ -3,7 +3,7 @@
   "name": "Illusory Distraction",
   "type": "ability",
   "_id": "gDTAOoCmXMXgK7PN",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "",
@@ -127,7 +127,7 @@
   "effects": [
     {
       "name": "Illusory Distraction",
-      "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
       "type": "base",
       "_id": "tFYv5NDl4MK3HPYe",
       "system": {
@@ -165,11 +165,11 @@
         }
       },
       "_key": "!items.effects!gDTAOoCmXMXgK7PN.tFYv5NDl4MK3HPYe",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.gDTAOoCmXMXgK7PN"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.gDTAOoCmXMXgK7PN"
     },
     {
       "name": "Illusory Distraction",
-      "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
       "type": "abilityModifier",
       "_id": "yHUPsIITZiXzms3G",
       "system": {
@@ -211,7 +211,7 @@
         }
       },
       "_key": "!items.effects!gDTAOoCmXMXgK7PN.yHUPsIITZiXzms3G",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.gDTAOoCmXMXgK7PN"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.gDTAOoCmXMXgK7PN"
     }
   ],
   "sort": 0,
@@ -219,7 +219,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "grimoireManeuver"
     },

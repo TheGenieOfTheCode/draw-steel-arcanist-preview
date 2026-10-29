@@ -6,7 +6,7 @@
   "img": "icons/magic/time/clock-spinning-gold-pink.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.8Q7edlWaKg7mFTXM]{A starmetal pocket watch}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.8Q7edlWaKg7mFTXM]{A starmetal pocket watch}</p>",
       "director": ""
     },
     "source": {
@@ -186,7 +186,7 @@
         }
       },
       "_key": "!items.effects!luBeMzOiXTzitO7i.GRdTkKvYiFlDUy9h",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.luBeMzOiXTzitO7i"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.luBeMzOiXTzitO7i"
     },
     {
       "name": "Nexus of Fate (Heroic Resource)",
@@ -228,7 +228,7 @@
         }
       },
       "_key": "!items.effects!luBeMzOiXTzitO7i.kvo7zm3p9svcIaIr",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.luBeMzOiXTzitO7i"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.luBeMzOiXTzitO7i"
     }
   ],
   "sort": 0,
@@ -236,7 +236,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "heroic",
       "component": "A starmetal pocket watch"
     },

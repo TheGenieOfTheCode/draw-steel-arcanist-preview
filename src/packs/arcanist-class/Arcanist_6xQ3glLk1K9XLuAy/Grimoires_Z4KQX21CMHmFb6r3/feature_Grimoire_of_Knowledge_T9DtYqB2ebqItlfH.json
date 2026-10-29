@@ -3,7 +3,7 @@
   "name": "Grimoire of Knowledge",
   "type": "feature",
   "_id": "T9DtYqB2ebqItlfH",
-  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/divination.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Magic Sight:</strong> You can spend 1 minute performing a ritual to grant you the ability to sense magic. For the next hour, you instantly know the location of any magical object, trap, or effect within 20 squares of you. You can also see if any creatures in your line of effect, but within 20 squares of you, are under any magical effect. This feature doesn't tell you what the effect is or how it works, but grants you an edge on tests made to discern the nature of the effect.</p><p><strong>Analyze:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.MMLZIskGYCRwBk0P"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.MMLZIskGYCRwBk0P"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "divination",
       "slot": "grimoire"
     }

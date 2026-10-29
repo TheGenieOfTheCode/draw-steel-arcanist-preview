@@ -6,7 +6,7 @@
   "img": "icons/commodities/bones/bones-hand-grey.webp",
   "system": {
     "description": {
-      "value": "<p>The finger bone of a creature with telekinesis.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.FsgmcHgmeXhBSTXV]{Fling}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>The finger bone of a creature with telekinesis.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.FsgmcHgmeXhBSTXV]{Fling}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-fling"
     }
   },

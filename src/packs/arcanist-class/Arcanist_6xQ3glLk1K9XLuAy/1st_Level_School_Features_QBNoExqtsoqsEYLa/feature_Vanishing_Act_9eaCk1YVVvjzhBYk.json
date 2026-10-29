@@ -3,7 +3,7 @@
   "name": "Vanishing Act",
   "type": "feature",
   "_id": "9eaCk1YVVvjzhBYk",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following free maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.taYvgGroMcaeEkRJ"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.taYvgGroMcaeEkRJ"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "schoolFeature",
       "limit": "turn"

@@ -3,7 +3,7 @@
   "name": "Grimoire of Matter",
   "type": "feature",
   "_id": "FN05DsJl0ZPHKgYp",
-  "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/conjuration.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Mend:</strong> You can spend 1 minute repairing a mundane 1T object such as a broken key, snapped rope, or shattered glass. The written text on a book or other parchment can't be restored this way. You can also spend 10 minutes repairing a larger object such as a wall, spending an additional 10 minutes per square beyond the first, repairing any damage and sealing any holes that might have been created from a creature being thrown through it.</p><p><strong>Jaunt:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.bdc1F0gvQcjnU2lF"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.bdc1F0gvQcjnU2lF"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "conjuration",
       "slot": "grimoire"
     }

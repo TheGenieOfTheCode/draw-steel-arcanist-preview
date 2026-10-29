@@ -3,7 +3,7 @@
   "name": "Enchantment Focus",
   "type": "feature",
   "_id": "MDfV4EDRlBJvOJMT",
-  "img": "modules/draw-steel-arcanist/assets/icons/enchantment.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
   "system": {
     "description": {
       "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or a creature within 10 squares of you gains a surge.</p>",
@@ -30,7 +30,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "enchantment",
       "slot": "schoolFocus"
     }

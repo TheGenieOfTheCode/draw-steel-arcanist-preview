@@ -3,7 +3,7 @@
   "name": "Grimoire of Change",
   "type": "feature",
   "_id": "7vduxj30ovtsqJX3",
-  "img": "modules/draw-steel-arcanist/assets/icons/transmutation.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/transmutation.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Alter Form:</strong> You can spend 1 minute performing a ritual to alter you or another willing creature's physiology. Until you finish a respite, or until you use this ritual again, the target can gain one of the following benefits:</p><ul><li><p>They can automatically climb at full speed while moving.</p></li><li><p>They can automatically swim at full speed while moving and can breathe underwater.</p></li><li><p>They can change their physical appearance and voice to mimic a creature who they've seen before, but their size can't change. They gain an edge on tests made to convince other creatures that they are that person.</p></li></ul><p><strong>Manipulate Density:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.3GcXtAroEIdShTML"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.3GcXtAroEIdShTML"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "transmutation",
       "slot": "grimoire"
     }

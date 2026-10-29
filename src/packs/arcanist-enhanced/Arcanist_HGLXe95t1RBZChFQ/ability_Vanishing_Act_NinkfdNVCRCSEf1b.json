@@ -3,7 +3,7 @@
   "name": "Vanishing Act",
   "type": "ability",
   "_id": "NinkfdNVCRCSEf1b",
-  "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
   "system": {
     "description": {
       "value": "",
@@ -89,7 +89,7 @@
   "effects": [
     {
       "name": "Vanishing Act",
-      "img": "modules/draw-steel-arcanist/assets/icons/illusion.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/illusion.webp",
       "type": "base",
       "_id": "X9j0ckXoCT2SCyKg",
       "system": {
@@ -133,7 +133,7 @@
         }
       },
       "_key": "!items.effects!NinkfdNVCRCSEf1b.X9j0ckXoCT2SCyKg",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.NinkfdNVCRCSEf1b"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.NinkfdNVCRCSEf1b"
     }
   ],
   "sort": 0,
@@ -141,7 +141,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "illusion",
       "slot": "schoolFeature",
       "limit": "turn"

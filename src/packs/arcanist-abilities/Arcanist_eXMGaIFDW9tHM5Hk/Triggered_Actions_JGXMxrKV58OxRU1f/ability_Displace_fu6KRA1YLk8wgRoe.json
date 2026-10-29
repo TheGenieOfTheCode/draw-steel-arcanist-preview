@@ -3,7 +3,7 @@
   "name": "Displace",
   "type": "ability",
   "_id": "fu6KRA1YLk8wgRoe",
-  "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/conjuration.webp",
   "system": {
     "description": {
       "value": "",
@@ -82,7 +82,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "conjuration",
       "slot": "triggered"
     }

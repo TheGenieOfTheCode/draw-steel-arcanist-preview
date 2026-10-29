@@ -3,7 +3,7 @@
   "name": "Inflict Wounds",
   "type": "ability",
   "_id": "QmmC23q0LbArIuca",
-  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
   "system": {
     "description": {
       "value": "",
@@ -122,7 +122,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "necromancy",
       "slot": "schoolFeature",
       "limit": "round"

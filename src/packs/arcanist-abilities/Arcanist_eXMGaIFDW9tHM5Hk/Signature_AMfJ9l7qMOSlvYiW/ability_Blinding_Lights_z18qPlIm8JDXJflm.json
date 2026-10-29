@@ -6,7 +6,7 @@
   "img": "icons/magic/light/explosion-star-glow-blue.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.vLr979zsT2iuPqiA]{A prism covered in glitter}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.vLr979zsT2iuPqiA]{A prism covered in glitter}</p>",
       "director": ""
     },
     "source": {
@@ -156,7 +156,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "signature",
       "component": "A prism covered in glitter"
     }

@@ -6,7 +6,7 @@
   "img": "icons/commodities/gems/gem-amber-insect-orange.webp",
   "system": {
     "description": {
-      "value": "<p>A golden beetle encased in amber.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.30Z0QLa9xLLyymRZ]{Stasis}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>A golden beetle encased in amber.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.30Z0QLa9xLLyymRZ]{Stasis}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-stasis"
     }
   },

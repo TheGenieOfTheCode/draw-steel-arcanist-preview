@@ -6,7 +6,7 @@
   "img": "icons/commodities/materials/powder-red-green-yellow.webp",
   "system": {
     "description": {
-      "value": "<p>Elemental sand left behind when an elemental traverses planes.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist.arcanist-abilities.Item.AV74EAggWf0JaWNo]{Prismatic Chain}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
+      "value": "<p>Elemental sand left behind when an elemental traverses planes.</p><p>The Component Prerequisite for @UUID[Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.AV74EAggWf0JaWNo]{Prismatic Chain}.</p><p>Unless otherwise noted, components are not consumed and can be used freely.</p>",
       "director": ""
     },
     "source": {
@@ -27,7 +27,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "ability": "arcanist-prismatic-chain"
     }
   },

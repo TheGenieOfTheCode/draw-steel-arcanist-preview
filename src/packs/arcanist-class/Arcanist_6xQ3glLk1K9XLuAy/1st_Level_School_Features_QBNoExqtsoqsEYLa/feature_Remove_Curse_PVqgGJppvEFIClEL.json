@@ -3,7 +3,7 @@
   "name": "Remove Curse",
   "type": "feature",
   "_id": "PVqgGJppvEFIClEL",
-  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following free triggered action.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.95DAOg8i0rygekxC"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.95DAOg8i0rygekxC"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "abjuration",
       "slot": "schoolFeature",
       "limit": "round"

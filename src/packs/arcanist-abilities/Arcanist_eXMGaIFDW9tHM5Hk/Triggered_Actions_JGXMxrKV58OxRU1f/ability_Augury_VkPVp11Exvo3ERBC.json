@@ -3,7 +3,7 @@
   "name": "Augury",
   "type": "ability",
   "_id": "VkPVp11Exvo3ERBC",
-  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/divination.webp",
   "system": {
     "description": {
       "value": "",
@@ -78,7 +78,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "divination",
       "slot": "triggered"
     }

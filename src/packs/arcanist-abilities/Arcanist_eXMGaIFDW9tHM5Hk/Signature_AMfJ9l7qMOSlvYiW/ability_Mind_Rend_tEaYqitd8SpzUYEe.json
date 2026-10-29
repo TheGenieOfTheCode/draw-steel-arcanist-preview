@@ -6,7 +6,7 @@
   "img": "icons/magic/perception/eye-tendrils-web-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist.arcanist-components.Item.l94VioicKiXggyR8]{The eye of a creature with telepathy}</p>",
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.l94VioicKiXggyR8]{The eye of a creature with telepathy}</p>",
       "director": ""
     },
     "source": {
@@ -115,7 +115,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "slot": "signature",
       "component": "The eye of a creature with telepathy"
     }

@@ -3,7 +3,7 @@
   "name": "Foresee",
   "type": "feature",
   "_id": "QZxGDgTcSoN6FHW9",
-  "img": "modules/draw-steel-arcanist/assets/icons/divination.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/divination.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following free maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.FBkTOJ4rAHThbUw2"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.FBkTOJ4rAHThbUw2"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "divination",
       "slot": "schoolFeature",
       "limit": "turn"

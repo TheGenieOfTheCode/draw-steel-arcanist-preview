@@ -3,7 +3,7 @@
   "name": "Harrowing Atrophy",
   "type": "ability",
   "_id": "br3F6oyUBCEtYMNG",
-  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
   "system": {
     "description": {
       "value": "",
@@ -79,7 +79,7 @@
   "effects": [
     {
       "name": "Harrowing Atrophy (Might)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-might.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy-might.webp",
       "type": "base",
       "_id": "O4FO4Vm9XwUMDD2s",
       "system": {
@@ -113,11 +113,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!br3F6oyUBCEtYMNG.O4FO4Vm9XwUMDD2s",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
     },
     {
       "name": "Harrowing Atrophy (Agility)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-agility.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy-agility.webp",
       "type": "base",
       "_id": "29FcaxjAHhdzbps1",
       "system": {
@@ -151,11 +151,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!br3F6oyUBCEtYMNG.29FcaxjAHhdzbps1",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
     },
     {
       "name": "Harrowing Atrophy (Reason)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
       "type": "base",
       "_id": "87imSo0UEi44QqRo",
       "system": {
@@ -189,11 +189,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!br3F6oyUBCEtYMNG.87imSo0UEi44QqRo",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
     },
     {
       "name": "Harrowing Atrophy (Intuition)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-intuition.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy-intuition.webp",
       "type": "base",
       "_id": "bLhkGOCXvhCbjLRD",
       "system": {
@@ -227,11 +227,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!br3F6oyUBCEtYMNG.bLhkGOCXvhCbjLRD",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
     },
     {
       "name": "Harrowing Atrophy (Presence)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy-presence.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy-presence.webp",
       "type": "base",
       "_id": "Gj5MNdaAtYUop0JG",
       "system": {
@@ -265,11 +265,11 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!br3F6oyUBCEtYMNG.Gj5MNdaAtYUop0JG",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
     },
     {
       "name": "Harrowing Atrophy (All)",
-      "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
       "type": "base",
       "_id": "8VwUnlpjzBk9jQC3",
       "system": {
@@ -331,7 +331,7 @@
       "sort": 0,
       "flags": {},
       "_key": "!items.effects!br3F6oyUBCEtYMNG.8VwUnlpjzBk9jQC3",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.br3F6oyUBCEtYMNG"
     }
   ],
   "sort": 0,
@@ -339,7 +339,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "necromancy",
       "slot": "grimoireManeuver"
     }

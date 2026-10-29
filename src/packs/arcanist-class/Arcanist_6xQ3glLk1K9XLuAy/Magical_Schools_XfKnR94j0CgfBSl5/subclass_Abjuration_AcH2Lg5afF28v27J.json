@@ -3,7 +3,7 @@
   "name": "Abjuration",
   "type": "subclass",
   "_id": "AcH2Lg5afF28v27J",
-  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
   "system": {
     "description": {
       "value": "<p>The magic of protection.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.taSXm3tEY1MgIEUl"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.taSXm3tEY1MgIEUl"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.SphbG0Rckri8ucCi"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.SphbG0Rckri8ucCi"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.lwpyuWnPRYoA4MKA"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.lwpyuWnPRYoA4MKA"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "abjuration",
       "slot": "school"
     }

@@ -3,7 +3,7 @@
   "name": "Arcane Ward",
   "type": "ability",
   "_id": "qLwtLYLUNC5fTK6W",
-  "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
   "system": {
     "description": {
       "value": "",
@@ -179,7 +179,7 @@
   "effects": [
     {
       "name": "Arcane Ward",
-      "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
       "type": "base",
       "_id": "cNDLo120bYkuVwbQ",
       "system": {
@@ -225,11 +225,11 @@
         }
       },
       "_key": "!items.effects!qLwtLYLUNC5fTK6W.cNDLo120bYkuVwbQ",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
     },
     {
       "name": "Arcane Ward (Temporary Stamina)",
-      "img": "modules/draw-steel-arcanist/assets/icons/abjuration.webp",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
       "type": "base",
       "_id": "dR8fsAG6riUyJ9ab",
       "system": {
@@ -268,7 +268,7 @@
         }
       },
       "_key": "!items.effects!qLwtLYLUNC5fTK6W.dR8fsAG6riUyJ9ab",
-      "origin": "Compendium.draw-steel-arcanist.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
     }
   ],
   "sort": 0,
@@ -276,7 +276,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "abjuration",
       "slot": "grimoireManeuver"
     },

@@ -3,7 +3,7 @@
   "name": "Precise Momentum",
   "type": "ability",
   "_id": "rHySubNrl3PeM3vS",
-  "img": "modules/draw-steel-arcanist/assets/icons/graviturgy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/graviturgy.webp",
   "system": {
     "description": {
       "value": "",
@@ -89,7 +89,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "graviturgy",
       "slot": "schoolFeature",
       "limit": "round"

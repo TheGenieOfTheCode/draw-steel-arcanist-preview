@@ -3,7 +3,7 @@
   "name": "Conjuration",
   "type": "subclass",
   "_id": "fjTVllSxqoa55mZ5",
-  "img": "modules/draw-steel-arcanist/assets/icons/conjuration.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/conjuration.webp",
   "system": {
     "description": {
       "value": "<p>The magic of matter.</p>",
@@ -31,7 +31,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.Go59ahfNAigeFgIF"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.Go59ahfNAigeFgIF"
           }
         ],
         "additional": {
@@ -53,7 +53,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.fu6KRA1YLk8wgRoe"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.fu6KRA1YLk8wgRoe"
           }
         ],
         "additional": {
@@ -75,7 +75,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-class.Item.FN05DsJl0ZPHKgYp"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-class.Item.FN05DsJl0ZPHKgYp"
           }
         ],
         "additional": {
@@ -91,7 +91,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "conjuration",
       "slot": "school"
     }

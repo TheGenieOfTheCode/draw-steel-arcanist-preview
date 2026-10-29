@@ -3,7 +3,7 @@
   "name": "Grimoire of Time",
   "type": "feature",
   "_id": "Toh9gofgxnFDE7Xo",
-  "img": "modules/draw-steel-arcanist/assets/icons/chronomancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
   "system": {
     "description": {
       "value": "<p>You gain the following features:</p><p><strong>Walk It Back:</strong> When speaking to one or more creatures during a negotiation or a montage test, you can choose to rewind up to a minute into the past, allowing you to retract something you or an ally have said. You and your allies are aware of the rewind and can act accordingly. Once you use this feature, you can't do so again until you gain at least 1 Victory or finish a respite.</p><p><strong>Guided Strike:</strong> You gain the following maneuver.</p>",
@@ -30,7 +30,7 @@
         "repick": {},
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-arcanist.arcanist-abilities.Item.wP8Sk1dwQKUFiqXW"
+            "uuid": "Compendium.draw-steel-arcanist-preview.arcanist-abilities.Item.wP8Sk1dwQKUFiqXW"
           }
         ],
         "additional": {
@@ -51,7 +51,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "chronomancy",
       "slot": "grimoire"
     }

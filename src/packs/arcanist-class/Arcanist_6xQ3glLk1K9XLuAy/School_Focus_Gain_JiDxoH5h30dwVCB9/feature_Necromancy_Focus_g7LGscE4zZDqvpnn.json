@@ -3,7 +3,7 @@
   "name": "Necromancy Focus",
   "type": "feature",
   "_id": "g7LGscE4zZDqvpnn",
-  "img": "modules/draw-steel-arcanist/assets/icons/necromancy.webp",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/necromancy.webp",
   "system": {
     "description": {
       "value": "<p>You [[/gain 1 heroic]]{gain 1 focus} the first time each combat round that you or a creature within 10 squares of you takes corruption or poison damage, begins dying, or dies.</p>",
@@ -30,7 +30,7 @@
     "default": 0
   },
   "flags": {
-    "draw-steel-arcanist": {
+    "draw-steel-arcanist-preview": {
       "school": "necromancy",
       "slot": "schoolFocus"
     }
