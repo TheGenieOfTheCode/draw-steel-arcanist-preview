@@ -1,0 +1,201 @@
+{
+  "folder": "NUfapbu0bpKp20VQ",
+  "name": "Chromatic Flux",
+  "type": "ability",
+  "_id": "OErBGII1AFFtaKro",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/evocation.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-chromatic-flux",
+    "story": "You create a spark of elemental energy to blast a foe.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target takes [[/flat dsctDamage000001]]{R cold, fire, or lightning damage}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000009": {
+        "_id": "after00000000009",
+        "type": "base",
+        "name": "Spend",
+        "img": null,
+        "sort": 100000,
+        "before": false,
+        "description": "<p>You gain [[/flat dsctResour000002]]{1 surge}. Until the end of the encounter, [[/flat dsctApplied00003]]{your surges} can deal cold, fire, or lightning damage.</p>"
+      },
+      "dsctDamage000001": {
+        "_id": "dsctDamage000001",
+        "type": "dsct.flatDamage",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatDamage": {
+          "displayText": "R cold, fire, or lightning damage",
+          "display": "Elemental Damage",
+          "value": "@R",
+          "types": [
+            "cold",
+            "fire",
+            "lightning"
+          ],
+          "ignoredImmunities": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctResour000002": {
+        "_id": "dsctResour000002",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "You gain 1 surge",
+          "display": "1 Surge",
+          "amount": 1,
+          "type": "surge",
+          "recipient": "self",
+          "preApplied": false,
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00003": {
+        "_id": "dsctApplied00003",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200003,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "Your surges can deal cold, fire, or lightning damage until the end of the encounter",
+          "display": "Elemental Surges",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "Hb2ipRdnWJC65hC9",
+          "exclusiveSelf": true,
+          "end": "encounter",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Elemental Surges",
+      "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "type": "base",
+      "_id": "Hb2ipRdnWJC65hC9",
+      "system": {
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.surgeTypes",
+            "type": "override",
+            "value": "cold,fire,lightning",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Until the end of the encounter, your surges can deal cold, fire, or lightning damage.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!OErBGII1AFFtaKro.Hb2ipRdnWJC65hC9",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.OErBGII1AFFtaKro"
+    }
+  ],
+  "sort": 55000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "evocation",
+      "slot": "grimoireManeuver"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!OErBGII1AFFtaKro"
+}

@@ -1,0 +1,289 @@
+{
+  "folder": "NUfapbu0bpKp20VQ",
+  "name": "Arcane Ward",
+  "type": "ability",
+  "_id": "qLwtLYLUNC5fTK6W",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "10",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-arcane-ward",
+    "story": "You grant a creature a ward of protection.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target gains [[/flat dsctHeal00000001]]{R temporary Stamina} [[/flat dsctApplied00004]]{until the start of your next turn}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000009": {
+        "_id": "after00000000009",
+        "type": "base",
+        "name": "Spend",
+        "img": null,
+        "sort": 100000,
+        "before": false,
+        "description": "<p>The target gains [[/flat dsctHeal00000002]]{2 × R temporary Stamina} instead. While the target has this temporary Stamina, strikes against them [[/flat dsctApplied00003]]{take a bane and they have an edge on reactive tests}.</p>"
+      },
+      "dsctHeal00000001": {
+        "_id": "dsctHeal00000001",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "The target gains R temporary Stamina",
+          "display": "Temp Stamina",
+          "spendRecovery": false,
+          "recoverySource": "self",
+          "amountType": "custom",
+          "amountFormula": "@R",
+          "recoveryValueSource": "self",
+          "tempStamina": true,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "target",
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctHeal00000002": {
+        "_id": "dsctHeal00000002",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "The target gains 2 × R temporary Stamina instead",
+          "display": "Double Temp Stamina",
+          "spendRecovery": false,
+          "recoverySource": "self",
+          "amountType": "custom",
+          "amountFormula": "2*@R",
+          "recoveryValueSource": "self",
+          "tempStamina": true,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "target",
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00003": {
+        "_id": "dsctApplied00003",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200003,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "Strikes against them take a bane and they have an edge on reactive tests while this temporary Stamina lasts",
+          "display": "Ward",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "cNDLo120bYkuVwbQ",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00004": {
+        "_id": "dsctApplied00004",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200004,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "The ward's temporary Stamina ends at the start of your next turn",
+          "display": "Lasts Until Your Turn",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "dR8fsAG6riUyJ9ab",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Arcane Ward",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
+      "type": "base",
+      "_id": "cNDLo120bYkuVwbQ",
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.targetModifiers.banes",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.reactiveTests.edges",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Strikes against you take a bane and you have an edge on reactive tests while you have the ward's temporary Stamina.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "tempStamina"
+        }
+      },
+      "_key": "!items.effects!qLwtLYLUNC5fTK6W.cNDLo120bYkuVwbQ",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
+    },
+    {
+      "name": "Arcane Ward (Temporary Stamina)",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/abjuration.webp",
+      "type": "base",
+      "_id": "dR8fsAG6riUyJ9ab",
+      "system": {
+        "changes": [],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>The ward's temporary Stamina lasts until the start of the caster's next turn.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "tempStamina",
+          "expiryClearsTempStamina": true,
+          "expiryReminder": {
+            "expiry": "turnStart",
+            "rounds": 1
+          }
+        },
+        "draw-steel-battle-log": {
+          "gmOnly": true
+        }
+      },
+      "_key": "!items.effects!qLwtLYLUNC5fTK6W.dR8fsAG6riUyJ9ab",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.qLwtLYLUNC5fTK6W"
+    }
+  ],
+  "sort": 60000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "abjuration",
+      "slot": "grimoireManeuver"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!qLwtLYLUNC5fTK6W"
+}

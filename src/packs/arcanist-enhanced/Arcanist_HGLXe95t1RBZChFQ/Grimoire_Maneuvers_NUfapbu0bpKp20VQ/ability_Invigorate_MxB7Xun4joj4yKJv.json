@@ -1,0 +1,185 @@
+{
+  "folder": "NUfapbu0bpKp20VQ",
+  "name": "Invigorate",
+  "type": "ability",
+  "_id": "MxB7Xun4joj4yKJv",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "9",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-invigorate",
+    "story": "You grant yourself or an ally a burst of power.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target gains [[/flat dsctResour000001]]{1 surge}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000009": {
+        "_id": "after00000000009",
+        "type": "base",
+        "name": "Spend",
+        "img": null,
+        "sort": 100000,
+        "before": false,
+        "description": "<p>The target gains [[/flat dsctApplied00002]]{an edge} on their next power roll.</p>"
+      },
+      "dsctResour000001": {
+        "_id": "dsctResour000001",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "The target gains 1 surge",
+          "display": "1 Surge",
+          "amount": 1,
+          "type": "surge",
+          "recipient": "target",
+          "preApplied": false,
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00002": {
+        "_id": "dsctApplied00002",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "An edge on their next power roll",
+          "display": "Edge on Next Roll",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "iB2pnUnf89gxhppr",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Invigorate",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
+      "type": "abilityModifier",
+      "_id": "iB2pnUnf89gxhppr",
+      "system": {
+        "changes": [
+          {
+            "key": "power.roll.edges",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": []
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have an edge on your next power roll.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "abilityRoll"
+        }
+      },
+      "_key": "!items.effects!MxB7Xun4joj4yKJv.iB2pnUnf89gxhppr",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.MxB7Xun4joj4yKJv"
+    }
+  ],
+  "sort": 56000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "enchantment",
+      "slot": "grimoireManeuver"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!MxB7Xun4joj4yKJv"
+}

@@ -1,0 +1,104 @@
+{
+  "folder": "vSSRSw6pQFswvEme",
+  "name": "Foresee",
+  "type": "ability",
+  "_id": "PIK1hYYl8KaZ0U3l",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/divination.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-foresee-action",
+    "story": "",
+    "keywords": [],
+    "type": "freeManeuver",
+    "category": "",
+    "resource": 1,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target [[/flat dsctResour000001]]{gains 1 of their Heroic Resource}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctResour000001": {
+        "_id": "dsctResour000001",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "The target gains 1 of their Heroic Resource",
+          "display": "1 Heroic Resource",
+          "amount": 1,
+          "type": "heroic",
+          "recipient": "target",
+          "preApplied": false,
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 18000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "divination",
+      "slot": "schoolFeature",
+      "limit": "turn"
+    },
+    "draw-steel-triggers": {
+      "once": "turn"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!PIK1hYYl8KaZ0U3l"
+}

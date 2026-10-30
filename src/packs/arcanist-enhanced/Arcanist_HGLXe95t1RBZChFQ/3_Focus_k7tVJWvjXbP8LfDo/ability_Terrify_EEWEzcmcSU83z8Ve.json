@@ -1,0 +1,206 @@
+{
+  "folder": "k7tVJWvjXbP8LfDo",
+  "name": "Terrify",
+  "type": "ability",
+  "_id": "EEWEzcmcSU83z8Ve",
+  "img": "icons/magic/control/fear-fright-shadow-monster-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.S4zl1OgVkJhUpmW9]{Demon snot or mucus}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-terrify",
+    "story": "You conjure images of a creature's worst nightmare into their minds.",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "jW7beDbTXSsXUxqK": {
+          "_id": "jW7beDbTXSsXUxqK",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "psychic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [
+                "psychic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [
+                "psychic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "QZYjVB96UKcNrw91": {
+          "_id": "QZYjVB96UKcNrw91",
+          "name": "Frightened",
+          "img": null,
+          "type": "applied",
+          "sort": 100,
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, frightened (EoT)",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "intuition"
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "failure",
+                  "end": "turn",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "{{potency}}, frightened (EoT)",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "failure",
+                  "end": "turn",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "{{potency}}, frightened (EoT)",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "failure",
+                  "end": "turn",
+                  "properties": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "<p>You can safely [[/flat dsctForced000001]]{push} each creature frightened this way up to a number of squares equal to their speed, ignoring stability.</p>",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctForced000001": {
+        "_id": "dsctForced000001",
+        "type": "dsct.flatForced",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatForced": {
+          "displayText": "Safely push up to their speed, ignoring stability",
+          "display": "Push (Speed)",
+          "movement": [
+            "push"
+          ],
+          "origin": "source",
+          "distance": "@target.movement.value",
+          "requiresStatus": "frightened",
+          "properties": [
+            "safely",
+            "ignore-stability"
+          ],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 48000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "slot": "heroic",
+      "component": "Demon snot or mucus"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!EEWEzcmcSU83z8Ve"
+}

@@ -1,0 +1,106 @@
+{
+  "folder": "vSSRSw6pQFswvEme",
+  "name": "Precise Momentum",
+  "type": "ability",
+  "_id": "rHySubNrl3PeM3vS",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/graviturgy.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-precise-momentum-action",
+    "story": "",
+    "keywords": [],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "The target is force moved.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You [[/flat dsctForced000001]].</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctForced000001": {
+        "_id": "dsctForced000001",
+        "type": "dsct.flatForced",
+        "name": "Slide",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatForced": {
+          "displayText": "Slide the target R squares",
+          "display": "Slide R",
+          "movement": [
+            "slide"
+          ],
+          "origin": "source",
+          "distance": "@R",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 34000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "graviturgy",
+      "slot": "schoolFeature",
+      "limit": "round"
+    },
+    "draw-steel-triggers": {
+      "once": "round"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!rHySubNrl3PeM3vS"
+}

@@ -1,0 +1,155 @@
+{
+  "folder": "gGn5H29HaJjD2DhU",
+  "name": "Dispel the Supernatural",
+  "type": "ability",
+  "_id": "ZyRwkfZUc29iI15s",
+  "img": "icons/magic/life/heart-cross-strong-flame-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.jRDuLW8q3CS7jnN0]{The petrified heart of a newt}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "14",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-dispel-the-supernatural",
+    "story": "You use magic to remove a harmful effect and rejuvenate your ally.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>You can [[/flat dsctCleans000001]]{cleanse} each effect the target is suffering that was supernaturally imposed. The target gains [[/flat dsctResour000002]]{2 surges} and can [[/flat dsctHeal00000003]]{spend a Recovery}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctCleans000001": {
+        "_id": "dsctCleans000001",
+        "type": "dsct.flatCleanse",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatCleanse": {
+          "displayText": "Ends each supernaturally imposed effect on the target",
+          "display": "Cleanse Effects",
+          "expiryFilter": [],
+          "statusFilter": [],
+          "keywordFilter": [
+            "magic",
+            "psionic"
+          ],
+          "repeatable": false,
+          "all": true,
+          "recipient": "target",
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctResour000002": {
+        "_id": "dsctResour000002",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "The target gains 2 surges",
+          "display": "2 Surges",
+          "amount": 2,
+          "type": "surge",
+          "recipient": "target",
+          "preApplied": false,
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctHeal00000003": {
+        "_id": "dsctHeal00000003",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200003,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "The target can spend a Recovery",
+          "display": "Spend Recovery",
+          "spendRecovery": true,
+          "recoverySource": "target",
+          "amountType": "recoveryValue",
+          "amountFormula": "0",
+          "recoveryValueSource": "target",
+          "tempStamina": false,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "target",
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "slot": "heroic",
+      "component": "The petrified heart of a newt"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!ZyRwkfZUc29iI15s"
+}

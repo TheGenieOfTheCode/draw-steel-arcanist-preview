@@ -1,0 +1,104 @@
+{
+  "folder": "vSSRSw6pQFswvEme",
+  "name": "Equivalent Exchange",
+  "type": "ability",
+  "_id": "pCN9MWy2RiJm3WMa",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/transmutation.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-equivalent-exchange-action",
+    "story": "",
+    "keywords": [],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "The target spends a Recovery.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target gains [[/flat dsctResour000001]]{2 surges}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctResour000001": {
+        "_id": "dsctResour000001",
+        "type": "dsct.flatResource",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatResource": {
+          "displayText": "The target gains 2 surges",
+          "display": "2 Surges",
+          "amount": 2,
+          "type": "surge",
+          "recipient": "target",
+          "preApplied": false,
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 11000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "transmutation",
+      "slot": "schoolFeature",
+      "limit": "round"
+    },
+    "draw-steel-triggers": {
+      "once": "round"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!pCN9MWy2RiJm3WMa"
+}

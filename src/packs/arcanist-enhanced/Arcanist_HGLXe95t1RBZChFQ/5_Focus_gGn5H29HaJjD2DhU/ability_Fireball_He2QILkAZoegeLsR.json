@@ -1,0 +1,345 @@
+{
+  "folder": "gGn5H29HaJjD2DhU",
+  "name": "Fireball",
+  "type": "ability",
+  "_id": "He2QILkAZoegeLsR",
+  "img": "icons/magic/fire/explosion-fireball-large-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Component Prerequisite:</strong> @UUID[Compendium.draw-steel-arcanist-preview.arcanist-components.Item.cCtZZBgIS2BUuaFX]{The nectar of a fire beetle}</p>",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "15",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-fireball",
+    "story": "You didn't ask how big the room was.",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemyObject",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "LQ3kkIaAExumi8Rn": {
+          "_id": "LQ3kkIaAExumi8Rn",
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "3",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "[[/choose dsctChoose000001]]{Choose one of the following effects:}",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000001": {
+        "_id": "after00000000001",
+        "type": "base",
+        "description": "<p>On a critical hit, all four effects are chosen.</p>",
+        "before": false,
+        "name": "Special",
+        "img": null,
+        "sort": 1
+      },
+      "dsctChoose000001": {
+        "_id": "dsctChoose000001",
+        "type": "dsct.choose",
+        "name": "",
+        "img": null,
+        "sort": 140000,
+        "before": false,
+        "description": "",
+        "choose": {
+          "count": 1,
+          "timing": "after",
+          "critical": "all",
+          "choices": [
+            {
+              "name": "Bigger Area",
+              "icon": "",
+              "preview": "The area becomes a 5 cube, and this ability targets each creature and object in the area.",
+              "story": "",
+              "keywords": [],
+              "distance": {
+                "type": "cube",
+                "primary": "5",
+                "secondary": "10",
+                "tertiary": ""
+              },
+              "target": {
+                "type": "creatureObject",
+                "custom": "",
+                "value": null
+              },
+              "effects": []
+            },
+            {
+              "name": "Extra Fire",
+              "icon": "",
+              "preview": "Each target takes [[/flat dsctDamage000001]]{4 additional fire damage}.",
+              "story": "",
+              "keywords": [],
+              "distance": {
+                "type": "",
+                "primary": "",
+                "secondary": "",
+                "tertiary": ""
+              },
+              "target": {
+                "type": "",
+                "custom": "",
+                "value": null
+              },
+              "effects": [
+                "Extra Fire"
+              ]
+            },
+            {
+              "name": "Push",
+              "icon": "",
+              "preview": "Each target is [[/flat dsctForced000002]] squares away from the center of the area.",
+              "story": "",
+              "keywords": [],
+              "distance": {
+                "type": "",
+                "primary": "",
+                "secondary": "",
+                "tertiary": ""
+              },
+              "target": {
+                "type": "",
+                "custom": "",
+                "value": null
+              },
+              "effects": [
+                "Push"
+              ]
+            },
+            {
+              "name": "Recurring Fire",
+              "icon": "",
+              "preview": "Each target with [[potency A strong]] has [[/flat dsctApplied00003]]{recurring fire 2} (save ends).",
+              "story": "",
+              "keywords": [],
+              "distance": {
+                "type": "",
+                "primary": "",
+                "secondary": "",
+                "tertiary": ""
+              },
+              "target": {
+                "type": "",
+                "custom": "",
+                "value": null
+              },
+              "effects": [
+                "Recurring Fire"
+              ]
+            }
+          ]
+        }
+      },
+      "dsctDamage000001": {
+        "_id": "dsctDamage000001",
+        "type": "dsct.flatDamage",
+        "name": "Extra Fire",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatDamage": {
+          "displayText": "4 additional fire damage",
+          "display": "4 Fire Damage",
+          "value": "4",
+          "types": [
+            "fire"
+          ],
+          "ignoredImmunities": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctForced000002": {
+        "_id": "dsctForced000002",
+        "type": "dsct.flatForced",
+        "name": "Push",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatForced": {
+          "displayText": "Pushed 2 squares away from the center of the area",
+          "display": "Push 2",
+          "movement": [
+            "push"
+          ],
+          "origin": "area",
+          "distance": "2",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00003": {
+        "_id": "dsctApplied00003",
+        "type": "dsct.flatApplied",
+        "name": "Recurring Fire",
+        "img": null,
+        "sort": 200003,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "Recurring fire 2 (save ends)",
+          "display": "Recurring Fire 2",
+          "potency": {
+            "characteristic": "agility",
+            "strength": "strong",
+            "custom": ""
+          },
+          "statusId": "rVjIr8sEkNVLq8Yg",
+          "exclusiveSelf": false,
+          "end": "save",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Recurring Fire 2",
+      "img": "icons/magic/fire/flame-burning-chain.webp",
+      "type": "base",
+      "_id": "rVjIr8sEkNVLq8Yg",
+      "system": {
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.recurring.fire",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>At the start of each of your turns, you take [[/damage 2 fire]] damage.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!He2QILkAZoegeLsR.rVjIr8sEkNVLq8Yg",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.He2QILkAZoegeLsR"
+    }
+  ],
+  "sort": 15000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "slot": "heroic",
+      "component": "The nectar of a fire beetle"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!He2QILkAZoegeLsR"
+}

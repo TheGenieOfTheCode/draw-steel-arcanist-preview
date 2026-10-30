@@ -1,0 +1,328 @@
+{
+  "folder": "NUfapbu0bpKp20VQ",
+  "name": "Guided Strike",
+  "type": "ability",
+  "_id": "RiwrwpMoOsyU4AlD",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "11",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-guided-strike",
+    "story": "You glimpse into the near future to perfect an attack.",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target has [[/flat dsctApplied00001]]{an edge} on their next strike until the start of your turn.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000009": {
+        "_id": "after00000000009",
+        "type": "base",
+        "name": "Spend",
+        "img": null,
+        "sort": 100000,
+        "before": false,
+        "description": "<p>The target has [[/flat dsctApplied00002]]{a double edge} on the next strike they make before the start of your next turn instead, and that strike [[/flat dsctApplied00003]]{ignores cover and concealment}.</p>"
+      },
+      "dsctApplied00001": {
+        "_id": "dsctApplied00001",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "An edge on their next strike",
+          "display": "Edge on Strike",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "Eje3xkjxU9BgUp2l",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00002": {
+        "_id": "dsctApplied00002",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200002,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "A double edge on their next strike instead",
+          "display": "Double Edge on Strike",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "enpHLoiV5dZoPchy",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      },
+      "dsctApplied00003": {
+        "_id": "dsctApplied00003",
+        "type": "dsct.flatApplied",
+        "name": "",
+        "img": null,
+        "sort": 200003,
+        "description": "",
+        "before": false,
+        "flatApplied": {
+          "displayText": "Their next strike ignores cover and concealment",
+          "display": "Ignores Cover",
+          "potency": {
+            "characteristic": "",
+            "strength": "",
+            "custom": ""
+          },
+          "statusId": "ZiigcLXxmOS1HB4q",
+          "exclusiveSelf": false,
+          "end": "",
+          "properties": [],
+          "spend": {
+            "enabled": true,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "name": "Guided Strike",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
+      "type": "abilityModifier",
+      "_id": "Eje3xkjxU9BgUp2l",
+      "system": {
+        "changes": [
+          {
+            "key": "power.roll.edges",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "strike"
+          ]
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have an edge on your next strike.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "strike",
+          "expiryReminder": {
+            "expiry": "turnStart",
+            "rounds": 1
+          }
+        }
+      },
+      "_key": "!items.effects!RiwrwpMoOsyU4AlD.Eje3xkjxU9BgUp2l",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+    },
+    {
+      "name": "Guided Strike (Double Edge)",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
+      "type": "abilityModifier",
+      "_id": "enpHLoiV5dZoPchy",
+      "system": {
+        "changes": [
+          {
+            "key": "power.roll.edges",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "strike"
+          ]
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have a double edge on your next strike.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "strike",
+          "expiryReminder": {
+            "expiry": "turnStart",
+            "rounds": 1
+          }
+        }
+      },
+      "_key": "!items.effects!RiwrwpMoOsyU4AlD.enpHLoiV5dZoPchy",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+    },
+    {
+      "name": "Guided Strike (Unerring)",
+      "img": "modules/draw-steel-arcanist-preview/assets/icons/chronomancy.webp",
+      "type": "base",
+      "_id": "ZiigcLXxmOS1HB4q",
+      "system": {
+        "changes": [
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.ignoresCoverBane",
+            "type": "override",
+            "value": "true",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "flags.draw-steel-combat-tools.stealth.ignoresConcealmentBane",
+            "type": "override",
+            "value": "true",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Your next strike ignores cover and concealment.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "draw-steel-combat-tools": {
+          "enhanced": true,
+          "consumeOn": "strike",
+          "expiryReminder": {
+            "expiry": "turnStart",
+            "rounds": 1
+          }
+        }
+      },
+      "_key": "!items.effects!RiwrwpMoOsyU4AlD.ZiigcLXxmOS1HB4q",
+      "origin": "Compendium.draw-steel-arcanist-preview.arcanist-enhanced.Item.RiwrwpMoOsyU4AlD"
+    }
+  ],
+  "sort": 61000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "chronomancy",
+      "slot": "grimoireManeuver"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!RiwrwpMoOsyU4AlD"
+}

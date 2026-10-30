@@ -1,0 +1,109 @@
+{
+  "folder": "vSSRSw6pQFswvEme",
+  "name": "Rejuvenating Surge",
+  "type": "ability",
+  "_id": "iUKBVGhVpyaei0Xo",
+  "img": "modules/draw-steel-arcanist-preview/assets/icons/enchantment.webp",
+  "system": {
+    "description": {
+      "value": "",
+      "director": ""
+    },
+    "source": {
+      "book": "The Arcanist: First Level Preview",
+      "page": "5",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcanist-rejuvenating-surge-action",
+    "story": "",
+    "keywords": [],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "The target gains one or more surges.",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "arcanist"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "<p>The target can [[/flat dsctHeal00000001]]{spend a Recovery}.</p>",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "dsctHeal00000001": {
+        "_id": "dsctHeal00000001",
+        "type": "dsct.flatHeal",
+        "name": "",
+        "img": null,
+        "sort": 200001,
+        "description": "",
+        "before": false,
+        "flatHeal": {
+          "displayText": "The target spends a Recovery and regains Stamina equal to their recovery value",
+          "display": "Spend a Recovery",
+          "spendRecovery": true,
+          "recoverySource": "target",
+          "amountType": "recoveryValue",
+          "amountFormula": "0",
+          "recoveryValueSource": "target",
+          "tempStamina": false,
+          "tempStack": false,
+          "repeatable": false,
+          "recipient": "target",
+          "spend": {
+            "enabled": false,
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "sort": 36000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-arcanist-preview": {
+      "school": "enchantment",
+      "slot": "schoolFeature",
+      "limit": "round"
+    },
+    "draw-steel-triggers": {
+      "once": "round"
+    },
+    "draw-steel-combat-tools": {
+      "enhanced": true,
+      "enhancedSpecific": true
+    }
+  },
+  "_key": "!items!iUKBVGhVpyaei0Xo"
+}
