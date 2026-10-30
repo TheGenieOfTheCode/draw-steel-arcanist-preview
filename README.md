@@ -1,5 +1,8 @@
 # Draw Steel: The Arcanist (Preview)
 
+[![Downloads](https://img.shields.io/github/downloads/TheGenieOfTheCode/draw-steel-arcanist-preview/total?label=Downloads&color=4aa94a)](https://github.com/TheGenieOfTheCode/draw-steel-arcanist-preview/releases)
+[![Latest Version](https://img.shields.io/github/downloads/TheGenieOfTheCode/draw-steel-arcanist-preview/latest/total?label=Latest%20Version&color=4aa94a)](https://github.com/TheGenieOfTheCode/draw-steel-arcanist-preview/releases/latest)
+
 *Ready your sword, wand or staff, flip through your countless tomes, and prepare to PONDER YOUR ORB!!*
 
 A Foundry VTT module that brings **The Arcanist**, a new master class for Draw Steel, to your table at 1st level, with the class, its abilities, every magical school and every arcane path ready to add to a hero.
@@ -9,6 +12,10 @@ A Foundry VTT module that brings **The Arcanist**, a new master class for Draw S
 **Requires Foundry v14 and the Draw Steel system.**
 
 ---
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/genieofthecode)
+
+*If you like what I do, consider donating on Ko-fi. Thanks!*
 
 ![The Arcanist](assets/art/arcanist-cover.jpg)
 
