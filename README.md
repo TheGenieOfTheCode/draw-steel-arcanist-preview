@@ -83,13 +83,15 @@ The Arcanist works on its own, but it's built to shine alongside my other Draw S
 
 ## Installation
 
-Install via the Foundry module browser, or paste this manifest URL directly:
+**How to Install the Arcanist on FoundryVTT and get started with it.**
+
+https://github.com/user-attachments/assets/0885f058-6508-4e61-aca1-ff877a366bcf
+
+The above video shows how to install via the module browser, but you can also paste this manifest URL directly into it:
 
 ```
 https://github.com/TheGenieOfTheCode/draw-steel-arcanist-preview/releases/latest/download/module.json
 ```
-
-The Arcanist only needs the Draw Steel system.
 
 **Recommended:** [Draw Steel: Combat Tools](https://github.com/TheGenieOfTheCode/draw-steel-combat-tools) 1.2.7 or later, [Draw Steel: Triggers](https://github.com/TheGenieOfTheCode/draw-steel-triggers) 1.2.0 or later
 
