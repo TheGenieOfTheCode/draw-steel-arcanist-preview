@@ -49,7 +49,7 @@
         "manifest": "https://raw.githubusercontent.com/MetaMorphic-Digital/draw-steel/refs/heads/main/system.json",
         "compatibility": {
           "minimum": "1.1.0",
-          "verified": "1.1.2"
+          "verified": "1.2.0"
         }
       }
     ],
